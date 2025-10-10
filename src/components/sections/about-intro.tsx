@@ -10,9 +10,9 @@ const AboutIntro = () => {
   });
 
   return (
-    <section className="bg-[#f5f5f5] py-16 md:py-24 overflow-hidden">
-      <div className="mx-auto max-w-[1440px] pl-4 md:pl-8 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
+    <section className="bg-[#f5f5f5] py-16 md:py-24 lg:py-32 overflow-hidden">
+      <div className="mx-auto max-w-[1440px] pl-4 md:pl-8 relative min-h-[600px] lg:min-h-[700px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 h-full">
           {/* Left Column - Text aligned to extreme left */}
           <div className="flex flex-col justify-between gap-12 lg:gap-8 pr-4 md:pr-8 lg:pr-12">
             <div className="flex flex-col gap-4">
@@ -30,7 +30,7 @@ const AboutIntro = () => {
 
           {/* Right Column - Large image filling right side to edge */}
           <div className="relative -mr-4 md:-mr-8 lg:mr-0 lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-1/2">
-            <div ref={ref} className="relative h-full min-h-[500px] w-full">
+            <div ref={ref} className="relative h-full min-h-[500px] lg:min-h-[700px] w-full">
               <Image
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/XpBU0aa8iF6J3llpZtjaN0hJo-3.jpg"
                 alt="Professionals reviewing documents"
