@@ -10,27 +10,22 @@ const AboutIntro = () => {
   });
 
   return (
-    <section className="bg-[#f5f5f5] pt-16 md:pt-24 pb-0 overflow-hidden">
-      <div className="mx-auto max-w-[1440px] pl-4 md:pl-8 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
-          {/* Left Column - Text with "Protecting Innovation" at bottom */}
-          <div className="flex flex-col justify-start gap-12 pr-4 md:pr-8 lg:pr-12 pb-16 md:pb-24">
-            <div className="flex flex-col gap-4">
+    <section className="bg-[#f5f5f5] overflow-hidden">
+      <div className="mx-auto max-w-[1440px] relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+          {/* Left Column - Text with space for content */}
+          <div className="flex flex-col pt-16 md:pt-24 pl-4 md:pl-8 pr-4 md:pr-8 lg:pr-12">
+            <div className="flex flex-col gap-4 mb-12">
               <p className="text-label text-text-primary">About us</p>
               <p className="text-lg text-text-secondary max-w-md">
                 Polley IP Law specializes in comprehensive intellectual property protection, guiding inventors and creators through patents, trademarks, and copyrights.
               </p>
             </div>
-            <h2 className="text-text-primary mt-auto">
-              Protecting
-              <br />
-              Innovation
-            </h2>
           </div>
 
           {/* Right Column - Large image filling right side to edge */}
-          <div className="relative -mr-4 md:-mr-8 lg:mr-0 lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:w-1/2">
-            <div ref={ref} className="relative h-full min-h-[500px] lg:min-h-full w-full">
+          <div className="relative -mr-4 md:-mr-8 lg:mr-0 lg:absolute lg:right-0 lg:top-0 lg:w-1/2 h-[500px] lg:h-[650px]">
+            <div ref={ref} className="relative h-full w-full">
               <Image
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/XpBU0aa8iF6J3llpZtjaN0hJo-3.jpg"
                 alt="Professionals reviewing documents"
@@ -65,6 +60,15 @@ const AboutIntro = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* "Protecting Innovation" positioned right above Services section */}
+        <div className="pl-4 md:pl-8 pr-4 md:pr-8 lg:pr-12 lg:w-1/2 pb-0">
+          <h2 className="text-text-primary">
+            Protecting
+            <br />
+            Innovation
+          </h2>
         </div>
       </div>
     </section>
