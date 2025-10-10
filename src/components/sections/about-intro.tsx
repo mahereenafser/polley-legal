@@ -11,7 +11,7 @@ const AboutIntro = () => {
 
   return (
     <section className="bg-[#f5f5f5] overflow-hidden">
-      <div className="mx-auto max-w-[1440px] relative">
+      <div className="mx-auto max-w-[1440px] relative min-h-[700px] lg:min-h-[900px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
           {/* Left Column - Text with space for content */}
           <div className="flex flex-col pt-16 md:pt-24 pl-4 md:pl-8 pr-4 md:pr-8 lg:pr-12">
@@ -24,7 +24,7 @@ const AboutIntro = () => {
           </div>
 
           {/* Right Column - Large image filling right side to edge */}
-          <div className="relative -mr-4 md:-mr-8 lg:mr-0 lg:absolute lg:right-0 lg:top-0 lg:w-1/2 h-[600px] lg:h-[800px]">
+          <div className="relative -mr-4 md:-mr-8 lg:mr-0 lg:absolute lg:right-0 lg:top-0 lg:w-1/2 h-[700px] lg:h-[900px]">
             <div ref={ref} className="relative h-full w-full">
               <Image
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/XpBU0aa8iF6J3llpZtjaN0hJo-3.jpg"
