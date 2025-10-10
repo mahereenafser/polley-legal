@@ -78,17 +78,17 @@ const ServicesPreview = () => {
           ))}
         </div>
         
-        <footer className="flex flex-col md:flex-row justify-between items-start md:items-center mt-16 gap-8 md:gap-4">
+        <footer className="flex flex-col items-center mt-16 gap-8">
           <div className="flex items-center gap-6">
             <Image
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/C8lenn1fyhQXk44X9WHkW8hgMQ-4.webp"
-              alt="Tech Startup Founder"
+              src="/images/Daniel+S.+Polley+Website+Photo.webp"
+              alt="Daniel Polley"
               width={80}
               height={80}
               className="rounded-full flex-shrink-0 object-cover"
             />
             <div className="max-w-md">
-              <p className="font-display italic text-2xl leading-[1.5]">
+              <p className="font-display italic text-base leading-[1.5]">
                 "Polley IP Law made the patent process seamless. Their expertise helped us secure protection for our core technology quickly and effectively."
               </p>
               <div className="mt-4">
@@ -100,7 +100,7 @@ const ServicesPreview = () => {
 
           <Link
             href="/services"
-            className="group shrink-0 inline-flex items-center justify-center gap-2 text-button bg-primary text-primary-foreground px-8 py-4 rounded-full transition-colors hover:bg-accent-secondary whitespace-nowrap"
+            className="group inline-flex items-center justify-center gap-2 text-button bg-primary text-primary-foreground px-8 py-4 rounded-full transition-colors hover:bg-accent-secondary whitespace-nowrap"
           >
             View All Services
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

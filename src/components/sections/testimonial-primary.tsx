@@ -16,18 +16,18 @@ const TestimonialPrimary = () => {
             </div>
             <div className="flex flex-shrink-0 flex-col items-start gap-6">
               <Image
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/tNzkqCtSCztzZYOGrYFcR3JOU-7.webp"
-                alt="Marcus Johnson"
+                src="/images/Miles-polley.webp"
+                alt="Miles Polley"
                 width={104}
                 height={104}
                 className="h-[104px] w-[104px] rounded-full object-cover"
               />
               <div className="flex flex-col gap-1">
                 <p className="text-lg font-semibold text-text-primary">
-                  Marcus Johnson
+                  Miles Polley
                 </p>
                 <p className="text-base font-medium text-text-primary">
-                  CEO, BrandWorks Inc.
+                  Associate
                 </p>
               </div>
             </div>
