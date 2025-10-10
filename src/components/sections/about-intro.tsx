@@ -1,11 +1,20 @@
+'use client';
+
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
 const AboutIntro = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
   return (
     <section className="bg-[#f5f5f5] py-16 md:py-24">
-      <div className="mx-auto max-w-[1200px] px-6 md:px-12">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="flex flex-col justify-between gap-12 lg:gap-8">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8">
+        <div className="grid grid-cols-1 gap-32 lg:grid-cols-2 lg:gap-48">
+          {/* Left Column - Text aligned to extreme left */}
+          <div className="flex flex-col justify-between gap-12 lg:gap-8 lg:pr-0">
             <div className="flex flex-col gap-4">
               <p className="text-label text-text-primary">About us</p>
               <p className="text-lg text-text-secondary">
@@ -19,29 +28,41 @@ const AboutIntro = () => {
             </h2>
           </div>
 
-          <div className="flex flex-col gap-8">
-            <div className="flex flex-col items-start gap-4 bg-white p-6 md:flex-row md:items-center md:gap-6">
-              <div className="flex flex-col">
-                <p className="text-base font-medium text-text-primary">
-                  Years of Experience
-                </p>
-                <h3 className="text-text-primary">15+</h3>
-              </div>
-              <div className="h-px w-full bg-border md:h-12 md:w-px" />
-              <div className="flex flex-col">
-                <p className="text-base font-medium text-text-primary">
-                  IP Filings Protected
-                </p>
-                <h3 className="text-text-primary">500+</h3>
-              </div>
-            </div>
-            <div className="relative aspect-[568/480] w-full">
+          {/* Right Column - Image and stats aligned to extreme right */}
+          <div className="flex flex-col gap-8 lg:pl-0">
+            <div ref={ref} className="relative aspect-[568/480] w-full">
               <Image
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/XpBU0aa8iF6J3llpZtjaN0hJo-3.jpg"
                 alt="Professionals reviewing documents"
                 fill
                 className="object-cover"
               />
+              {/* Animated text overlay at bottom of image */}
+              <div className="absolute bottom-0 left-0 right-0 flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-6 p-6 bg-gradient-to-t from-black/70 via-black/50 to-transparent">
+                <div
+                  className={`flex flex-col transition-all duration-700 ease-out ${
+                    inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
+                  style={{ transitionDelay: '200ms' }}
+                >
+                  <p className="text-base font-medium text-white">
+                    Years of Experience
+                  </p>
+                  <h3 className="text-white text-4xl md:text-5xl">15+</h3>
+                </div>
+                <div className="hidden md:block h-12 w-px bg-white/30" />
+                <div
+                  className={`flex flex-col transition-all duration-700 ease-out ${
+                    inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
+                  style={{ transitionDelay: '400ms' }}
+                >
+                  <p className="text-base font-medium text-white">
+                    IP Filings Protected
+                  </p>
+                  <h3 className="text-white text-4xl md:text-5xl">500+</h3>
+                </div>
+              </div>
             </div>
           </div>
         </div>

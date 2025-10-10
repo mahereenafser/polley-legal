@@ -21,7 +21,7 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 container mx-auto h-full flex flex-col justify-between pt-32 pb-16 lg:py-40 px-6 sm:px-12 md:px-20">
+      <div className="relative z-10 container mx-auto h-full flex flex-col justify-between pt-32 pb-16 lg:pb-24 px-6 sm:px-8 md:px-12">
         <div className="w-full flex justify-end">
           <p className="text-base text-white/90 max-w-[200px] lg:max-w-none lg:w-[440px] text-right">
             Protecting innovations and securing intellectual property rights in Florida and beyond
@@ -29,8 +29,8 @@ const HeroSection = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row justify-between items-end gap-8">
-          <div className="flex-1 w-full">
-            <h1 className="font-display text-white text-[80px] sm:text-[100px] lg:text-[140px] leading-[0.9] -tracking-[0.02em]">
+          <div className="flex-1 w-full lg:pl-0">
+            <h1 className="font-display text-white text-[70px] sm:text-[90px] lg:text-[120px] leading-[0.9] -tracking-[0.02em]">
               Own What
               <br />
               You

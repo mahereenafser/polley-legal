@@ -47,11 +47,11 @@ const ServicesPreview = () => {
                 className="absolute top-[-1px] left-0 w-full h-[1px] bg-foreground origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"
               ></div>
               <div className="flex justify-between items-center py-8">
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-1 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
                   <h3 className="font-display text-3xl md:text-[48px] leading-[1.2] font-normal">{item.title}</h3>
                   <p className="text-lg leading-[1.6] text-text-primary">{item.description}</p>
                 </div>
-                <div className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2.5 ml-4">
+                <div className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-3 ml-4">
                   <ArrowRight className="w-8 h-8 md:w-10 md:h-10 text-text-primary shrink-0" />
                 </div>
               </div>
@@ -73,8 +73,8 @@ const ServicesPreview = () => {
                 "Polley IP Law made the patent process seamless. Their expertise helped us secure protection for our core technology quickly and effectively."
               </p>
               <div className="mt-4">
-                <p className="text-sm font-semibold leading-[1.4] text-text-primary">Sarah Chen</p>
-                <p className="text-sm leading-[1.4] text-text-secondary">Founder, TechVenture</p>
+                <p className="text-xs font-semibold leading-[1.4] text-text-primary">Daniel Polley</p>
+                <p className="text-xs leading-[1.4] text-text-secondary">Managing Shareholder</p>
               </div>
             </div>
           </div>

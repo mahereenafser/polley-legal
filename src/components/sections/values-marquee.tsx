@@ -19,7 +19,7 @@ const MarqueeContent = () => {
 
 const ValuesMarquee = () => {
   return (
-    <section className="bg-[#F4CCBA] w-full py-12 lg:h-[200px] flex items-center overflow-hidden">
+    <section className="bg-[#FFFFFF] w-full py-12 lg:h-[200px] flex items-center overflow-hidden">
       <div className="flex animate-[marquee_40s_linear_infinite]">
         <MarqueeContent />
         <MarqueeContent />

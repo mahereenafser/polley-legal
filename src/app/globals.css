@@ -1,5 +1,5 @@
 /* Updated: 2025-10-10T11:01:26.502Z */
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=General+Sans:wght@200&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -55,8 +55,8 @@
   --color-border-light: #E0E2DF;
   --color-border-dark: #2D4745;
 
-  --font-display: "Newsreader", serif;
-  --font-body: "Newsreader", serif;
+  --font-display: "General Sans", sans-serif;
+  --font-body: "General Sans", sans-serif;
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
@@ -120,13 +120,13 @@
     font-family: var(--font-body);
     background-color: var(--color-background);
     color: var(--color-text-primary);
-    font-weight: 400;
+    font-weight: 200;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     color: var(--color-text-primary);
-    font-weight: 300;
+    font-weight: 200;
   }
 
   h1 {
@@ -156,27 +156,27 @@
     font-size: 1.125rem; /* 18px */
     line-height: 1.6;
     color: var(--color-text-primary);
-    font-weight: 400;
+    font-weight: 200;
   }
 
   .text-body-large {
     font-family: var(--font-body);
     font-size: 1.5rem; /* 24px */
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 200;
   }
 
   .text-body-small {
     font-family: var(--font-body);
     font-size: 0.875rem; /* 14px */
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 200;
   }
 
   .text-button {
     font-family: var(--font-body);
     font-size: 1rem; /* 16px */
-    font-weight: 400;
+    font-weight: 200;
     line-height: 1.2;
     letter-spacing: 0.01em;
   }
@@ -184,14 +184,14 @@
   .text-nav {
     font-family: var(--font-body);
     font-size: 1rem; /* 16px */
-    font-weight: 400;
+    font-weight: 200;
     line-height: 1.4;
   }
 
   .text-label {
     font-family: var(--font-body);
     font-size: 0.875rem; /* 14px */
-    font-weight: 400;
+    font-weight: 200;
     line-height: 1.4;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -202,7 +202,7 @@
     font-size: 2.5rem; /* 40px */
     font-style: italic;
     line-height: 1.4;
-    font-weight: 300;
+    font-weight: 200;
   }
 
   .text-stat-number {
@@ -210,7 +210,7 @@
     font-size: 5rem; /* 80px */
     line-height: 1;
     letter-spacing: -0.02em;
-    font-weight: 300;
+    font-weight: 200;
   }
 
   .container {
