@@ -88,12 +88,12 @@ const ServicesPreview = () => {
               className="flex-shrink-0 object-cover"
             />
             <div className="max-w-md">
-              <p className="font-display italic text-base leading-[1.5]">
+              <p className="font-body text-base leading-[1.5]">
                 "Polley IP Law made the patent process seamless. Their expertise helped us secure protection for our core technology quickly and effectively."
               </p>
               <div className="mt-4">
-                <p className="text-xs font-semibold leading-[1.4] text-text-primary">Daniel Polley</p>
-                <p className="text-xs leading-[1.4] text-text-secondary">Managing Shareholder</p>
+                <p className="font-body text-base font-semibold leading-[1.4] text-text-primary">Daniel Polley</p>
+                <p className="font-body text-base leading-[1.4] text-text-secondary">Managing Shareholder</p>
               </div>
             </div>
           </div>
