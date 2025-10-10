@@ -23,15 +23,17 @@ const serviceItems = [
 
 const ServicesPreview = () => {
   return (
-    <section className="bg-secondary text-text-primary py-20 px-6 md:px-0">
-      <div className="max-w-[1200px] mx-auto px-0 md:px-12">
-        <header className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 pb-16">
+    <section className="bg-secondary text-text-primary pt-[120px] pb-20">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-8">
+        <header className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-48 pb-16">
+          {/* Left Column - pushed to extreme left */}
           <div className="flex flex-col gap-3">
             <p className="text-sm text-text-secondary tracking-[0.1em] uppercase">Services</p>
-            <p className="text-base text-text-primary leading-relaxed">
+            <p className="text-base text-text-primary leading-relaxed max-w-md">
               Comprehensive intellectual property protection services to secure your innovations and creative works.
             </p>
           </div>
+          {/* Right Column - pushed to extreme right */}
           <div className="flex flex-col gap-8">
             {serviceItems.map((item, index) => (
               <Link
