@@ -12,8 +12,8 @@ const AboutIntro = () => {
   return (
     <section className="bg-[#f5f5f5] overflow-hidden">
       <div className="mx-auto max-w-[1440px] relative pt-[60px]">
-        <div className="relative min-h-[700px] lg:min-h-[900px]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+        <div className="relative min-h-[700px] lg:min-h-[900px] flex flex-col">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 flex-1">
             {/* Left Column - Text with space for content */}
             <div className="flex flex-col pl-4 md:pl-8 pr-4 md:pr-8 lg:pr-12">
               <div className="flex flex-col gap-4 mb-12">
