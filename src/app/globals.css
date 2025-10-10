@@ -1,5 +1,5 @@
 /* Updated: 2025-10-10T11:01:26.502Z */
-@import url('https://fonts.googleapis.com/css2?family=General+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=General+Sans:wght@200&family=Newsreader:wght@300&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -55,7 +55,7 @@
   --color-border-light: #E0E2DF;
   --color-border-dark: #2D4745;
 
-  --font-display: "General Sans", sans-serif;
+  --font-display: "Newsreader", serif;
   --font-body: "General Sans", sans-serif;
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
@@ -126,7 +126,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     color: var(--color-text-primary);
-    font-weight: 200;
+    font-weight: 300;
   }
 
   h1 {
@@ -202,7 +202,7 @@
     font-size: 2.5rem; /* 40px */
     font-style: italic;
     line-height: 1.4;
-    font-weight: 200;
+    font-weight: 300;
   }
 
   .text-stat-number {
@@ -210,7 +210,7 @@
     font-size: 5rem; /* 80px */
     line-height: 1;
     letter-spacing: -0.02em;
-    font-weight: 200;
+    font-weight: 300;
   }
 
   .container {

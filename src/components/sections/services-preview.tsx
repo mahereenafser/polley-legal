@@ -25,18 +25,35 @@ const ServicesPreview = () => {
   return (
     <section className="bg-secondary text-text-primary py-20 px-6 md:px-0">
       <div className="max-w-[1200px] mx-auto px-0 md:px-12">
-        <header className="flex flex-col md:flex-row md:gap-8 pb-16">
-          <div className="flex-1">
-            <p className="text-label text-text-secondary tracking-[0.1em]">Services</p>
-          </div>
-          <div className="flex-[2_1_0%] pt-4 md:pt-0">
-            <p className="text-body-large text-text-primary">
+        <header className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 pb-16">
+          <div className="flex flex-col gap-3">
+            <p className="text-sm text-text-secondary tracking-[0.1em] uppercase">Services</p>
+            <p className="text-base text-text-primary leading-relaxed">
               Comprehensive intellectual property protection services to secure your innovations and creative works.
             </p>
           </div>
+          <div className="flex flex-col gap-8">
+            {serviceItems.map((item, index) => (
+              <Link
+                key={index}
+                href={item.href}
+                className="group block"
+              >
+                <div className="flex justify-between items-start gap-4">
+                  <div className="flex flex-col gap-1 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
+                    <h3 className="font-display text-2xl md:text-3xl leading-[1.2] font-normal">{item.title}</h3>
+                    <p className="text-sm leading-relaxed text-text-secondary">{item.description}</p>
+                  </div>
+                  <div className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-3 flex-shrink-0">
+                    <ArrowRight className="w-6 h-6 text-text-primary" />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </header>
 
-        <div className="border-b border-border-light">
+        <div className="border-b border-border-light hidden">
           {serviceItems.map((item, index) => (
             <Link
               key={index}
