@@ -78,14 +78,14 @@ const ServicesPreview = () => {
           ))}
         </div>
         
-        <footer className="flex flex-col items-center mt-16 gap-8">
-          <div className="flex items-center gap-6">
+        <footer className="flex flex-col items-start mt-16 gap-8">
+          <div className="flex items-start gap-6">
             <Image
               src="/images/Daniel+S.+Polley+Website+Photo.webp"
               alt="Daniel Polley"
               width={80}
               height={80}
-              className="rounded-full flex-shrink-0 object-cover"
+              className="flex-shrink-0 object-cover"
             />
             <div className="max-w-md">
               <p className="font-display italic text-base leading-[1.5]">
@@ -100,7 +100,7 @@ const ServicesPreview = () => {
 
           <Link
             href="/services"
-            className="group inline-flex items-center justify-center gap-2 text-button bg-primary text-primary-foreground px-8 py-4 rounded-full transition-colors hover:bg-accent-secondary whitespace-nowrap"
+            className="group inline-flex items-center justify-center gap-2 text-button bg-primary text-primary-foreground px-8 py-4 rounded-full transition-colors hover:bg-accent-secondary whitespace-nowrap self-center"
           >
             View All Services
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

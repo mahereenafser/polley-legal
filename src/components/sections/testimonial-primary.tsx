@@ -20,7 +20,7 @@ const TestimonialPrimary = () => {
                 alt="Miles Polley"
                 width={104}
                 height={104}
-                className="h-[104px] w-[104px] rounded-full object-cover"
+                className="h-[104px] w-[104px] object-cover"
               />
               <div className="flex flex-col gap-1">
                 <p className="text-lg font-semibold text-text-primary">
