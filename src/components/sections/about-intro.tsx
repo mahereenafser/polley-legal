@@ -17,7 +17,7 @@ const AboutIntro = () => {
           <div className="flex flex-col justify-between gap-12 lg:gap-8 lg:pr-0 pr-4 md:pr-8">
             <div className="flex flex-col gap-4">
               <p className="text-label text-text-primary">About us</p>
-              <p className="text-lg text-text-secondary">
+              <p className="text-lg text-text-secondary max-w-md">
                 Polley IP Law specializes in comprehensive intellectual property protection, guiding inventors and creators through patents, trademarks, and copyrights.
               </p>
             </div>
