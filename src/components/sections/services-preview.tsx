@@ -23,9 +23,9 @@ const serviceItems = [
 
 const ServicesPreview = () => {
   return (
-    <section className="bg-secondary text-text-primary pt-[120px] pb-20">
+    <section className="bg-secondary text-text-primary pt-[120px] pb-32 min-h-[800px]">
       <div className="max-w-[1440px] mx-auto px-4 md:px-8">
-        <header className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-48 pb-16">
+        <header className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-48 pb-24">
           {/* Left Column - pushed to extreme left */}
           <div className="flex flex-col gap-3">
             <p className="text-sm text-text-secondary tracking-[0.1em] uppercase">Services</p>
@@ -34,20 +34,20 @@ const ServicesPreview = () => {
             </p>
           </div>
           {/* Right Column - pushed to extreme right */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-16">
             {serviceItems.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
-                className="group block"
+                className="group block py-4"
               >
                 <div className="flex justify-between items-start gap-4">
-                  <div className="flex flex-col gap-1 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
-                    <h3 className="font-display text-2xl md:text-3xl leading-[1.2] font-normal">{item.title}</h3>
+                  <div className="flex flex-col gap-3 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
+                    <h3 className="font-display text-[54px] leading-[1.1] font-normal">{item.title}</h3>
                     <p className="text-sm leading-relaxed text-text-secondary">{item.description}</p>
                   </div>
-                  <div className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-3 flex-shrink-0">
-                    <ArrowRight className="w-6 h-6 text-text-primary" />
+                  <div className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-3 flex-shrink-0 pt-4">
+                    <ArrowRight className="w-8 h-8 text-text-primary" />
                   </div>
                 </div>
               </Link>
