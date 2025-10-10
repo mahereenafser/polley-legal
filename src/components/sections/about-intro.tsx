@@ -11,64 +11,66 @@ const AboutIntro = () => {
 
   return (
     <section className="bg-[#f5f5f5] overflow-hidden">
-      <div className="mx-auto max-w-[1440px] relative min-h-[700px] lg:min-h-[900px]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-          {/* Left Column - Text with space for content */}
-          <div className="flex flex-col pt-16 md:pt-24 pl-4 md:pl-8 pr-4 md:pr-8 lg:pr-12">
-            <div className="flex flex-col gap-4 mb-12">
-              <p className="text-label text-text-primary">About us</p>
-              <p className="text-lg text-text-secondary max-w-md">
-                Polley IP Law specializes in comprehensive intellectual property protection, guiding inventors and creators through patents, trademarks, and copyrights.
-              </p>
+      <div className="mx-auto max-w-[1440px] relative pt-[60px]">
+        <div className="relative min-h-[700px] lg:min-h-[900px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+            {/* Left Column - Text with space for content */}
+            <div className="flex flex-col pl-4 md:pl-8 pr-4 md:pr-8 lg:pr-12">
+              <div className="flex flex-col gap-4 mb-12">
+                <p className="text-label text-text-primary">About us</p>
+                <p className="text-lg text-text-secondary max-w-md">
+                  Polley IP Law specializes in comprehensive intellectual property protection, guiding inventors and creators through patents, trademarks, and copyrights.
+                </p>
+              </div>
             </div>
-          </div>
 
-          {/* Right Column - Large image filling right side to edge */}
-          <div className="relative -mr-4 md:-mr-8 lg:mr-0 lg:absolute lg:right-0 lg:top-0 lg:w-1/2 h-[700px] lg:h-[900px]">
-            <div ref={ref} className="relative h-full w-full">
-              <Image
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/XpBU0aa8iF6J3llpZtjaN0hJo-3.jpg"
-                alt="Professionals reviewing documents"
-                fill
-                className="object-cover"
-              />
-              {/* Animated text overlay at bottom of image */}
-              <div className="absolute bottom-0 left-0 right-0 flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-6 p-6 bg-gradient-to-t from-black/70 via-black/50 to-transparent">
-                <div
-                  className={`flex flex-col transition-all duration-700 ease-out ${
-                    inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                  }`}
-                  style={{ transitionDelay: '200ms' }}
-                >
-                  <p className="text-base font-medium text-white">
-                    Years of Experience
-                  </p>
-                  <h3 className="text-white text-4xl md:text-5xl">15+</h3>
-                </div>
-                <div className="hidden md:block h-12 w-px bg-white/30" />
-                <div
-                  className={`flex flex-col transition-all duration-700 ease-out ${
-                    inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                  }`}
-                  style={{ transitionDelay: '400ms' }}
-                >
-                  <p className="text-base font-medium text-white">
-                    IP Filings Protected
-                  </p>
-                  <h3 className="text-white text-4xl md:text-5xl">500+</h3>
+            {/* Right Column - Large image filling right side to edge */}
+            <div className="relative -mr-4 md:-mr-8 lg:mr-0 lg:absolute lg:right-0 lg:top-0 lg:w-1/2 h-[700px] lg:h-[900px]">
+              <div ref={ref} className="relative h-full w-full">
+                <Image
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/XpBU0aa8iF6J3llpZtjaN0hJo-3.jpg"
+                  alt="Professionals reviewing documents"
+                  fill
+                  className="object-cover"
+                />
+                {/* Animated text overlay at bottom of image */}
+                <div className="absolute bottom-0 left-0 right-0 flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-6 p-6 bg-gradient-to-t from-black/70 via-black/50 to-transparent">
+                  <div
+                    className={`flex flex-col transition-all duration-700 ease-out ${
+                      inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                    }`}
+                    style={{ transitionDelay: '200ms' }}
+                  >
+                    <p className="text-base font-medium text-white">
+                      Years of Experience
+                    </p>
+                    <h3 className="text-white text-4xl md:text-5xl">15+</h3>
+                  </div>
+                  <div className="hidden md:block h-12 w-px bg-white/30" />
+                  <div
+                    className={`flex flex-col transition-all duration-700 ease-out ${
+                      inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                    }`}
+                    style={{ transitionDelay: '400ms' }}
+                  >
+                    <p className="text-base font-medium text-white">
+                      IP Filings Protected
+                    </p>
+                    <h3 className="text-white text-4xl md:text-5xl">500+</h3>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* "Protecting Innovation" positioned right above Services section */}
-        <div className="pl-4 md:pl-8 pr-4 md:pr-8 lg:pr-12 lg:w-1/2 pb-0">
-          <h2 className="text-text-primary">
-            Protecting
-            <br />
-            Innovation
-          </h2>
+          {/* "Protecting Innovation" positioned right above Services section */}
+          <div className="pl-4 md:pl-8 pr-4 md:pr-8 lg:pr-12 lg:w-1/2 pb-0">
+            <h2 className="text-text-primary">
+              Protecting
+              <br />
+              Innovation
+            </h2>
+          </div>
         </div>
       </div>
     </section>
