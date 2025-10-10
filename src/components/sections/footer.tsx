@@ -14,7 +14,7 @@ const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/polley-ip-law', icon: Linkedin },
 ];
 
-const SocialIcon = ({ href, Icon }: { href: string; Icon: React.ElementType }) => (
+const SocialIcon = ({ href, Icon, name }: { href: string; Icon: React.ElementType; name: string }) => (
   <a
     href={href}
     target="_blank"
@@ -22,7 +22,7 @@ const SocialIcon = ({ href, Icon }: { href: string; Icon: React.ElementType }) =
     className="text-white transition-opacity hover:opacity-70"
   >
     <Icon className="h-5 w-5" />
-    <span className="sr-only">{Icon.displayName}</span>
+    <span className="sr-only">{name}</span>
   </a>
 );
 
@@ -79,7 +79,7 @@ export default function Footer() {
             </div>
             <div className="mt-8 flex gap-6">
               {socialLinks.map((social) => (
-                <SocialIcon key={social.name} href={social.href} Icon={social.icon} />
+                <SocialIcon key={social.name} href={social.href} Icon={social.icon} name={social.name} />
               ))}
             </div>
           </div>
