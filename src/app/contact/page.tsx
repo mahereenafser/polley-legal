@@ -203,6 +203,9 @@ export default function ContactPage() {
                   alt="Patents"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  quality={75}
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="mb-3">
@@ -226,6 +229,9 @@ export default function ContactPage() {
                   alt="Trademarks"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  quality={75}
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="mb-3">
@@ -249,6 +255,9 @@ export default function ContactPage() {
                   alt="Copyrights"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  quality={75}
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="mb-3">

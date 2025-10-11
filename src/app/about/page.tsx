@@ -1,14 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
+import { useInView } from "react-intersection-observer";
 
 export default function AboutPage() {
+  const [danielRef, danielInView] = useInView({ triggerOnce: true, threshold: 0.3 });
+  const [milesRef, milesInView] = useInView({ triggerOnce: true, threshold: 0.3 });
+
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section - Exactly matching homepage structure */}
+      {/* Hero Section */}
       <section className="relative h-screen min-h-[720px] lg:min-h-[800px] text-text-inverse overflow-hidden">
         <Image
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/Es1kU20wiKwPNdeByqxmWS50F6g-2.jpg"
@@ -67,98 +73,124 @@ export default function AboutPage() {
         </a>
       </section>
 
-      {/* About Content */}
-      <section id="about-content" className="py-24 lg:py-32 bg-background">
-        <div className="container mx-auto px-6 sm:px-8 md:px-12">
-          <div className="max-w-4xl mx-auto mb-20 text-center">
-            <h2 className="font-display text-5xl lg:text-6xl text-text-primary mb-8">
-              Our Team
-            </h2>
-            <p className="text-xl text-text-secondary leading-relaxed">
-              At Polley IP Law, P.A., we are dedicated to providing exceptional intellectual property services. Our experienced team is committed to protecting your innovations and helping you navigate the complexities of IP law.
-            </p>
-          </div>
-
-          {/* Team Members */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-20 max-w-5xl mx-auto">
-
-            {/* Daniel Polley */}
-            <div className="flex flex-col gap-6">
-              <div className="relative w-full h-[400px] overflow-hidden">
-                <Image
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/Es1kU20wiKwPNdeByqxmWS50F6g-2.jpg"
-                  alt="Daniel Polley - Managing Shareholder"
-                  fill
-                  className="object-cover"
-                />
+      {/* Intro Section - Two Column */}
+      <section id="about-content" className="bg-[#f5f5f5] overflow-hidden">
+        <div className="mx-auto max-w-[1440px] relative pt-[120px]">
+          <div className="relative min-h-[700px] lg:min-h-[900px] flex flex-col">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 flex-1">
+              {/* Left Column - Text */}
+              <div className="flex flex-col pl-4 md:pl-8 pr-4 md:pr-8 lg:pr-12">
+                <div className="flex flex-col gap-4 mb-12">
+                  <p className="text-label text-text-primary">About us</p>
+                  <p className="text-base text-text-secondary max-w-md">
+                    Polley IP Law specializes in comprehensive intellectual property protection, guiding inventors and creators through patents, trademarks, and copyrights.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-display text-4xl text-text-primary mb-2">
-                  Daniel Polley
-                </h3>
-                <p className="text-lg text-accent-primary font-medium mb-4">
+
+              {/* Right Column - Large image */}
+              <div className="relative -mr-4 md:-mr-8 lg:mr-0 lg:absolute lg:right-0 lg:top-0 lg:w-1/2 h-[700px] lg:h-[900px]">
+                <div className="relative h-full w-full">
+                  <Image
+                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/XpBU0aa8iF6J3llpZtjaN0hJo-3.jpg"
+                    alt="Professionals reviewing documents"
+                    fill
+                    className="object-cover"
+                  />
+                  {/* Stats overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-6 p-6 bg-gradient-to-t from-black/70 via-black/50 to-transparent">
+                    <div className="flex flex-col">
+                      <p className="text-base font-medium text-white">Years of Experience</p>
+                      <h3 className="text-white text-4xl md:text-5xl">15+</h3>
+                    </div>
+                    <div className="hidden md:block h-12 w-px bg-white/30" />
+                    <div className="flex flex-col">
+                      <p className="text-base font-medium text-white">IP Filings Protected</p>
+                      <h3 className="text-white text-4xl md:text-5xl">500+</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Title positioned above next section */}
+            <div className="pl-4 md:pl-8 pr-4 md:pr-8 lg:pr-12 lg:w-1/2 pb-0">
+              <h2 className="text-text-primary">
+                Our
+                <br />
+                Team
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Daniel Polley - Two Column Layout */}
+      <section className="bg-background-tertiary overflow-hidden">
+        <div className="mx-auto max-w-[1440px] relative pt-[120px] pb-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16 lg:gap-x-24 items-center px-6 md:px-12">
+            {/* Left - Image */}
+            <div ref={danielRef} className="relative w-full aspect-[4/5]">
+              <Image
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/fvb9alQqu0RnQpJt7fyXnVHf4-5.jpg"
+                alt="Daniel Polley - Managing Shareholder"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Right - Text */}
+            <div className="flex flex-col justify-center">
+              <header className="flex justify-between items-center mb-8">
+                <span className="font-body text-base font-medium text-text-primary">01</span>
+                <span className="font-body text-sm font-semibold uppercase tracking-[0.05em] text-text-accent">
                   Managing Shareholder
-                </p>
-                <p className="text-lg text-text-secondary leading-relaxed">
+                </span>
+              </header>
+              <div className="max-w-xl">
+                <h2 className="font-display text-6xl sm:text-7xl lg:text-8xl leading-none text-text-primary mb-6">
+                  Daniel Polley
+                </h2>
+                <p className="font-body text-lg text-text-primary leading-relaxed">
                   Daniel Polley is the Managing Shareholder at Polley IP Law, P.A. With extensive experience in intellectual property law, he specializes in patents, trademarks, and copyrights. Daniel is dedicated to helping clients protect their innovations and creative works with personalized legal strategies.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Miles Polley */}
-            <div className="flex flex-col gap-6">
-              <div className="relative w-full h-[400px] overflow-hidden">
-                <Image
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/Es1kU20wiKwPNdeByqxmWS50F6g-2.jpg"
-                  alt="Miles Polley - Associate"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="font-display text-4xl text-text-primary mb-2">
-                  Miles Polley
-                </h3>
-                <p className="text-lg text-accent-primary font-medium mb-4">
+      {/* Miles Polley - Two Column Layout (Text Left) */}
+      <section className="bg-background-tertiary overflow-hidden">
+        <div className="mx-auto max-w-[1440px] relative pb-[120px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16 lg:gap-x-24 items-center px-6 md:px-12">
+            {/* Left - Text */}
+            <div className="flex flex-col justify-center">
+              <header className="flex justify-between items-center mb-8">
+                <span className="font-body text-base font-medium text-text-primary">02</span>
+                <span className="font-body text-sm font-semibold uppercase tracking-[0.05em] text-text-accent">
                   Associate
-                </p>
-                <p className="text-lg text-text-secondary leading-relaxed">
+                </span>
+              </header>
+              <div className="max-w-xl">
+                <h2 className="font-display text-6xl sm:text-7xl lg:text-8xl leading-none text-text-primary mb-6">
+                  Miles Polley
+                </h2>
+                <p className="font-body text-lg text-text-primary leading-relaxed">
                   Miles Polley is an Associate at Polley IP Law, P.A. He brings a fresh perspective and keen attention to detail to intellectual property matters. Miles works closely with clients to ensure their IP assets are properly protected and strategically managed.
                 </p>
               </div>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="py-24 bg-background-secondary">
-        <div className="container mx-auto px-6 sm:px-8 md:px-12 text-center">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="font-display text-5xl lg:text-6xl text-text-primary mb-6">
-              Inside IP
-            </h2>
-            <p className="text-lg text-text-secondary mb-8">
-              Receive the latest intellectual property updates
-            </p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-3 border border-border-light focus:outline-none focus:ring-2 focus:ring-ring"
-                required
+            {/* Right - Image */}
+            <div ref={milesRef} className="relative w-full aspect-[4/5]">
+              <Image
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/qczjTcTGhNr04QiZO8QMBftMhg-6.jpg"
+                alt="Miles Polley - Associate"
+                fill
+                className="object-cover"
               />
-              <button
-                type="submit"
-                className="px-8 py-3 bg-accent-primary text-text-primary font-medium hover:bg-accent-secondary transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-            <p className="text-sm text-text-secondary mt-4">
-              By signing up for Inside IP, you agree to receive other marketing, advertising, and promotional communication
-            </p>
+            </div>
           </div>
         </div>
       </section>

@@ -2,6 +2,25 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
+import { General_Sans, Newsreader } from 'next/font/google'
+
+const generalSans = General_Sans({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700'],
+  variable: '--font-body',
+  display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial'],
+})
+
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  weight: ['300', '400'],
+  variable: '--font-display',
+  display: 'swap',
+  preload: true,
+  fallback: ['georgia', 'serif'],
+})
 
 export const metadata: Metadata = {
   title: "Polley IP Law | Patent, Trademark & Copyright Attorneys in Florida",
@@ -130,8 +149,9 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${generalSans.variable} ${newsreader.variable}`}>
       <head>
+        <link rel="preconnect" href="https://slelguoygbfzlpylpxfs.supabase.co" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceSchema) }}
@@ -141,7 +161,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className="antialiased">
+      <body className={`${generalSans.className} antialiased`}>
         <ErrorReporter />
         <Script
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"

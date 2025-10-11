@@ -24,7 +24,8 @@ export default function ServicesPage() {
             fill
             className="object-cover"
             priority
-            quality={100}
+            quality={85}
+            sizes="100vw"
           />
         </div>
 
@@ -76,6 +77,9 @@ export default function ServicesPage() {
                 alt="Patents service"
                 fill
                 className="object-cover"
+                loading="lazy"
+                quality={75}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -93,6 +97,9 @@ export default function ServicesPage() {
                 alt="Trademarks service"
                 fill
                 className="object-cover"
+                loading="lazy"
+                quality={75}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
 
@@ -140,6 +147,9 @@ export default function ServicesPage() {
                 alt="Copyrights service"
                 fill
                 className="object-cover"
+                loading="lazy"
+                quality={75}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
