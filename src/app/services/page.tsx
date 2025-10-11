@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowDown } from "lucide-react";
+import Link from "next/link";
+import { ArrowDown, ArrowRight } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import { useInView } from "react-intersection-observer";
@@ -65,9 +66,17 @@ export default function ServicesPage() {
               <h2 className="font-display text-6xl md:text-7xl lg:text-8xl leading-[0.95] mb-8" style={{ color: '#1f3130' }}>
                 Patents
               </h2>
-              <p className="text-lg leading-relaxed text-gray-700 max-w-lg">
+              <p className="text-lg leading-relaxed text-gray-700 max-w-lg mb-8">
                 Navigate the complex world of patents with ease. Our expert guidance supports your ideas from concept to protection, ensuring your innovations are safely secured.
               </p>
+              <Link
+                href="/patents"
+                className="group inline-flex items-center gap-2 text-base font-semibold rounded-full px-6 py-3 transition-all duration-300 self-start"
+                style={{ backgroundColor: '#f8d0b3', color: '#1f3130' }}
+              >
+                Learn More
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
             </div>
 
             {/* Right - Image */}
@@ -113,9 +122,17 @@ export default function ServicesPage() {
               <h2 className="font-display text-6xl md:text-7xl lg:text-8xl leading-[0.95] mb-8" style={{ color: '#1f3130' }}>
                 Trademarks
               </h2>
-              <p className="text-lg leading-relaxed text-gray-700 max-w-lg">
+              <p className="text-lg leading-relaxed text-gray-700 max-w-lg mb-8">
                 Protect your brand with our dedicated team, leading you through the complexities of trademark law. Let us be your trusted partner in safeguarding what matters most to your business.
               </p>
+              <Link
+                href="/trademarks"
+                className="group inline-flex items-center gap-2 text-base font-semibold rounded-full px-6 py-3 transition-all duration-300 self-start"
+                style={{ backgroundColor: '#f8d0b3', color: '#1f3130' }}
+              >
+                Learn More
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
             </div>
           </div>
         </div>
@@ -135,9 +152,17 @@ export default function ServicesPage() {
               <h2 className="font-display text-6xl md:text-7xl lg:text-8xl leading-[0.95] mb-8" style={{ color: '#1f3130' }}>
                 Copyrights
               </h2>
-              <p className="text-lg leading-relaxed text-gray-700 max-w-lg">
+              <p className="text-lg leading-relaxed text-gray-700 max-w-lg mb-8">
                 Discover peace of mind knowing your works are safeguarded by experts who truly care. Our team makes copyright law clear and accessible so you can focus on what you do best: creating.
               </p>
+              <Link
+                href="/copyrights"
+                className="group inline-flex items-center gap-2 text-base font-semibold rounded-full px-6 py-3 transition-all duration-300 self-start"
+                style={{ backgroundColor: '#f8d0b3', color: '#1f3130' }}
+              >
+                Learn More
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
             </div>
 
             {/* Right - Image */}

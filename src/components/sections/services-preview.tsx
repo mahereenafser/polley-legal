@@ -7,17 +7,17 @@ const serviceItems = [
   {
     title: 'Patents',
     description: 'Navigate the complex world of patents with ease. Our expert guidance supports your ideas from concept to protection.',
-    href: '/services#patents',
+    href: '/patents',
   },
   {
     title: 'Trademarks',
     description: 'Protect your brand with our dedicated team, leading you through the complexities of trademark law.',
-    href: '/services#trademarks',
+    href: '/trademarks',
   },
   {
     title: 'Copyrights',
     description: 'Discover peace of mind knowing your works are safeguarded by experts who truly care about your creative output.',
-    href: '/services#copyrights',
+    href: '/copyrights',
   },
 ];
 
