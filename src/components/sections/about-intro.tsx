@@ -25,10 +25,10 @@ const AboutIntro = () => {
             </div>
 
             {/* Right Column - Large image filling right side to edge */}
-            <div className="relative -mr-4 md:-mr-8 lg:mr-0 lg:absolute lg:right-0 lg:top-0 lg:w-1/2 h-[700px] lg:h-[900px]">
-              <div ref={ref} className="relative h-full w-full">
+            <div className="relative -mr-4 md:-mr-8 lg:mr-0 lg:absolute lg:right-0 lg:top-0 lg:w-1/2 h-[700px] lg:h-[900px] p-2">
+              <div ref={ref} className="relative h-full w-full rounded-xl overflow-hidden">
                 <Image
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/XpBU0aa8iF6J3llpZtjaN0hJo-3.jpg"
+                  src="/images/about-us.jpg"
                   alt="Professionals reviewing documents"
                   fill
                   className="object-cover"

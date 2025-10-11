@@ -102,7 +102,7 @@ export default function Navigation() {
         </nav>
 
         <div className="hidden lg:flex">
-            <Button asChild style={{ backgroundColor: "#F4CCBA" }} className="rounded-full px-5 py-3 font-body font-semibold text-base text-text-primary transition-colors hover:bg-[#eabfAc]">
+            <Button asChild variant="outline" className="rounded-full px-5 py-3 font-body font-semibold text-base border-2 border-white text-white bg-transparent hover:bg-white/10 transition-colors uppercase">
                 <a href="https://calendly.com/polleylaw" target="_blank" rel="noopener noreferrer">
                     Free Consultation
                 </a>
