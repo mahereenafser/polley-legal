@@ -1,25 +1,20 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen min-h-[720px] lg:min-h-[800px] text-text-inverse overflow-hidden">
-      <Image
-        src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/Es1kU20wiKwPNdeByqxmWS50F6g-2.jpg"
-        alt="Two professionals in a modern office setting"
-        fill
-        className="object-cover"
-        priority
-        quality={100}
-      />
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(75deg, rgba(30, 52, 50, 0.9) 0%, rgba(30, 52, 50, 0) 60%), linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.15) 100%)",
-        }}
-      />
+    <section className="relative h-screen min-h-[720px] lg:min-h-[800px] text-text-inverse overflow-hidden bg-primary-700">
+      <div className="absolute inset-0 p-6 sm:p-8 md:p-12 lg:p-16">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover rounded-2xl lg:rounded-3xl"
+        >
+          <source src="/videos/hero-video.mp4" type="video/mp4" />
+        </video>
+      </div>
 
       <div className="relative z-10 container mx-auto h-full flex flex-col justify-between pt-32 pb-16 lg:pb-24 px-6 sm:px-8 md:px-12">
         <div className="w-full flex justify-end">
