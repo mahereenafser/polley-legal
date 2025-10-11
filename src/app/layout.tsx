@@ -6,6 +6,29 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Polley IP Law | Patent, Trademark & Copyright Attorneys in Florida",
   description: "Polley IP Law specializes in intellectual property protection. Expert guidance in patents, trademarks, and copyrights. Serving inventors and creators nationwide. Free 30-minute consultation.",
+  metadataBase: new URL('https://www.polleylegal.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: "Polley IP Law | Patent, Trademark & Copyright Attorneys",
+    description: "Expert intellectual property protection for patents, trademarks, and copyrights.",
+    url: 'https://www.polleylegal.com',
+    siteName: 'Polley IP Law',
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -13,8 +36,111 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const legalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Polley IP Law, P.A.",
+    "image": "https://www.polleylegal.com/logo.png",
+    "description": "Full-service intellectual property law firm specializing in patents, trademarks, and copyrights",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tampa",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    "url": "https://www.polleylegal.com",
+    "telephone": "+1-XXX-XXX-XXXX",
+    "priceRange": "$$",
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "United States"
+      }
+    ],
+    "serviceType": [
+      "Patent Law",
+      "Trademark Law",
+      "Copyright Law",
+      "Intellectual Property Law"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Intellectual Property Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Patent Services",
+            "description": "Navigate the complex world of patents with ease. Our expert guidance supports your ideas from concept to protection, ensuring your innovations are safely secured.",
+            "serviceType": "Patent Law"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Trademark Services",
+            "description": "Protect your brand with our dedicated team, leading you through the complexities of trademark law. Let us be your trusted partner in safeguarding what matters most to your business.",
+            "serviceType": "Trademark Law"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Copyright Services",
+            "description": "Discover peace of mind knowing your works are safeguarded by experts who truly care. Our team makes copyright law clear and accessible so you can focus on what you do best: creating.",
+            "serviceType": "Copyright Law"
+          }
+        }
+      ]
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Polley",
+      "jobTitle": "Patent Attorney"
+    },
+    "knowsAbout": [
+      "Patent Law",
+      "Trademark Registration",
+      "Copyright Protection",
+      "Intellectual Property Strategy",
+      "IP Portfolio Management"
+    ],
+    "slogan": "Protecting Your Innovations, Brands, and Creative Works"
+  };
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Polley IP Law, P.A.",
+    "url": "https://www.polleylegal.com",
+    "logo": "https://www.polleylegal.com/logo.png",
+    "sameAs": [
+      "https://www.instagram.com/polleylaw",
+      "https://twitter.com/polleylaw",
+      "https://www.linkedin.com/company/polley-ip-law-pa"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "availableLanguage": "English"
+    }
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body className="antialiased">
         <ErrorReporter />
         <Script
