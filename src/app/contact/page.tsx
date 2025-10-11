@@ -83,8 +83,7 @@ export default function ContactPage() {
                       className="w-full px-5 py-4 rounded text-white placeholder:text-white/40 focus:outline-none focus:ring-2 transition-all"
                       style={{
                         backgroundColor: 'rgba(255, 255, 255, 0.14)',
-                        border: '1px solid rgba(255, 255, 255, 0.2)',
-                        focusRing: 'rgba(255, 255, 255, 0.4)'
+                        border: '1px solid rgba(255, 255, 255, 0.2)'
                       }}
                     />
                   </div>
