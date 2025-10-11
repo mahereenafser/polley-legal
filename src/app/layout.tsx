@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
-import { General_Sans, Newsreader } from 'next/font/google'
+import { Inter, Newsreader } from 'next/font/google'
 
-const generalSans = General_Sans({
+const inter = Inter({
   subsets: ['latin'],
   weight: ['200', '300', '400', '500', '600', '700'],
   variable: '--font-body',
   display: 'swap',
-  preload: true,
   fallback: ['system-ui', 'arial'],
 })
 
@@ -18,7 +17,6 @@ const newsreader = Newsreader({
   weight: ['300', '400'],
   variable: '--font-display',
   display: 'swap',
-  preload: true,
   fallback: ['georgia', 'serif'],
 })
 
@@ -149,7 +147,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${generalSans.variable} ${newsreader.variable}`}>
+    <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
       <head>
         <link rel="preconnect" href="https://slelguoygbfzlpylpxfs.supabase.co" />
         <script
@@ -161,7 +159,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className={`${generalSans.className} antialiased`}>
+      <body className={`${inter.className} antialiased`}>
         <ErrorReporter />
         <Script
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"

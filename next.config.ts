@@ -25,12 +25,6 @@ const nextConfig: NextConfig = {
   },
   // Enable React strict mode for better performance debugging
   reactStrictMode: true,
-  // Optimize builds
-  swcMinify: true,
-  // Enable compression
-  compress: true,
-  // Optimize fonts
-  optimizeFonts: true,
   turbopack: {
     rules: {
       "*.{jsx,tsx}": {
