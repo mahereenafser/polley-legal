@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Trademark Attorney Florida | Federal & State Trademark Registration | Polley IP Law",
@@ -20,5 +21,63 @@ export default function TrademarksLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  const trademarkServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Trademark Law Services",
+    "provider": {
+      "@type": "LegalService",
+      "name": "Polley IP Law, P.A.",
+      "url": "https://www.polleylegal.com"
+    },
+    "name": "Trademark Attorney Services in Florida",
+    "description": "Comprehensive trademark services including federal trademark filing, state registration, trademark searches, logo protection, brand name trademarks, and trademark monitoring. Rush filing available.",
+    "areaServed": {
+      "@type": "State",
+      "name": "Florida"
+    },
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://www.polleylegal.com/trademarks",
+      "servicePhone": "+1-XXX-XXX-XXXX"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Federal Trademark Registration",
+        "description": "File federal trademark applications with the USPTO for nationwide brand protection"
+      },
+      {
+        "@type": "Offer",
+        "name": "State Trademark Registration",
+        "description": "Register trademarks at the state level for localized brand protection"
+      },
+      {
+        "@type": "Offer",
+        "name": "Trademark Clearance Search",
+        "description": "Comprehensive trademark searches to identify potential conflicts before filing"
+      },
+      {
+        "@type": "Offer",
+        "name": "Trademark Monitoring",
+        "description": "Ongoing monitoring services to protect your trademark from infringement"
+      },
+      {
+        "@type": "Offer",
+        "name": "Logo Protection",
+        "description": "Specialized trademark protection for logos and brand designs"
+      }
+    ]
+  };
+
+  return (
+    <>
+      <Script
+        id="trademark-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(trademarkServiceSchema) }}
+      />
+      {children}
+    </>
+  );
 }

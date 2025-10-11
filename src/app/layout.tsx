@@ -21,15 +21,16 @@ const newsreader = Newsreader({
 })
 
 export const metadata: Metadata = {
-  title: "Polley IP Law | Patent, Trademark & Copyright Attorneys in Florida",
-  description: "Polley IP Law specializes in intellectual property protection. Expert guidance in patents, trademarks, and copyrights. Serving inventors and creators nationwide. Free 30-minute consultation.",
+  title: "Best IP Attorney Florida | Intellectual Property Lawyer | Polley IP Law",
+  description: "Florida's top intellectual property attorney. Expert IP lawyer for patents, trademarks, and copyrights. Trusted by 500+ clients. Same-day emergency filing available. Free 30-minute consultation.",
+  keywords: "IP attorney Florida, intellectual property attorney Florida, best IP attorney Florida, IP lawyer Florida, intellectual property lawyer Florida, patent trademark copyright attorney Florida",
   metadataBase: new URL('https://www.polleylegal.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Polley IP Law | Patent, Trademark & Copyright Attorneys",
-    description: "Expert intellectual property protection for patents, trademarks, and copyrights.",
+    title: "Best IP Attorney Florida | Intellectual Property Lawyer | Polley IP Law",
+    description: "Florida's top intellectual property attorney for patents, trademarks, and copyrights. Trusted by 500+ clients.",
     url: 'https://www.polleylegal.com',
     siteName: 'Polley IP Law',
     locale: 'en_US',
@@ -58,7 +59,7 @@ export default function RootLayout({
     "@type": "LegalService",
     "name": "Polley IP Law, P.A.",
     "image": "https://www.polleylegal.com/logo.png",
-    "description": "Full-service intellectual property law firm specializing in patents, trademarks, and copyrights",
+    "description": "Florida's leading intellectual property attorney and IP lawyer specializing in patents, trademarks, and copyrights with emergency filing services",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Tampa",
@@ -125,7 +126,7 @@ export default function RootLayout({
       "Intellectual Property Strategy",
       "IP Portfolio Management"
     ],
-    "slogan": "Protecting Your Innovations, Brands, and Creative Works"
+    "slogan": "Florida's Best IP Attorney - Protecting Your Innovations, Brands, and Creative Works"
   };
 
   const organizationSchema = {

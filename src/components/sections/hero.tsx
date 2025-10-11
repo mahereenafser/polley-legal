@@ -24,7 +24,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto h-full flex flex-col justify-between pt-32 pb-16 lg:pb-24 px-6 sm:px-8 md:px-12">
         <div className="w-full flex justify-end">
           <p className="text-base text-white/90 max-w-[200px] lg:max-w-none lg:w-[440px] text-right">
-            Protecting innovations and securing intellectual property rights in Florida and beyond
+            Florida's trusted IP attorney for protecting innovations and securing intellectual property rights
           </p>
         </div>
 

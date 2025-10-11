@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Patent Attorney Florida | Utility, Design & Provisional Patents | Polley IP Law",
@@ -20,5 +21,58 @@ export default function PatentsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  const patentServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Patent Law Services",
+    "provider": {
+      "@type": "LegalService",
+      "name": "Polley IP Law, P.A.",
+      "url": "https://www.polleylegal.com"
+    },
+    "name": "Patent Attorney Services in Florida",
+    "description": "Comprehensive patent services including utility patents, design patents, provisional patent applications, patent searches, and PCT filing. Emergency same-day filing available.",
+    "areaServed": {
+      "@type": "State",
+      "name": "Florida"
+    },
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://www.polleylegal.com/patents",
+      "servicePhone": "+1-XXX-XXX-XXXX"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Utility Patent Filing",
+        "description": "Protect functional inventions and new processes with utility patent applications"
+      },
+      {
+        "@type": "Offer",
+        "name": "Design Patent Filing",
+        "description": "Secure protection for ornamental designs and product appearances"
+      },
+      {
+        "@type": "Offer",
+        "name": "Provisional Patent Application",
+        "description": "Establish early filing dates with affordable provisional patent applications"
+      },
+      {
+        "@type": "Offer",
+        "name": "Emergency Patent Filing",
+        "description": "Same-day emergency patent filing services available"
+      }
+    ]
+  };
+
+  return (
+    <>
+      <Script
+        id="patent-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(patentServiceSchema) }}
+      />
+      {children}
+    </>
+  );
 }

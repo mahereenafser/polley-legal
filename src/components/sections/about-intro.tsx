@@ -19,7 +19,7 @@ const AboutIntro = () => {
               <div className="flex flex-col gap-4 mb-12">
                 <p className="text-label text-text-primary">About us</p>
                 <p className="text-base text-text-secondary max-w-md">
-                  Polley IP Law specializes in comprehensive intellectual property protection, guiding inventors and creators through patents, trademarks, and copyrights.
+                  As Florida's leading intellectual property attorney, Polley IP Law specializes in comprehensive IP protection, guiding inventors and creators through patents, trademarks, and copyrights with expert legal representation.
                 </p>
               </div>
             </div>
