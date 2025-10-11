@@ -3,18 +3,19 @@ import { ArrowDown, ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen min-h-[720px] lg:min-h-[800px] text-text-inverse overflow-hidden bg-primary-700">
-      <div className="absolute inset-0 p-6 sm:p-8 md:p-12 lg:p-16">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover rounded-2xl lg:rounded-3xl"
-        >
-          <source src="/videos/hero-video.mp4" type="video/mp4" />
-        </video>
-      </div>
+    <section className="relative h-screen min-h-[720px] lg:min-h-[800px] text-text-inverse overflow-hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/hero-video.mp4" type="video/mp4" />
+      </video>
+      <div
+        className="absolute inset-0 bg-black/40"
+      />
 
       <div className="relative z-10 container mx-auto h-full flex flex-col justify-between pt-32 pb-16 lg:pb-24 px-6 sm:px-8 md:px-12">
         <div className="w-full flex justify-end">
