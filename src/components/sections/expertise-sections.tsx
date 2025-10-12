@@ -8,17 +8,22 @@ const ExpertiseSections = () => {
   const containerRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end start"],
+    offset: ["start start", "end end"],
   });
 
   // Transform values for layered sliding effect
-  // Section 2 slides up over section 1
-  const section2Y = useTransform(scrollYProgress, [0, 0.33, 0.66], ["100vh", "0vh", "0vh"]);
-  const section2Scale = useTransform(scrollYProgress, [0, 0.33], [0.8, 1]);
+  // Section 1 (Deep Knowledge) - fades out as section 2 comes in
+  const section1Opacity = useTransform(scrollYProgress, [0, 0.25, 0.33], [1, 1, 0]);
 
-  // Section 3 slides up over section 2
-  const section3Y = useTransform(scrollYProgress, [0.33, 0.66, 1], ["100vh", "100vh", "0vh"]);
-  const section3Scale = useTransform(scrollYProgress, [0.66, 1], [0.8, 1]);
+  // Section 2 slides up over section 1
+  const section2Y = useTransform(scrollYProgress, [0, 0.33], ["100vh", "0vh"]);
+  const section2Scale = useTransform(scrollYProgress, [0, 0.33], [0.8, 1]);
+  const section2Opacity = useTransform(scrollYProgress, [0, 0.1, 0.33, 0.58, 0.66], [0, 0, 1, 1, 0]);
+
+  // Section 3 slides up over section 2 and stays locked
+  const section3Y = useTransform(scrollYProgress, [0.33, 0.66], ["100vh", "0vh"]);
+  const section3Scale = useTransform(scrollYProgress, [0.33, 0.66], [0.8, 1]);
+  const section3Opacity = useTransform(scrollYProgress, [0.33, 0.45, 0.66, 1], [0, 0, 1, 1]);
 
   return (
     <section
@@ -29,7 +34,10 @@ const ExpertiseSections = () => {
       <div className="sticky top-0 h-screen flex items-center justify-center px-6 md:px-12 overflow-hidden">
         <div className="container mx-auto max-w-[1440px] relative h-[700px]">
           {/* Deep Knowledge Expertise - Video Background (Base Layer) */}
-          <div className="absolute inset-0 w-full h-full">
+          <motion.div
+            className="absolute inset-0 w-full h-full z-10"
+            style={{ opacity: section1Opacity }}
+          >
             <div className="relative h-full rounded-3xl overflow-hidden">
               <video
                 autoPlay
@@ -57,14 +65,15 @@ const ExpertiseSections = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Client-Focused Accessibility - Image Background (Layer 2) */}
           <motion.div
-            className="absolute inset-0 w-full h-full"
+            className="absolute inset-0 w-full h-full z-20"
             style={{
               y: section2Y,
               scale: section2Scale,
+              opacity: section2Opacity,
             }}
           >
             <div className="relative h-full rounded-3xl overflow-hidden shadow-2xl">
@@ -95,10 +104,11 @@ const ExpertiseSections = () => {
 
           {/* Proven Success Results - Image Background (Layer 3) */}
           <motion.div
-            className="absolute inset-0 w-full h-full"
+            className="absolute inset-0 w-full h-full z-30"
             style={{
               y: section3Y,
               scale: section3Scale,
+              opacity: section3Opacity,
             }}
           >
             <div className="relative h-full rounded-3xl overflow-hidden shadow-2xl">
