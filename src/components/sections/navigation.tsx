@@ -6,6 +6,7 @@ import { Menu, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 import { Button } from "@/components/ui/button";
+import { HoverButton } from "@/components/ui/hover-button";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -102,11 +103,12 @@ export default function Navigation() {
         </nav>
 
         <div className="hidden lg:flex">
-            <Button asChild variant="outline" className="rounded-full px-5 py-3 font-body font-semibold text-base border-2 border-white text-white bg-transparent hover:bg-white/10 transition-colors uppercase">
-                <a href="https://calendly.com/polleylaw" target="_blank" rel="noopener noreferrer">
-                    Free Consultation
-                </a>
-            </Button>
+            <HoverButton
+              onClick={() => window.open("https://calendly.com/polleylaw", "_blank", "noopener,noreferrer")}
+              className="font-body font-semibold text-white uppercase"
+            >
+              Free Consultation
+            </HoverButton>
         </div>
 
         <div className="lg:hidden">
