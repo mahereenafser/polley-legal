@@ -105,7 +105,7 @@ export default function Navigation() {
         <div className="hidden lg:flex">
             <HoverButton
               onClick={() => window.open("https://calendly.com/polleylaw", "_blank", "noopener,noreferrer")}
-              className="font-body font-semibold text-white uppercase"
+              className="font-body font-normal text-sm text-white uppercase"
             >
               Free Consultation
             </HoverButton>
