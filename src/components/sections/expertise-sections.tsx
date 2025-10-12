@@ -13,16 +13,18 @@ const ExpertiseSections = () => {
             loop
             muted
             playsInline
+            preload="auto"
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source src="/videos/deep-knowledge.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
           {/* Dark overlay for readability */}
           <div className="absolute inset-0 bg-black/50" />
 
           {/* Text content */}
           <div className="relative z-10 h-full flex items-center justify-center px-8 md:px-16">
-            <div className="max-w-4xl">
+            <div className="max-w-4xl text-center">
               <h2 className="font-display text-white text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
                 01 Deep Knowledge Expertise
               </h2>
@@ -41,13 +43,14 @@ const ExpertiseSections = () => {
             fill
             className="object-cover"
             quality={90}
+            priority
           />
           {/* Dark overlay for readability */}
           <div className="absolute inset-0 bg-black/50" />
 
           {/* Text content */}
           <div className="relative z-10 h-full flex items-center justify-center px-8 md:px-16">
-            <div className="max-w-4xl">
+            <div className="max-w-4xl text-center">
               <h2 className="font-display text-white text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
                 02 Client-Focused Accessibility
               </h2>
@@ -66,13 +69,14 @@ const ExpertiseSections = () => {
             fill
             className="object-cover"
             quality={90}
+            priority
           />
           {/* Dark overlay for readability */}
           <div className="absolute inset-0 bg-black/50" />
 
           {/* Text content */}
           <div className="relative z-10 h-full flex items-center justify-center px-8 md:px-16">
-            <div className="max-w-4xl">
+            <div className="max-w-4xl text-center">
               <h2 className="font-display text-white text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
                 03 Proven Success Results
               </h2>
