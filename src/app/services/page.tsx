@@ -96,7 +96,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Trademarks - Two Column Layout (Image Left) */}
-      <section className="overflow-hidden" style={{ backgroundColor: '#e5ebea' }}>
+      <section className="overflow-hidden bg-white">
         <div className="mx-auto max-w-[1200px] py-32 px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left - Image */}

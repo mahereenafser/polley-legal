@@ -10,7 +10,7 @@ const AboutIntro = () => {
   });
 
   return (
-    <section className="bg-[#f5f5f5] overflow-hidden">
+    <section className="bg-white overflow-hidden">
       <div className="mx-auto max-w-[1440px] relative pt-[120px]">
         <div className="relative min-h-[700px] lg:min-h-[900px] flex flex-col">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 flex-1">

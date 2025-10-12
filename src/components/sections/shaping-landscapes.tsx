@@ -2,7 +2,7 @@ import NextImage from "next/image";
 
 export default function ShapingLandscapes() {
   return (
-    <section className="bg-[#F9F7F4] py-24">
+    <section className="bg-white py-24">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col lg:flex-row lg:items-stretch lg:gap-[60px]">
           <div className="flex lg:w-1/2 flex-col justify-between mb-12 lg:mb-0">

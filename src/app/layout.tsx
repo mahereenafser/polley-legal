@@ -6,7 +6,7 @@ import { Inter, Newsreader } from 'next/font/google'
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['200', '300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-body',
   display: 'swap',
   fallback: ['system-ui', 'arial'],
