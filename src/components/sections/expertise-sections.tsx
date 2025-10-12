@@ -7,7 +7,7 @@ const ExpertiseSections = () => {
     <section className="bg-white py-24 px-6 md:px-12">
       <div className="container mx-auto max-w-[1440px] space-y-8">
         {/* Deep Knowledge Expertise - Video Background */}
-        <div className="relative h-[500px] rounded-3xl overflow-hidden">
+        <div className="relative h-[700px] rounded-3xl overflow-hidden">
           <video
             autoPlay
             loop
@@ -36,7 +36,7 @@ const ExpertiseSections = () => {
         </div>
 
         {/* Client-Focused Accessibility - Image Background */}
-        <div className="relative h-[500px] rounded-3xl overflow-hidden">
+        <div className="relative h-[700px] rounded-3xl overflow-hidden">
           <Image
             src="/images/client-focused.jpg"
             alt="Client-focused accessibility"
@@ -62,7 +62,7 @@ const ExpertiseSections = () => {
         </div>
 
         {/* Proven Success Results - Image Background */}
-        <div className="relative h-[500px] rounded-3xl overflow-hidden">
+        <div className="relative h-[700px] rounded-3xl overflow-hidden">
           <Image
             src="/images/proven-success.jpg"
             alt="Proven success results"
