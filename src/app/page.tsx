@@ -6,7 +6,6 @@ import ServicesPreview from "@/components/sections/services-preview";
 import ValuesMarquee from "@/components/sections/values-marquee";
 import TestimonialPrimary from "@/components/sections/testimonial-primary";
 import ClientCentric from "@/components/sections/client-centric";
-import TestimonialSecondary from "@/components/sections/testimonial-secondary";
 import RetentionMarquee from "@/components/sections/retention-marquee";
 import TrustedLeadersSection from "@/components/sections/trusted-leaders";
 import ExploreCards from "@/components/sections/explore-cards";
@@ -25,7 +24,6 @@ export default function Home() {
       <ValuesMarquee />
       <ExpertiseSections />
       <ClientCentric />
-      <TestimonialSecondary />
       <RetentionMarquee />
       <TrustedLeadersSection />
       <ExploreCards />
