@@ -53,15 +53,46 @@ const ExpertiseSections = () => {
               {/* Dark overlay for readability */}
               <div className="absolute inset-0 bg-black/50" />
 
-              {/* Text content */}
-              <div className="relative z-10 h-full flex items-center justify-center px-8 md:px-16">
-                <div className="max-w-4xl text-center">
-                  <h2 className="font-display text-white text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
-                    01 Deep Knowledge Expertise
-                  </h2>
-                  <p className="font-body text-white/90 text-lg md:text-xl leading-relaxed">
-                    Our specialized knowledge in intellectual property law ensures your innovations are protected with precision and care. We stay current with evolving IP regulations.
+              {/* Content container */}
+              <div className="relative z-10 h-full flex flex-col px-8 md:px-16 py-12">
+                {/* Top-left label */}
+                <div className="flex-shrink-0">
+                  <p className="font-body text-white text-base uppercase tracking-wider mb-2">
+                    01 Deep Knowledge
                   </p>
+                  {/* Thin decorative line */}
+                  <div className="w-full h-px bg-white/20" />
+                </div>
+
+                {/* Card on the right side - vertically centered */}
+                <div className="flex-1 flex items-center justify-end">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 max-w-md w-full md:w-auto shadow-2xl">
+                    <h3 className="font-display text-3xl md:text-4xl text-text-primary mb-4">
+                      Expertise
+                    </h3>
+                    <p className="font-body text-base md:text-lg text-text-primary leading-relaxed mb-6">
+                      Our specialized knowledge in intellectual property law ensures your innovations are protected with precision and care. We stay current with evolving IP regulations.
+                    </p>
+                    <a
+                      href="/services"
+                      className="inline-flex items-center gap-2 font-body text-sm font-bold uppercase tracking-wider text-text-primary hover:text-text-accent transition-colors duration-300 group"
+                    >
+                      Learn More
+                      <svg
+                        className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
