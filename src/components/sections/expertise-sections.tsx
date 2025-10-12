@@ -119,15 +119,46 @@ const ExpertiseSections = () => {
               {/* Dark overlay for readability */}
               <div className="absolute inset-0 bg-black/50" />
 
-              {/* Text content */}
-              <div className="relative z-10 h-full flex items-center justify-center px-8 md:px-16">
-                <div className="max-w-4xl text-center">
-                  <h2 className="font-display text-white text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+              {/* Content container */}
+              <div className="relative z-10 h-full flex flex-col px-8 md:px-16 py-12">
+                {/* Top-left label */}
+                <div className="flex-shrink-0">
+                  <p className="font-body text-white text-base uppercase tracking-wider mb-2">
                     02 Client-Focused Accessibility
-                  </h2>
-                  <p className="font-body text-white/90 text-lg md:text-xl leading-relaxed">
-                    We make complex IP law clear and accessible. Our team is dedicated to guiding you through every step, ensuring you understand and own your intellectual property rights.
                   </p>
+                  {/* Thin decorative line */}
+                  <div className="w-full h-px bg-white/20" />
+                </div>
+
+                {/* Card on the right side - vertically centered */}
+                <div className="flex-1 flex items-center justify-end">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 max-w-md w-full md:w-auto shadow-2xl">
+                    <h3 className="font-display text-3xl md:text-4xl text-text-primary mb-4">
+                      Accessibility
+                    </h3>
+                    <p className="font-body text-base md:text-lg text-text-primary leading-relaxed mb-6">
+                      We make complex IP law clear and accessible. Our team is dedicated to guiding you through every step, ensuring you understand and own your intellectual property rights.
+                    </p>
+                    <a
+                      href="/services"
+                      className="inline-flex items-center gap-2 font-body text-sm font-bold uppercase tracking-wider text-text-primary hover:text-text-accent transition-colors duration-300 group"
+                    >
+                      Learn More
+                      <svg
+                        className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -154,15 +185,46 @@ const ExpertiseSections = () => {
               {/* Dark overlay for readability */}
               <div className="absolute inset-0 bg-black/50" />
 
-              {/* Text content */}
-              <div className="relative z-10 h-full flex items-center justify-center px-8 md:px-16">
-                <div className="max-w-4xl text-center">
-                  <h2 className="font-display text-white text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+              {/* Content container */}
+              <div className="relative z-10 h-full flex flex-col px-8 md:px-16 py-12">
+                {/* Top-left label */}
+                <div className="flex-shrink-0">
+                  <p className="font-body text-white text-base uppercase tracking-wider mb-2">
                     03 Proven Success Results
-                  </h2>
-                  <p className="font-body text-white/90 text-lg md:text-xl leading-relaxed">
-                    With over 500 successful IP filings and a 98% client satisfaction rate, we deliver results that protect your creative assets and build lasting value for your business.
                   </p>
+                  {/* Thin decorative line */}
+                  <div className="w-full h-px bg-white/20" />
+                </div>
+
+                {/* Card on the right side - vertically centered */}
+                <div className="flex-1 flex items-center justify-end">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 max-w-md w-full md:w-auto shadow-2xl">
+                    <h3 className="font-display text-3xl md:text-4xl text-text-primary mb-4">
+                      Results
+                    </h3>
+                    <p className="font-body text-base md:text-lg text-text-primary leading-relaxed mb-6">
+                      We deliver results that protect your creative assets and build lasting value for your business. Our services ensure that your intellectual property is well-protected and your brand is safeguarded against infringement.
+                    </p>
+                    <a
+                      href="/services"
+                      className="inline-flex items-center gap-2 font-body text-sm font-bold uppercase tracking-wider text-text-primary hover:text-text-accent transition-colors duration-300 group"
+                    >
+                      Learn More
+                      <svg
+                        className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
