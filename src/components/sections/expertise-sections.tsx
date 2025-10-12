@@ -64,7 +64,7 @@ const ExpertiseSections = () => {
         {/* Proven Success Results - Image Background */}
         <div className="relative h-[700px] rounded-3xl overflow-hidden">
           <Image
-            src="/images/proven-success.jpg"
+            src="/images/signing.jpg"
             alt="Proven success results"
             fill
             className="object-cover"
