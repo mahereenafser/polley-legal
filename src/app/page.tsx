@@ -6,8 +6,6 @@ import ServicesPreview from "@/components/sections/services-preview";
 import ValuesMarquee from "@/components/sections/values-marquee";
 import TestimonialPrimary from "@/components/sections/testimonial-primary";
 import ClientCentric from "@/components/sections/client-centric";
-import RetentionMarquee from "@/components/sections/retention-marquee";
-import TrustedLeadersSection from "@/components/sections/trusted-leaders";
 import ExploreCards from "@/components/sections/explore-cards";
 import ValuesAccordion from "@/components/sections/values-accordion";
 import CtaContact from "@/components/sections/cta-contact";
@@ -24,8 +22,6 @@ export default function Home() {
       <ValuesMarquee />
       <ExpertiseSections />
       <ClientCentric />
-      <RetentionMarquee />
-      <TrustedLeadersSection />
       <ExploreCards />
       <ValuesAccordion />
       <CtaContact />
