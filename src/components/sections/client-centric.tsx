@@ -28,9 +28,24 @@ const ClientCentric = () => {
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent" />
-            <div className="relative z-10 flex flex-col gap-8">
-              <StatItem label="IP Experience" value="15y" />
-              <StatItem label="Client Satisfaction" value="98%" />
+            <div className="relative z-10 flex flex-col gap-6">
+              <div className="flex flex-col gap-3">
+                <h3 className="font-display text-4xl md:text-5xl text-white leading-tight">
+                  Dedicated Legal Support
+                </h3>
+                <p className="font-body text-base font-medium text-[#E8E9E6]">
+                  Comprehensive IP protection across Florida
+                </p>
+              </div>
+              <div className="border-t border-border-dark pt-6"></div>
+              <div className="flex flex-col gap-3">
+                <h3 className="font-display text-4xl md:text-5xl text-white leading-tight">
+                  Strategic Guidance
+                </h3>
+                <p className="font-body text-base font-medium text-[#E8E9E6]">
+                  Expert counsel for your innovations
+                </p>
+              </div>
             </div>
           </div>
 
