@@ -34,29 +34,16 @@ const AboutIntro = () => {
                   className="object-cover"
                 />
                 {/* Animated text overlay at bottom of image */}
-                <div className="absolute bottom-0 left-0 right-0 flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-6 p-6 bg-gradient-to-t from-black/70 via-black/50 to-transparent">
+                <div className="absolute bottom-0 left-0 right-0 flex flex-col items-start gap-4 p-6 bg-gradient-to-t from-black/70 via-black/50 to-transparent">
                   <div
                     className={`flex flex-col transition-all duration-700 ease-out ${
                       inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                     }`}
                     style={{ transitionDelay: '200ms' }}
                   >
-                    <p className="text-base font-medium text-white">
-                      Years of Experience
+                    <p className="text-lg font-medium text-white">
+                      Extensive experience protecting intellectual property across Florida
                     </p>
-                    <h3 className="text-white text-4xl md:text-5xl">15+</h3>
-                  </div>
-                  <div className="hidden md:block h-12 w-px bg-white/30" />
-                  <div
-                    className={`flex flex-col transition-all duration-700 ease-out ${
-                      inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                    }`}
-                    style={{ transitionDelay: '400ms' }}
-                  >
-                    <p className="text-base font-medium text-white">
-                      IP Filings Protected
-                    </p>
-                    <h3 className="text-white text-4xl md:text-5xl">500+</h3>
                   </div>
                 </div>
               </div>

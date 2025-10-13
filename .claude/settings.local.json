@@ -21,7 +21,12 @@
       "WebFetch(domain:www.polleylegal.com)",
       "Bash(mkdir:*)",
       "Bash(git log:*)",
-      "WebFetch(domain:lynford.framer.website)"
+      "WebFetch(domain:lynford.framer.website)",
+      "Bash(dir)",
+      "Bash(where magick)",
+      "Bash(git rm:*)",
+      "Bash(dir node_modules)",
+      "Bash(npx next build:*)"
     ],
     "deny": [],
     "ask": []

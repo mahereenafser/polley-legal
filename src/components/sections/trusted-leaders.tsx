@@ -10,8 +10,7 @@ const logos = [
 
 const StatCard = () => (
   <div className="bg-background-dark text-text-inverse p-8 flex flex-col items-center justify-center text-center w-[280px] h-[210px] flex-shrink-0 mx-6">
-    <h3 className="font-display text-[5rem] leading-none tracking-tighter">95%</h3>
-    <p className="text-sm mt-2 opacity-80 font-body">Client retention rate</p>
+    <p className="text-lg font-body leading-relaxed">Trusted by clients for exceptional IP protection</p>
   </div>
 );
 
@@ -57,7 +56,7 @@ const TrustedLeadersSection = () => {
                 <Star size={20} fill="currentColor" strokeWidth={0} />
                 <Star size={20} fill="currentColor" strokeWidth={0} />
               </div>
-              <p className="text-sm text-text-secondary font-body">4.5/5 from 315+ Reviews</p>
+              <p className="text-sm text-text-secondary font-body">Highly rated by satisfied clients</p>
             </div>
           </div>
           <div className="text-center md:text-left">

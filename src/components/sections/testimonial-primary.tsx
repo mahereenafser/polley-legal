@@ -6,7 +6,7 @@ const TestimonialPrimary = () => {
       <div className="mx-auto max-w-[1200px] px-6 md:px-12">
         <div className="flex flex-col gap-16">
           <p className="text-sm font-semibold uppercase tracking-[0.05em] text-text-primary">
-            500+ IP filings protected
+            Trusted IP Protection
           </p>
           <div className="flex flex-col items-start gap-12 lg:flex-row lg:gap-24">
             <div className="lg:flex-1">

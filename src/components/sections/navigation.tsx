@@ -218,7 +218,7 @@ export default function Navigation() {
         className={cn(
           "fixed top-0 right-0 bottom-0 w-[320px] shadow-2xl transition-all duration-300 lg:hidden z-50",
           mobileMenuOpen ? "translate-x-0" : "translate-x-full",
-          scrolled ? "bg-green-600/95" : "bg-[#1E3432]/95",
+          "bg-[#1E3432]/95",
           "backdrop-blur-xl"
         )}
       >
