@@ -56,6 +56,16 @@ const TestimonialsSlider = () => {
   return (
     <section className="relative w-full py-16 md:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
+        {/* Heading and Body Text */}
+        <div className="max-w-4xl mx-auto mb-12 text-center">
+          <h2 className="font-body text-3xl md:text-4xl text-[#1E3432] mb-4" style={{ fontWeight: 300 }}>
+            Success stories from our clients
+          </h2>
+          <p className="font-body text-base md:text-lg text-gray-600 max-w-2xl mx-auto" style={{ fontWeight: 300 }}>
+            Hear from the innovators and creators we've helped protect their intellectual property and achieve their business goals.
+          </p>
+        </div>
+
         {/* Background Image Container */}
         <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-[32px] overflow-hidden">
           <Image
@@ -82,22 +92,22 @@ const TestimonialsSlider = () => {
                 }`}
               >
                 {/* Quote Icon */}
-                <div className="mb-6">
-                  <div className="w-14 h-14 rounded-full bg-[#1E3432] flex items-center justify-center">
-                    <Quote className="w-7 h-7 text-[#f8d0b3]" />
+                <div className="mb-4">
+                  <div className="w-12 h-12 rounded-full bg-[#1E3432] flex items-center justify-center">
+                    <Quote className="w-6 h-6 text-[#f8d0b3]" />
                   </div>
                 </div>
 
                 {/* Testimonial Text */}
-                <blockquote className="mb-8">
-                  <p className="text-xl md:text-2xl lg:text-3xl text-[#1E3432] leading-relaxed font-light">
+                <blockquote className="mb-6">
+                  <p className="text-base md:text-lg text-[#1E3432] leading-relaxed" style={{ fontWeight: 300 }}>
                     "{testimonials[currentIndex].quote}"
                   </p>
                 </blockquote>
 
                 {/* Author Info */}
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-200">
-                  <div className="relative w-16 h-16 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
+                <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
+                  <div className="relative w-12 h-12 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
                     {testimonials[currentIndex].image ? (
                       <Image
                         src={testimonials[currentIndex].image}
@@ -106,16 +116,16 @@ const TestimonialsSlider = () => {
                         className="object-cover"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-[#1E3432] text-white text-2xl font-display">
+                      <div className="w-full h-full flex items-center justify-center bg-[#1E3432] text-white text-lg font-display">
                         {testimonials[currentIndex].author.charAt(0)}
                       </div>
                     )}
                   </div>
                   <div>
-                    <p className="font-display text-xl text-[#1E3432] font-medium">
+                    <p className="font-body text-base text-[#1E3432]" style={{ fontWeight: 300 }}>
                       {testimonials[currentIndex].author}
                     </p>
-                    <p className="text-sm text-gray-600 mt-1">
+                    <p className="text-sm text-gray-600" style={{ fontWeight: 300 }}>
                       {testimonials[currentIndex].role}
                     </p>
                   </div>
