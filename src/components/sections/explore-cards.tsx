@@ -1,7 +1,21 @@
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
-const cardData = [
+type CardData = {
+  type: 'video';
+  videoUrl: string;
+  title: string;
+  subtitle: string;
+  href: string;
+} | {
+  type: 'image';
+  imageUrl: string;
+  title: string;
+  subtitle: string;
+  href: string;
+};
+
+const cardData: CardData[] = [
   {
     type: 'video',
     videoUrl: "/videos/video-1.mp4",
@@ -51,7 +65,7 @@ const ExploreCards = () => {
                       playsInline
                       className="w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"
                     />
-                  ) : (
+                  ) : card.type === 'image' ? (
                     <Image
                       src={card.imageUrl}
                       alt={card.title}
@@ -59,7 +73,7 @@ const ExploreCards = () => {
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"
                     />
-                  )}
+                  ) : null}
                 </div>
                 <div className="p-6 flex flex-col gap-2">
                   <div className="flex justify-between items-start">
