@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import Image from "next/image";
 
 const TestimonialPrimary = () => {
   return (
@@ -14,19 +15,29 @@ const TestimonialPrimary = () => {
 
           {/* Testimonial Text */}
           <blockquote className="text-center md:text-left">
-            <p className="font-display text-3xl md:text-4xl lg:text-5xl text-[#1E3432] leading-tight mb-8 font-light">
+            <p className="font-display text-2xl md:text-3xl lg:text-4xl text-[#1E3432] leading-tight mb-8 font-light">
               "Polley IP Law secured our trademark portfolio across multiple jurisdictions. Their attention to detail and strategic guidance gave us the confidence to expand globally."
             </p>
           </blockquote>
 
-          {/* Author Info */}
-          <div className="flex flex-col items-center md:items-start gap-3 pt-6 border-t border-gray-200">
-            <p className="font-display text-2xl text-[#1E3432]">
-              Miles Polley
-            </p>
-            <p className="text-base font-medium text-gray-500 uppercase tracking-widest">
-              Associate
-            </p>
+          {/* Author Info with Image */}
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 pt-6 border-t border-gray-200">
+            <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+              <Image
+                src="/images/Miles-polley.webp"
+                alt="Miles Polley"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="flex flex-col items-center md:items-start gap-2">
+              <p className="font-display text-2xl text-[#1E3432]">
+                Miles Polley
+              </p>
+              <p className="text-base font-medium text-gray-500 uppercase tracking-widest">
+                Associate
+              </p>
+            </div>
           </div>
         </div>
       </div>

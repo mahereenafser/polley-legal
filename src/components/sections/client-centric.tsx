@@ -59,7 +59,7 @@ const ClientCentric = () => {
                 <br />
                 Creators
               </h2>
-              <p className="max-w-[530px] font-body text-2xl leading-normal text-text-primary">
+              <p className="max-w-[530px] font-body text-base leading-relaxed text-text-primary">
                 We help inventors, entrepreneurs, and creators secure their intellectual property rights with expert guidance through every step of the process.
               </p>
               <Link
