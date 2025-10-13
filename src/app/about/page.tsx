@@ -140,7 +140,7 @@ export default function AboutPage() {
             {/* Left - Image */}
             <div ref={danielRef} className="relative w-full aspect-[4/5]">
               <Image
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/fvb9alQqu0RnQpJt7fyXnVHf4-5.jpg"
+                src="/images/daniel-polley.webp"
                 alt="Daniel Polley - Managing Shareholder"
                 fill
                 className="object-cover"
@@ -193,7 +193,7 @@ export default function AboutPage() {
             {/* Right - Image */}
             <div ref={milesRef} className="relative w-full aspect-[4/5]">
               <Image
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/qczjTcTGhNr04QiZO8QMBftMhg-6.jpg"
+                src="/images/miles-polley.webp"
                 alt="Miles Polley - Associate"
                 fill
                 className="object-cover"
