@@ -5,14 +5,14 @@ const cardData = [
   {
     imageUrl: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/6nfxOdF8b7eTn66NVNvEqRUeFxM-10.webp",
     title: "Services",
-    subtitle: "Comprehensive legal solutions",
-    href: "https://lynford.framer.website/services-landing-1",
+    subtitle: "Comprehensive IP solutions",
+    href: "/services",
   },
   {
     imageUrl: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/qOaIdbeCmsxTXr2UUj7TRajLFU-11.jpg",
     title: "About",
     subtitle: "Our story and values",
-    href: "https://lynford.framer.website/about",
+    href: "/about",
   },
 ];
 
@@ -28,7 +28,7 @@ const ExploreCards = () => {
               </p>
             </div>
             <p className="font-body text-2xl leading-9 text-foreground max-w-lg">
-              Discover how Lynford can support your legal needs and help you achieve your goals.
+              Protecting your innovations with integrity, forward-thinking strategies, and unwavering commitment to excellence.
             </p>
           </div>
 
