@@ -67,7 +67,7 @@ const TestimonialsSlider = () => {
         </div>
 
         {/* Background Image Container */}
-        <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-[32px] overflow-hidden">
+        <div className="relative w-full h-[600px] md:h-[600px] lg:h-[700px] rounded-[32px] overflow-hidden">
           <Image
             src="/images/testimonials-bg.jpg"
             alt="Testimonials background"
