@@ -19,12 +19,20 @@ const MarqueeContent = () => {
 
 const ValuesMarquee = () => {
   return (
-    <section className="bg-[#EAEBE5] w-full py-12 lg:h-[200px] flex items-center overflow-hidden">
-      <div className="flex animate-[marquee_40s_linear_infinite]">
-        <MarqueeContent />
-        <MarqueeContent />
-      </div>
-    </section>
+    <>
+      <style>{`
+        @keyframes marquee {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+      `}</style>
+      <section className="bg-[#EAEBE5] w-full py-12 lg:h-[200px] flex items-center overflow-hidden">
+        <div className="flex animate-[marquee_20s_linear_infinite] motion-reduce:animate-none">
+          <MarqueeContent />
+          <MarqueeContent />
+        </div>
+      </section>
+    </>
   );
 };
 
