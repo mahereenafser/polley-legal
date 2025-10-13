@@ -89,7 +89,7 @@ const ServicesPreview = () => {
             />
             <div className="max-w-md">
               <p className="font-body text-base leading-[1.5]">
-                "Polley IP Law made the patent process seamless. Their expertise helped us secure protection for our core technology quickly and effectively."
+                "At Polley IP Law, we're committed to delivering exceptional IP protection through personalized service and strategic insight. Our mission is to empower innovators and creators with the legal tools they need to succeed."
               </p>
               <div className="mt-4">
                 <p className="font-body text-base font-semibold leading-[1.4] text-text-primary">Daniel Polley</p>

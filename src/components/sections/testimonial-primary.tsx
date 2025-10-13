@@ -16,7 +16,7 @@ const TestimonialPrimary = () => {
           {/* Testimonial Text */}
           <blockquote className="text-center md:text-left">
             <p className="font-display text-2xl md:text-3xl lg:text-4xl text-[#1E3432] leading-tight mb-8 font-light">
-              "Polley IP Law secured our trademark portfolio across multiple jurisdictions. Their attention to detail and strategic guidance gave us the confidence to expand globally."
+              "Working at Polley IP Law means being part of a team that values precision, innovation, and client success. Every day, we help protect the ideas that shape the future."
             </p>
           </blockquote>
 
