@@ -34,15 +34,32 @@ const AboutIntro = () => {
                   className="object-cover"
                 />
                 {/* Animated text overlay at bottom of image */}
-                <div className="absolute bottom-0 left-0 right-0 flex flex-col items-start gap-4 p-6 bg-gradient-to-t from-black/70 via-black/50 to-transparent">
+                <div className="absolute bottom-0 left-0 right-0 flex flex-col md:flex-row items-start md:items-end gap-4 md:gap-6 p-6 bg-gradient-to-t from-black/70 via-black/50 to-transparent">
                   <div
                     className={`flex flex-col transition-all duration-700 ease-out ${
                       inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                     }`}
                     style={{ transitionDelay: '200ms' }}
                   >
-                    <p className="text-lg font-medium text-white">
-                      Extensive experience protecting intellectual property across Florida
+                    <h3 className="text-white text-3xl md:text-4xl font-display leading-tight mb-2">
+                      Comprehensive IP Protection
+                    </h3>
+                    <p className="text-base font-medium text-white/90">
+                      Trusted legal expertise across Florida
+                    </p>
+                  </div>
+                  <div className="hidden md:block h-12 w-px bg-white/30" />
+                  <div
+                    className={`flex flex-col transition-all duration-700 ease-out ${
+                      inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                    }`}
+                    style={{ transitionDelay: '400ms' }}
+                  >
+                    <h3 className="text-white text-3xl md:text-4xl font-display leading-tight mb-2">
+                      Client-Focused Service
+                    </h3>
+                    <p className="text-base font-medium text-white/90">
+                      Personalized strategies for your innovations
                     </p>
                   </div>
                 </div>
