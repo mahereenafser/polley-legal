@@ -3,12 +3,14 @@ import { ArrowRight } from 'lucide-react';
 
 const cardData = [
   {
-    imageUrl: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/6nfxOdF8b7eTn66NVNvEqRUeFxM-10.webp",
+    type: 'video',
+    videoUrl: "/videos/video-1.mp4",
     title: "Services",
     subtitle: "Comprehensive IP solutions",
     href: "/services",
   },
   {
+    type: 'image',
     imageUrl: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/qOaIdbeCmsxTXr2UUj7TRajLFU-11.jpg",
     title: "About",
     subtitle: "Our story and values",
@@ -34,19 +36,30 @@ const ExploreCards = () => {
 
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
             {cardData.map((card) => (
-              <a 
-                key={card.title} 
-                href={card.href} 
+              <a
+                key={card.title}
+                href={card.href}
                 className="group block bg-card rounded-xl shadow-[0px_4px_10px_0px_rgba(0,0,0,0.05)] overflow-hidden transition-transform duration-300 ease-in-out will-change-transform hover:-translate-y-1"
               >
                 <div className="overflow-hidden relative aspect-[3/2]">
-                  <Image
-                    src={card.imageUrl}
-                    alt={card.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"
-                  />
+                  {card.type === 'video' ? (
+                    <video
+                      src={card.videoUrl}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"
+                    />
+                  ) : (
+                    <Image
+                      src={card.imageUrl}
+                      alt={card.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"
+                    />
+                  )}
                 </div>
                 <div className="p-6 flex flex-col gap-2">
                   <div className="flex justify-between items-start">
