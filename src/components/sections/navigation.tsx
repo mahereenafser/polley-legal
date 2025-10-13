@@ -42,7 +42,7 @@ export default function Navigation() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-2 px-6",
           scrolled ? "bg-[#1E3432]/95 backdrop-blur-md shadow-lg" : "bg-transparent"
         )}
       >
@@ -51,7 +51,7 @@ export default function Navigation() {
           <nav className="hidden lg:flex items-center gap-x-6">
             <Link
               href="/"
-              className="font-body text-[16px] font-normal text-white transition-opacity hover:opacity-75 uppercase"
+              className="font-body text-[15px] font-normal text-white transition-opacity hover:opacity-75 uppercase"
             >
               Home
             </Link>
@@ -63,7 +63,7 @@ export default function Navigation() {
               onMouseLeave={() => setServicesOpen(false)}
             >
               <button
-                className="font-body text-[16px] font-normal text-white transition-opacity hover:opacity-75 flex items-center gap-1 uppercase"
+                className="font-body text-[15px] font-normal text-white transition-opacity hover:opacity-75 flex items-center gap-1 uppercase"
               >
                 Services
                 <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", servicesOpen && "rotate-180")} />
@@ -80,26 +80,26 @@ export default function Navigation() {
                 <div className="py-2">
                   <Link
                     href="/patents"
-                    className="block px-4 py-3 font-body text-[16px] font-normal text-white hover:bg-white/10 transition-colors uppercase"
+                    className="block px-4 py-3 font-body text-[15px] font-normal text-white hover:bg-white/10 transition-colors uppercase"
                   >
                     Patents
                   </Link>
                   <Link
                     href="/trademarks"
-                    className="block px-4 py-3 font-body text-[16px] font-normal text-white hover:bg-white/10 transition-colors uppercase"
+                    className="block px-4 py-3 font-body text-[15px] font-normal text-white hover:bg-white/10 transition-colors uppercase"
                   >
                     Trademarks
                   </Link>
                   <Link
                     href="/copyrights"
-                    className="block px-4 py-3 font-body text-[16px] font-normal text-white hover:bg-white/10 transition-colors uppercase"
+                    className="block px-4 py-3 font-body text-[15px] font-normal text-white hover:bg-white/10 transition-colors uppercase"
                   >
                     Copyrights
                   </Link>
                   <div className="border-t border-white/10 my-2"></div>
                   <Link
                     href="/services"
-                    className="block px-4 py-3 font-body text-[16px] font-normal text-white hover:bg-white/10 transition-colors uppercase"
+                    className="block px-4 py-3 font-body text-[15px] font-normal text-white hover:bg-white/10 transition-colors uppercase"
                   >
                     View All Services
                   </Link>
@@ -109,13 +109,13 @@ export default function Navigation() {
 
             <Link
               href="/about"
-              className="font-body text-[16px] font-normal text-white transition-opacity hover:opacity-75 uppercase"
+              className="font-body text-[15px] font-normal text-white transition-opacity hover:opacity-75 uppercase"
             >
               About Us
             </Link>
             <Link
               href="/contact"
-              className="font-body text-[16px] font-normal text-white transition-opacity hover:opacity-75 uppercase"
+              className="font-body text-[15px] font-normal text-white transition-opacity hover:opacity-75 uppercase"
             >
               Contact
             </Link>
@@ -141,7 +141,7 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center gap-4">
             <HoverButton
               onClick={() => window.open("https://calendly.com/polleylaw", "_blank", "noopener,noreferrer")}
-              className="font-body font-normal text-[16px] text-white uppercase"
+              className="font-body font-normal text-[15px] text-white uppercase"
             >
               Free Consultation
             </HoverButton>
@@ -245,7 +245,7 @@ export default function Navigation() {
           <nav className="flex flex-col px-6 pb-6 gap-2">
             <Link
               href="/"
-              className="font-body text-[16px] font-normal text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors uppercase"
+              className="font-body text-[15px] font-normal text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors uppercase"
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
@@ -254,7 +254,7 @@ export default function Navigation() {
             {/* Services Accordion */}
             <div className="flex flex-col">
               <button
-                className="font-body text-[16px] font-normal text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-between uppercase"
+                className="font-body text-[15px] font-normal text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-between uppercase"
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
               >
                 Services
@@ -269,21 +269,21 @@ export default function Navigation() {
               >
                 <Link
                   href="/patents"
-                  className="font-body text-[16px] font-normal text-white/90 py-2 px-8 hover:bg-white/10 transition-colors uppercase"
+                  className="font-body text-[15px] font-normal text-white/90 py-2 px-8 hover:bg-white/10 transition-colors uppercase"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Patents
                 </Link>
                 <Link
                   href="/trademarks"
-                  className="font-body text-[16px] font-normal text-white/90 py-2 px-8 hover:bg-white/10 transition-colors uppercase"
+                  className="font-body text-[15px] font-normal text-white/90 py-2 px-8 hover:bg-white/10 transition-colors uppercase"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Trademarks
                 </Link>
                 <Link
                   href="/copyrights"
-                  className="font-body text-[16px] font-normal text-white/90 py-2 px-8 hover:bg-white/10 transition-colors uppercase"
+                  className="font-body text-[15px] font-normal text-white/90 py-2 px-8 hover:bg-white/10 transition-colors uppercase"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Copyrights
@@ -291,7 +291,7 @@ export default function Navigation() {
                 <div className="border-t border-white/10 my-2 mx-4"></div>
                 <Link
                   href="/services"
-                  className="font-body text-[16px] font-normal text-white/90 py-2 px-8 hover:bg-white/10 transition-colors uppercase"
+                  className="font-body text-[15px] font-normal text-white/90 py-2 px-8 hover:bg-white/10 transition-colors uppercase"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   View All Services
@@ -301,7 +301,7 @@ export default function Navigation() {
 
             <Link
               href="/about"
-              className="font-body text-[16px] font-normal text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors uppercase"
+              className="font-body text-[15px] font-normal text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors uppercase"
               onClick={() => setMobileMenuOpen(false)}
             >
               About Us
@@ -309,7 +309,7 @@ export default function Navigation() {
 
             <Link
               href="/contact"
-              className="font-body text-[16px] font-normal text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors uppercase"
+              className="font-body text-[15px] font-normal text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors uppercase"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact
@@ -322,7 +322,7 @@ export default function Navigation() {
                   window.open("https://calendly.com/polleylaw", "_blank", "noopener,noreferrer");
                   setMobileMenuOpen(false);
                 }}
-                className="w-full font-body font-normal text-[16px] text-white uppercase"
+                className="w-full font-body font-normal text-[15px] text-white uppercase"
               >
                 Free Consultation
               </HoverButton>
