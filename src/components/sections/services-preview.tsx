@@ -45,10 +45,10 @@ const featuredServices = [
 const ServicesPreview = () => {
   return (
     <section className="bg-white text-text-primary pt-[120px] pb-32 min-h-[800px]">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-8">
+      <div className="max-w-[1440px] mx-auto">
         <header className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-48 pb-24">
-          {/* Left Column - pushed to extreme left */}
-          <div className="flex flex-col gap-8">
+          {/* Left Column - aligned with previous section */}
+          <div className="flex flex-col gap-8 pl-4 md:pl-8 pr-4 md:pr-8 lg:pr-12">
             <div className="flex flex-col gap-3">
               <p className="text-sm text-text-secondary tracking-[0.1em] uppercase">Services</p>
               <p className="text-base text-text-primary leading-relaxed max-w-md">
@@ -56,40 +56,37 @@ const ServicesPreview = () => {
               </p>
             </div>
 
-            {/* Floating Cards */}
-            <div className="flex flex-col gap-4 -mx-4 md:mx-0">
-              {featuredServices.map((service, index) => (
-                <Link
-                  key={index}
-                  href={service.href}
-                  className="group block bg-[#1E3432] text-white p-4 sm:p-6 rounded-none md:rounded-lg transition-all duration-300 hover:shadow-2xl animate-float"
-                  style={{
-                    animationDelay: `${index * 0.2}s`,
-                  }}
-                >
-                  <div className="flex justify-between items-start gap-3 sm:gap-4">
-                    <div className="flex-1">
-                      <h4 className="font-display text-lg sm:text-xl font-normal mb-1">{service.title}</h4>
-                      <p className="text-xs sm:text-sm text-white/80 mb-2 sm:mb-3">{service.subtitle}</p>
-                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                        {service.keywords.map((keyword, idx) => (
-                          <span
-                            key={idx}
-                            className="text-[10px] sm:text-xs px-2 py-1 bg-white/10 rounded-full text-white/90"
-                          >
-                            {keyword}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white/80 transition-transform duration-300 group-hover:translate-x-1 flex-shrink-0" />
+            {/* Single Featured Card */}
+            <Link
+              href="/patents"
+              className="group block bg-gradient-to-br from-[#1E3432] to-[#2D4745] text-white p-8 rounded-xl transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] animate-float relative overflow-hidden"
+            >
+              {/* Subtle texture overlay */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.1),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="relative z-10">
+                <div className="flex justify-between items-start gap-4 mb-4">
+                  <div className="flex-1">
+                    <h4 className="font-display text-2xl md:text-3xl font-normal mb-2 text-white">Patent Protection Services</h4>
+                    <p className="text-sm text-white/80 mb-4">Expert guidance from provisional applications to PCT filing</p>
                   </div>
-                </Link>
-              ))}
-            </div>
+                  <ArrowRight className="w-6 h-6 text-white/80 transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110 flex-shrink-0 mt-1" />
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-xs px-3 py-1.5 bg-white/15 backdrop-blur-sm rounded-full text-white border border-white/20">Software Patents</span>
+                  <span className="text-xs px-3 py-1.5 bg-white/15 backdrop-blur-sm rounded-full text-white border border-white/20">Biotech & Medical</span>
+                  <span className="text-xs px-3 py-1.5 bg-white/15 backdrop-blur-sm rounded-full text-white border border-white/20">AI & Blockchain</span>
+                </div>
+
+                <div className="text-xs text-white/60 font-medium uppercase tracking-wider">
+                  Click to explore all patent services →
+                </div>
+              </div>
+            </Link>
           </div>
           {/* Right Column - pushed to extreme right */}
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-16 pr-4 md:pr-8">
             {serviceItems.map((item, index) => (
               <Link
                 key={index}
@@ -133,7 +130,7 @@ const ServicesPreview = () => {
           ))}
         </div>
         
-        <footer className="flex flex-col items-start mt-16 gap-8">
+        <footer className="flex flex-col items-start mt-16 gap-8 px-4 md:px-8">
           <div className="flex flex-col sm:flex-row items-start gap-6">
             <Image
               src="/images/Daniel+S.+Polley+Website+Photo.webp"
