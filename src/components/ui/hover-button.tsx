@@ -13,7 +13,7 @@ const HoverButton = React.forwardRef<HTMLButtonElement, HoverButtonProps>(
       <button
         ref={ref}
         className={cn(
-          "relative px-8 py-3 rounded-full",
+          "relative px-5 py-2 rounded-full",
           "border-2 border-white",
           "bg-transparent",
           "cursor-pointer",

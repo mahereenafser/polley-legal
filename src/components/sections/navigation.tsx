@@ -141,7 +141,7 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center gap-4">
             <HoverButton
               onClick={() => window.open("https://calendly.com/polleylaw", "_blank", "noopener,noreferrer")}
-              className="font-body font-normal text-[15px] text-white uppercase"
+              className="font-body font-normal text-[13px] text-white uppercase"
             >
               Free Consultation
             </HoverButton>
@@ -322,7 +322,7 @@ export default function Navigation() {
                   window.open("https://calendly.com/polleylaw", "_blank", "noopener,noreferrer");
                   setMobileMenuOpen(false);
                 }}
-                className="w-full font-body font-normal text-[15px] text-white uppercase"
+                className="w-full font-body font-normal text-[13px] text-white uppercase"
               >
                 Free Consultation
               </HoverButton>
