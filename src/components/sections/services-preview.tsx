@@ -100,7 +100,7 @@ const ServicesPreview = () => {
             </div>
           </div>
           {/* Right Column - pushed to extreme right */}
-          <div className="flex flex-col gap-16 pl-4 md:pl-0 pr-4 md:pr-8 mt-10 md:mt-0">
+          <div className="flex flex-col pl-4 md:pl-0 pr-4 md:pr-8 mt-[100px] md:mt-0 space-y-[100px] md:space-y-16">
             {serviceItems.map((item, index) => (
               <Link
                 key={index}
@@ -170,7 +170,7 @@ const ServicesPreview = () => {
             {/* Right Column - Miles Polley */}
             <div className="flex flex-col sm:flex-row items-start gap-6">
               <Image
-                src="/images/miles-polley.webp"
+                src="/images/Miles-polley.webp"
                 alt="Miles Polley"
                 width={80}
                 height={80}
@@ -189,10 +189,10 @@ const ServicesPreview = () => {
           </div>
 
           <Link
-            href="/services"
+            href="/about"
             className="group inline-flex items-center justify-center gap-2 text-button bg-primary text-primary-foreground px-8 py-4 rounded-full transition-colors hover:bg-accent-secondary whitespace-nowrap self-center"
           >
-            View All Services
+            Read More
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </footer>

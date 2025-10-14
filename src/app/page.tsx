@@ -4,7 +4,6 @@ import AboutIntro from "@/components/sections/about-intro";
 import ExpertiseSections from "@/components/sections/expertise-sections";
 import ServicesPreview from "@/components/sections/services-preview";
 import ValuesMarquee from "@/components/sections/values-marquee";
-import TestimonialPrimary from "@/components/sections/testimonial-primary";
 import ClientCentric from "@/components/sections/client-centric";
 import ExploreCards from "@/components/sections/explore-cards";
 import TestimonialsSlider from "@/components/sections/testimonials-slider";
@@ -19,7 +18,6 @@ export default function Home() {
       <HeroSection />
       <AboutIntro />
       <ServicesPreview />
-      <TestimonialPrimary />
       <ValuesMarquee />
       <ExpertiseSections />
       <ClientCentric />
