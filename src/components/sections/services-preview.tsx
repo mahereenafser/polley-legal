@@ -72,7 +72,7 @@ const ServicesPreview = () => {
               {/* Floating Card - Positioned to overlap image (tape effect) */}
               <Link
                 href="/patents"
-                className="group absolute left-0 top-[60%] md:top-[65%] w-[85%] sm:w-[75%] md:w-[80%] lg:w-[85%] bg-gradient-to-br from-[#1E3432] to-[#2D4745] text-white p-4 sm:p-6 md:p-8 rounded-r-xl transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] animate-float overflow-hidden"
+                className="group absolute left-0 top-[calc(60%+60px)] md:top-[calc(65%+70px)] w-[85%] sm:w-[75%] md:w-[80%] lg:w-[85%] bg-gradient-to-br from-[#1E3432] to-[#2D4745] text-white p-4 sm:p-6 md:p-8 rounded-r-xl transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] animate-float overflow-hidden"
               >
                 {/* Subtle texture overlay */}
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.1),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
