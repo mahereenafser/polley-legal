@@ -26,7 +26,7 @@ const HeroSection = () => {
 
         <div className="flex flex-col lg:flex-row justify-between items-end gap-8">
           <div className="flex-1 w-full lg:pl-0">
-            <h1 className="font-display text-white text-[60px] sm:text-[80px] lg:text-[100px] leading-[0.9] -tracking-[0.02em]">
+            <h1 className="text-white text-[60px] sm:text-[80px] lg:text-[100px] leading-[0.9] -tracking-[0.02em]" style={{ fontFamily: "'LTC Caslon Pro', serif", fontWeight: 400 }}>
               Own What
               <br />
               You
