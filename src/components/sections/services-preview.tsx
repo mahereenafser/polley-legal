@@ -100,7 +100,7 @@ const ServicesPreview = () => {
             </div>
           </div>
           {/* Right Column - pushed to extreme right */}
-          <div className="flex flex-col gap-16 pl-4 md:pl-0 pr-4 md:pr-8 mt-[250px] md:mt-0">
+          <div className="flex flex-col gap-16 pl-4 md:pl-0 pr-4 md:pr-8 mt-10 md:mt-0">
             {serviceItems.map((item, index) => (
               <Link
                 key={index}
@@ -145,21 +145,45 @@ const ServicesPreview = () => {
         </div>
         
         <footer className="flex flex-col items-start mt-16 gap-8 px-4 md:px-8">
-          <div className="flex flex-col sm:flex-row items-start gap-6">
-            <Image
-              src="/images/Daniel+S.+Polley+Website+Photo.webp"
-              alt="Daniel Polley"
-              width={80}
-              height={80}
-              className="flex-shrink-0 object-cover"
-            />
-            <div className="max-w-md">
-              <p className="font-body text-sm sm:text-base leading-[1.5]">
-                "At Polley IP Law, we're committed to delivering exceptional IP protection through personalized service and strategic insight. Our mission is to empower innovators and creators with the legal tools they need to succeed."
-              </p>
-              <div className="mt-4">
-                <p className="font-body text-sm sm:text-base font-semibold leading-[1.4] text-text-primary">Daniel Polley</p>
-                <p className="font-body text-sm sm:text-base leading-[1.4] text-text-secondary">Managing Shareholder</p>
+          {/* Two-column layout for team members */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 w-full">
+            {/* Left Column - Daniel Polley */}
+            <div className="flex flex-col sm:flex-row items-start gap-6">
+              <Image
+                src="/images/Daniel+S.+Polley+Website+Photo.webp"
+                alt="Daniel Polley"
+                width={80}
+                height={80}
+                className="flex-shrink-0 object-cover"
+              />
+              <div className="max-w-md">
+                <p className="font-body text-sm sm:text-base leading-[1.5]">
+                  "At Polley IP Law, we're committed to delivering exceptional IP protection through personalized service and strategic insight. Our mission is to empower innovators and creators with the legal tools they need to succeed."
+                </p>
+                <div className="mt-4">
+                  <p className="font-body text-sm sm:text-base font-semibold leading-[1.4] text-text-primary">Daniel Polley</p>
+                  <p className="font-body text-sm sm:text-base leading-[1.4] text-text-secondary">Managing Shareholder</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Miles Polley */}
+            <div className="flex flex-col sm:flex-row items-start gap-6">
+              <Image
+                src="/images/miles-polley.webp"
+                alt="Miles Polley"
+                width={80}
+                height={80}
+                className="flex-shrink-0 object-cover"
+              />
+              <div className="max-w-md">
+                <p className="font-body text-sm sm:text-base leading-[1.5]">
+                  "Working at Polley IP Law means being part of a team that values precision, innovation, and client success. Every day, we help protect the ideas that shape the future."
+                </p>
+                <div className="mt-4">
+                  <p className="font-body text-sm sm:text-base font-semibold leading-[1.4] text-text-primary">Miles Polley</p>
+                  <p className="font-body text-sm sm:text-base leading-[1.4] text-text-secondary">Associate</p>
+                </div>
               </div>
             </div>
           </div>
