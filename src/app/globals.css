@@ -76,6 +76,16 @@
       height: 0;
     }
   }
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  --animate-float: float 3s ease-in-out infinite;
 }
 
 @layer base {
@@ -252,4 +262,9 @@
 /* Hide Next.js error overlay portal */
 nextjs-portal {
   display: none !important;
+}
+
+/* Floating animation utility */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
