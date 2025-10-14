@@ -6,18 +6,21 @@ import { ArrowRight } from 'lucide-react';
 const serviceItems = [
   {
     title: 'Patents',
-    description: 'Navigate the complex world of patents with ease. Our expert guidance supports your ideas from concept to protection.',
+    description: 'Expert patent services including provisional patent applications, expedited filing, patent searches, PCT applications, and office action responses. Specializing in software, mobile app, AI, blockchain, biotech, medical device, pharmaceutical, and product design patents.',
     href: '/patents',
+    keywords: ['provisional patent application', 'patent search', 'expedited filing', 'software patent', 'biotech patent', 'medical device patent']
   },
   {
     title: 'Trademarks',
-    description: 'Protect your brand with our dedicated team, leading you through the complexities of trademark law.',
+    description: 'Comprehensive trademark protection with international registration, infringement defense, opposition services, and cease and desist representation. Serving fashion, food & beverage, cosmetics, cannabis, NFT, CBD, and esports industries.',
     href: '/trademarks',
+    keywords: ['trademark infringement', 'international trademark', 'trademark opposition', 'fashion trademark', 'cannabis IP', 'NFT trademark']
   },
   {
     title: 'Copyrights',
-    description: 'Discover peace of mind knowing your works are safeguarded by experts who truly care about your creative output.',
+    description: 'Strategic copyright protection for creative works, digital content, and original expressions. Safeguarding your artistic, literary, and digital innovations with expert legal guidance and comprehensive registration services.',
     href: '/copyrights',
+    keywords: ['copyright protection', 'creative works', 'digital content']
   },
 ];
 
@@ -43,11 +46,11 @@ const ServicesPreview = () => {
               >
                 <div className="flex justify-between items-start gap-4">
                   <div className="flex flex-col gap-3 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
-                    <h3 className="font-display text-[54px] leading-[1.1] font-normal">{item.title}</h3>
-                    <p className="text-sm leading-relaxed text-text-secondary">{item.description}</p>
+                    <h3 className="font-display text-[36px] sm:text-[42px] md:text-[48px] lg:text-[54px] leading-[1.1] font-normal">{item.title}</h3>
+                    <p className="text-sm sm:text-base leading-relaxed text-text-secondary">{item.description}</p>
                   </div>
                   <div className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-3 flex-shrink-0 pt-4">
-                    <ArrowRight className="w-8 h-8 text-text-primary" />
+                    <ArrowRight className="w-6 h-6 sm:w-8 sm:h-8 text-text-primary" />
                   </div>
                 </div>
               </Link>
@@ -79,7 +82,7 @@ const ServicesPreview = () => {
         </div>
         
         <footer className="flex flex-col items-start mt-16 gap-8">
-          <div className="flex items-start gap-6">
+          <div className="flex flex-col sm:flex-row items-start gap-6">
             <Image
               src="/images/Daniel+S.+Polley+Website+Photo.webp"
               alt="Daniel Polley"
@@ -88,12 +91,12 @@ const ServicesPreview = () => {
               className="flex-shrink-0 object-cover"
             />
             <div className="max-w-md">
-              <p className="font-body text-base leading-[1.5]">
+              <p className="font-body text-sm sm:text-base leading-[1.5]">
                 "At Polley IP Law, we're committed to delivering exceptional IP protection through personalized service and strategic insight. Our mission is to empower innovators and creators with the legal tools they need to succeed."
               </p>
               <div className="mt-4">
-                <p className="font-body text-base font-semibold leading-[1.4] text-text-primary">Daniel Polley</p>
-                <p className="font-body text-base leading-[1.4] text-text-secondary">Managing Shareholder</p>
+                <p className="font-body text-sm sm:text-base font-semibold leading-[1.4] text-text-primary">Daniel Polley</p>
+                <p className="font-body text-sm sm:text-base leading-[1.4] text-text-secondary">Managing Shareholder</p>
               </div>
             </div>
           </div>
