@@ -1,8 +1,10 @@
 import Navigation from "@/components/sections/navigation";
 import HeroSection from "@/components/sections/hero";
 import AboutIntro from "@/components/sections/about-intro";
-import ExpertiseSections from "@/components/sections/expertise-sections";
 import ServicesPreview from "@/components/sections/services-preview";
+import TeamDaniel from "@/components/sections/team-daniel";
+import TeamMiles from "@/components/sections/team-miles";
+import ExpertiseSections from "@/components/sections/expertise-sections";
 import ValuesMarquee from "@/components/sections/values-marquee";
 import ClientCentric from "@/components/sections/client-centric";
 import ExploreCards from "@/components/sections/explore-cards";
@@ -17,9 +19,20 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
+      {/* 1. Hero */}
       <HeroSection />
-      <AboutIntro />
+
+      {/* 2. Services Section */}
       <ServicesPreview />
+
+      {/* 3. About Us */}
+      <AboutIntro />
+
+      {/* 4. Team - Daniel and Miles Polley */}
+      <TeamDaniel />
+      <TeamMiles />
+
+      {/* Other sections */}
       <ValuesMarquee />
       <ExpertiseSections />
       <ClientCentric />
