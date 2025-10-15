@@ -5,7 +5,6 @@ import Link from "next/link";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
-import EmergencyBanner from "@/components/sections/emergency-banner";
 import LiveChatWidget from "@/components/sections/live-chat-widget";
 import ContactForm from "@/components/sections/contact-form";
 import { useInView } from "react-intersection-observer";
@@ -18,7 +17,6 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navigation />
-      <EmergencyBanner />
 
       {/* Hero Section - Lynford Style */}
       <section className="relative h-screen min-h-[800px] overflow-hidden" style={{ backgroundColor: '#1f3130' }}>

@@ -2,11 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, ChevronDown, X, Search } from "lucide-react";
+import { Menu, ChevronDown, X, Search, Phone, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 import { Button } from "@/components/ui/button";
-import { HoverButton } from "@/components/ui/hover-button";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -40,30 +39,10 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Top Bar with Phone Number */}
-      <div className="fixed top-0 left-0 right-0 z-[51] bg-[#F4D9C3] py-2 px-6">
-        <div className="mx-auto flex h-full max-w-[1440px] items-center justify-between">
-          <div className="flex items-center gap-2 text-[#1E3432]">
-            <span className="font-body text-sm font-medium">Call Us:</span>
-            <a
-              href="tel:+18135557000"
-              className="font-body text-sm font-semibold hover:opacity-75 transition-opacity"
-            >
-              (813) 555-7000
-            </a>
-          </div>
-          <div className="hidden sm:flex items-center gap-4 text-[#1E3432] text-sm">
-            <span className="font-body">Emergency Filings Available</span>
-            <span className="font-body">|</span>
-            <span className="font-body">24/7 Support</span>
-          </div>
-        </div>
-      </div>
-
       <header
         className={cn(
-          "fixed left-0 right-0 z-50 transition-all duration-300 py-2 px-6",
-          scrolled ? "bg-[#1E3432]/95 backdrop-blur-md shadow-lg top-0" : "bg-transparent top-10"
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-2 px-6",
+          scrolled ? "bg-[#1E3432]/95 backdrop-blur-md shadow-lg" : "bg-transparent"
         )}
       >
         <div className="mx-auto flex h-full max-w-[1440px] items-center justify-between">
@@ -146,7 +125,7 @@ export default function Navigation() {
             href="/"
             className="font-display text-2xl font-normal text-white absolute left-1/2 transform -translate-x-1/2 hidden lg:block"
           >
-            Polley IP Law
+            Polley IP Law, P.A.
           </Link>
 
           {/* Mobile Logo - Left Aligned */}
@@ -154,23 +133,24 @@ export default function Navigation() {
             href="/"
             className="font-display text-2xl font-normal text-white lg:hidden"
           >
-            Polley IP Law
+            Polley IP Law, P.A.
           </Link>
 
-          {/* Right Section - Free Consultation & Search */}
-          <div className="hidden lg:flex items-center gap-4">
-            <HoverButton
+          {/* Right Section - Phone Number & Free Consultation */}
+          <div className="hidden lg:flex items-center gap-6">
+            <a
+              href="tel:+18135557000"
+              className="flex items-center gap-2 text-white hover:opacity-75 transition-opacity"
+            >
+              <Phone className="h-4 w-4" />
+              <span className="font-body text-sm">(813) 555-7000</span>
+            </a>
+            <button
               onClick={() => window.open("https://calendly.com/polleylaw", "_blank", "noopener,noreferrer")}
-              className="font-body font-normal text-[13px] text-white uppercase"
+              className="flex items-center gap-2 font-body text-sm text-white hover:opacity-75 transition-opacity uppercase"
             >
               Free Consultation
-            </HoverButton>
-            <button
-              onClick={() => setSearchOpen(true)}
-              className="text-white hover:opacity-75 transition-opacity"
-              aria-label="Search"
-            >
-              <Search className="h-5 w-5" />
+              <ArrowRight className="h-4 w-4" />
             </button>
           </div>
 
@@ -191,38 +171,6 @@ export default function Navigation() {
         </div>
       </header>
 
-      {/* Search Modal */}
-      {searchOpen && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[60] flex items-start justify-center pt-32 px-4">
-          <div className="w-full max-w-2xl">
-            <div className="bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-2xl">
-              <div className="flex items-center gap-4 mb-4">
-                <Search className="h-6 w-6 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  autoFocus
-                  className="flex-1 bg-transparent border-none outline-none text-xl text-gray-800 placeholder-gray-400"
-                  onKeyDown={(e) => {
-                    if (e.key === 'Escape') {
-                      setSearchOpen(false);
-                    }
-                  }}
-                />
-                <button
-                  onClick={() => setSearchOpen(false)}
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
-                >
-                  <X className="h-6 w-6" />
-                </button>
-              </div>
-              <div className="text-sm text-gray-500">
-                Press ESC to close
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Mobile Menu Overlay */}
       <div
@@ -243,15 +191,8 @@ export default function Navigation() {
         )}
       >
         <div className="flex flex-col h-full">
-          {/* Close Button & Search */}
-          <div className="flex justify-between items-center p-6">
-            <button
-              onClick={() => setSearchOpen(true)}
-              className="text-white hover:opacity-75 transition-opacity"
-              aria-label="Search"
-            >
-              <Search className="h-6 w-6" />
-            </button>
+          {/* Close Button */}
+          <div className="flex justify-end items-center p-6">
             <Button
               variant="ghost"
               size="icon"
@@ -335,17 +276,27 @@ export default function Navigation() {
               Contact
             </Link>
 
+            {/* Phone Number */}
+            <a
+              href="tel:+18135557000"
+              className="flex items-center gap-2 text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors"
+            >
+              <Phone className="h-4 w-4" />
+              <span className="font-body text-sm">(813) 555-7000</span>
+            </a>
+
             {/* Free Consultation Button */}
             <div className="mt-4">
-              <HoverButton
+              <button
                 onClick={() => {
                   window.open("https://calendly.com/polleylaw", "_blank", "noopener,noreferrer");
                   setMobileMenuOpen(false);
                 }}
-                className="w-full font-body font-normal text-[13px] text-white uppercase"
+                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-[#F4D9C3] text-[#1E3432] font-body text-sm font-medium uppercase hover:opacity-90 transition-opacity"
               >
                 Free Consultation
-              </HoverButton>
+                <ArrowRight className="h-4 w-4" />
+              </button>
             </div>
           </nav>
         </div>

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { ArrowDown } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
-import EmergencyBanner from "@/components/sections/emergency-banner";
 import LiveChatWidget from "@/components/sections/live-chat-widget";
 import { useState } from "react";
 
@@ -32,7 +31,6 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navigation />
-      <EmergencyBanner />
 
       {/* Hero Section - Lynford Style */}
       <section className="relative py-32 md:py-40 overflow-hidden" style={{ backgroundColor: '#fbe7d9' }}>

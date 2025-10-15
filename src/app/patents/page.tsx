@@ -5,7 +5,6 @@ import Link from "next/link";
 import { ArrowDown, Check, Phone } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
-import EmergencyBanner from "@/components/sections/emergency-banner";
 import LiveChatWidget from "@/components/sections/live-chat-widget";
 import ContactForm from "@/components/sections/contact-form";
 
@@ -13,7 +12,6 @@ export default function PatentsPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navigation />
-      <EmergencyBanner />
 
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[600px] overflow-hidden" style={{ backgroundColor: '#1f3130' }}>

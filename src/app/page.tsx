@@ -10,7 +10,6 @@ import TestimonialsSlider from "@/components/sections/testimonials-slider";
 import ValuesAccordion from "@/components/sections/values-accordion";
 import CtaContact from "@/components/sections/cta-contact";
 import Footer from "@/components/sections/footer";
-import EmergencyBanner from "@/components/sections/emergency-banner";
 import LiveChatWidget from "@/components/sections/live-chat-widget";
 import ContactForm from "@/components/sections/contact-form";
 
@@ -18,7 +17,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
-      <EmergencyBanner />
       <HeroSection />
       <AboutIntro />
       <ServicesPreview />
