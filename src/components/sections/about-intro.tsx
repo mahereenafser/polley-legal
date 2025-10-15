@@ -14,7 +14,7 @@ const AboutIntro = () => {
   return (
     <section className="bg-white overflow-hidden">
       <div className="mx-auto max-w-[1440px] relative pt-[120px]">
-        <div className="relative min-h-[700px] lg:min-h-[900px] flex flex-col">
+        <div className="relative min-h-[550px] lg:min-h-[750px] flex flex-col">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 flex-1">
             {/* Left Column - Text with space for content */}
             <div className="flex flex-col pl-4 md:pl-8 pr-4 md:pr-8 lg:pr-12">
@@ -27,7 +27,7 @@ const AboutIntro = () => {
             </div>
 
             {/* Right Column - Large image filling right side to edge */}
-            <div className="relative -mr-4 md:-mr-8 lg:mr-0 lg:absolute lg:right-0 lg:top-0 lg:w-1/2 h-[700px] lg:h-[900px] p-2">
+            <div className="relative -mr-4 md:-mr-8 lg:mr-0 lg:absolute lg:right-0 lg:top-0 lg:w-1/2 h-[550px] lg:h-[750px] p-2">
               <div ref={ref} className="relative h-full w-full rounded-xl overflow-hidden">
                 <Image
                   src="/images/about-us.jpg"

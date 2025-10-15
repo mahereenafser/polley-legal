@@ -32,7 +32,7 @@ const ExpertiseSections = () => {
       style={{ height: "300vh" }} // Extended height for scroll-based animation
     >
       <div className="sticky top-0 h-screen flex items-center justify-center px-6 md:px-12 overflow-hidden">
-        <div className="container mx-auto max-w-[1440px] relative h-[700px]">
+        <div className="container mx-auto max-w-[1440px] relative h-[550px]">
           {/* Deep Knowledge Expertise - Video Background (Base Layer) */}
           <motion.div
             className="absolute inset-0 w-full h-full z-10"

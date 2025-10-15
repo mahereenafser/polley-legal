@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, ChevronDown, X, Search, Phone, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 
@@ -13,6 +14,16 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isServicesActive = [
+    "/services",
+    "/patents",
+    "/trademarks",
+    "/copyrights",
+  ].some((route) => pathname?.startsWith(route));
+
+  const isActivePath = (route: string) => pathname === route;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,9 +61,19 @@ export default function Navigation() {
           <nav className="hidden lg:flex items-center gap-x-6">
             <Link
               href="/"
-              className="font-body text-[15px] font-normal text-white transition-opacity hover:opacity-75 uppercase"
+              className={cn(
+                "group relative font-body text-[15px] font-normal uppercase tracking-wide text-white transition-opacity",
+                "hover:opacity-80"
+              )}
             >
-              Home
+              <span>Home</span>
+              <span
+                className={cn(
+                  "pointer-events-none absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#F4D9C3] transition-transform duration-300",
+                  "group-hover:scale-x-100",
+                  isActivePath("/") && "scale-x-100"
+                )}
+              />
             </Link>
 
             {/* Services Dropdown */}
@@ -62,10 +83,20 @@ export default function Navigation() {
               onMouseLeave={() => setServicesOpen(false)}
             >
               <button
-                className="font-body text-[15px] font-normal text-white transition-opacity hover:opacity-75 flex items-center gap-1 uppercase"
+                className={cn(
+                  "group relative font-body text-[15px] font-normal text-white uppercase tracking-wide transition-opacity flex items-center gap-1",
+                  "hover:opacity-80"
+                )}
               >
-                Services
+                <span>Services</span>
                 <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", servicesOpen && "rotate-180")} />
+                <span
+                  className={cn(
+                    "pointer-events-none absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#F4D9C3] transition-transform duration-300",
+                    "group-hover:scale-x-100",
+                    isServicesActive && "scale-x-100"
+                  )}
+                />
               </button>
 
               {/* Dropdown Menu */}
@@ -108,21 +139,51 @@ export default function Navigation() {
 
             <Link
               href="/about"
-              className="font-body text-[15px] font-normal text-white transition-opacity hover:opacity-75 uppercase"
+              className={cn(
+                "group relative font-body text-[15px] font-normal uppercase tracking-wide text-white transition-opacity",
+                "hover:opacity-80"
+              )}
             >
-              About Us
+              <span>About Us</span>
+              <span
+                className={cn(
+                  "pointer-events-none absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#F4D9C3] transition-transform duration-300",
+                  "group-hover:scale-x-100",
+                  pathname?.startsWith("/about") && "scale-x-100"
+                )}
+              />
             </Link>
             <Link
               href="/blog"
-              className="font-body text-[15px] font-normal text-white transition-opacity hover:opacity-75 uppercase"
+              className={cn(
+                "group relative font-body text-[15px] font-normal uppercase tracking-wide text-white transition-opacity",
+                "hover:opacity-80"
+              )}
             >
-              Blog
+              <span>Blog</span>
+              <span
+                className={cn(
+                  "pointer-events-none absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#F4D9C3] transition-transform duration-300",
+                  "group-hover:scale-x-100",
+                  pathname?.startsWith("/blog") && "scale-x-100"
+                )}
+              />
             </Link>
             <Link
               href="/contact"
-              className="font-body text-[15px] font-normal text-white transition-opacity hover:opacity-75 uppercase"
+              className={cn(
+                "group relative font-body text-[15px] font-normal uppercase tracking-wide text-white transition-opacity",
+                "hover:opacity-80"
+              )}
             >
-              Contact
+              <span>Contact</span>
+              <span
+                className={cn(
+                  "pointer-events-none absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#F4D9C3] transition-transform duration-300",
+                  "group-hover:scale-x-100",
+                  pathname?.startsWith("/contact") && "scale-x-100"
+                )}
+              />
             </Link>
           </nav>
 

@@ -79,7 +79,7 @@ const ContactSection = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="relative min-h-screen py-20 overflow-hidden">
+    <section className="relative min-h-[680px] md:min-h-[calc(100vh-160px)] py-16 md:py-20 overflow-hidden">
       {/* Full Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
