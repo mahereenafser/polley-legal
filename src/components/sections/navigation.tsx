@@ -40,10 +40,30 @@ export default function Navigation() {
 
   return (
     <>
+      {/* Top Bar with Phone Number */}
+      <div className="fixed top-0 left-0 right-0 z-[51] bg-[#F4D9C3] py-2 px-6">
+        <div className="mx-auto flex h-full max-w-[1440px] items-center justify-between">
+          <div className="flex items-center gap-2 text-[#1E3432]">
+            <span className="font-body text-sm font-medium">Call Us:</span>
+            <a
+              href="tel:+18135557000"
+              className="font-body text-sm font-semibold hover:opacity-75 transition-opacity"
+            >
+              (813) 555-7000
+            </a>
+          </div>
+          <div className="hidden sm:flex items-center gap-4 text-[#1E3432] text-sm">
+            <span className="font-body">Emergency Filings Available</span>
+            <span className="font-body">|</span>
+            <span className="font-body">24/7 Support</span>
+          </div>
+        </div>
+      </div>
+
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-2 px-6",
-          scrolled ? "bg-[#1E3432]/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+          "fixed left-0 right-0 z-50 transition-all duration-300 py-2 px-6",
+          scrolled ? "bg-[#1E3432]/95 backdrop-blur-md shadow-lg top-0" : "bg-transparent top-10"
         )}
       >
         <div className="mx-auto flex h-full max-w-[1440px] items-center justify-between">
