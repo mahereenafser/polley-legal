@@ -1,6 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import {
+  useState,
+  useEffect,
+  useRef,
+  type MouseEvent as ReactMouseEvent,
+  type FocusEvent as ReactFocusEvent,
+} from "react";
 import Link from "next/link";
 import { Menu, ChevronDown, X, Search, Phone, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -15,6 +21,8 @@ export default function Navigation() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
+  const servicesRef = useRef<HTMLDivElement | null>(null);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const isServicesActive = [
     "/services",
@@ -35,6 +43,50 @@ export default function Navigation() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+        closeTimeoutRef.current = null;
+      }
+    };
+  }, []);
+
+  const handleServicesMouseEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setServicesOpen(true);
+  };
+
+  const handleServicesMouseLeave = (event: ReactMouseEvent<HTMLDivElement>) => {
+    const relatedTarget = event.relatedTarget as Node | null;
+
+    if (relatedTarget && servicesRef.current?.contains(relatedTarget)) {
+      return;
+    }
+
+    closeTimeoutRef.current = setTimeout(() => {
+      setServicesOpen(false);
+      closeTimeoutRef.current = null;
+    }, 120);
+  };
+
+  const handleServicesBlur = (event: ReactFocusEvent<HTMLElement>) => {
+    const relatedTarget = event.relatedTarget as Node | null;
+
+    if (relatedTarget && servicesRef.current?.contains(relatedTarget)) {
+      return;
+    }
+
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setServicesOpen(false);
+  };
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -78,9 +130,12 @@ export default function Navigation() {
 
             {/* Services Dropdown */}
             <div
+              ref={servicesRef}
               className="relative"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
+              onMouseEnter={handleServicesMouseEnter}
+              onMouseLeave={handleServicesMouseLeave}
+              onFocus={handleServicesMouseEnter}
+              onBlur={handleServicesBlur}
             >
               <button
                 className={cn(
@@ -102,12 +157,16 @@ export default function Navigation() {
               {/* Dropdown Menu */}
               <div
                 className={cn(
-                  "absolute top-full left-0 mt-2 w-56 rounded-lg shadow-lg overflow-hidden transition-all duration-200 origin-top",
-                  servicesOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
+                  "absolute top-full left-0 w-56 pt-2 transition-all duration-200 origin-top",
+                  servicesOpen ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"
                 )}
-                style={{ backgroundColor: '#1E3432' }}
+                onMouseEnter={handleServicesMouseEnter}
               >
-                <div className="py-2">
+                <div
+                  className="rounded-lg shadow-lg overflow-hidden"
+                  style={{ backgroundColor: '#1E3432' }}
+                >
+                  <div className="py-2">
                   <Link
                     href="/patents"
                     className="block px-4 py-3 font-body text-[15px] font-normal text-white hover:bg-white/10 transition-colors uppercase"
@@ -133,6 +192,7 @@ export default function Navigation() {
                   >
                     View All Services
                   </Link>
+                </div>
                 </div>
               </div>
             </div>
