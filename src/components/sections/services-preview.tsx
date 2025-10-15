@@ -44,7 +44,7 @@ const featuredServices = [
 
 const ServicesPreview = () => {
   return (
-    <section className="bg-white text-text-primary pt-[120px] pb-16 md:pb-24 lg:pb-32 min-h-[650px] md:min-h-[800px]">
+    <section className="bg-white text-text-primary pt-[120px] pb-12 md:pb-24 lg:pb-32 md:min-h-[800px]">
       <div className="max-w-[1440px] mx-auto">
         <header className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-48 pb-24">
           {/* Left Column - aligned with previous section */}
@@ -100,7 +100,7 @@ const ServicesPreview = () => {
             </div>
           </div>
           {/* Right Column - pushed to extreme right */}
-          <div className="flex flex-col pl-4 md:pl-0 pr-4 md:pr-8 mt-16 md:mt-0 space-y-12 md:space-y-16">
+          <div className="flex flex-col pl-4 md:pl-0 pr-4 md:pr-8 mt-12 md:mt-0 space-y-10 md:space-y-16">
             {serviceItems.map((item, index) => (
               <Link
                 key={index}
