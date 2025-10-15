@@ -2,8 +2,6 @@ import Navigation from "@/components/sections/navigation";
 import HeroSection from "@/components/sections/hero";
 import AboutIntro from "@/components/sections/about-intro";
 import ServicesPreview from "@/components/sections/services-preview";
-import TeamDaniel from "@/components/sections/team-daniel";
-import TeamMiles from "@/components/sections/team-miles";
 import ExpertiseSections from "@/components/sections/expertise-sections";
 import ValuesMarquee from "@/components/sections/values-marquee";
 import ClientCentric from "@/components/sections/client-centric";
@@ -27,10 +25,6 @@ export default function Home() {
 
       {/* 3. About Us */}
       <AboutIntro />
-
-      {/* 4. Team - Daniel and Miles Polley */}
-      <TeamDaniel />
-      <TeamMiles />
 
       {/* Other sections */}
       <ValuesMarquee />
