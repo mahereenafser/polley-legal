@@ -5,7 +5,6 @@ import { ArrowDown } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import LiveChatWidget from "@/components/sections/live-chat-widget";
-import ContactForm from "@/components/sections/contact-form";
 import { useInView } from "react-intersection-observer";
 
 export default function AboutPage() {
@@ -202,13 +201,6 @@ export default function AboutPage() {
               />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="py-16 bg-[#E8E9E6]">
-        <div className="container max-w-3xl">
-          <ContactForm />
         </div>
       </section>
 

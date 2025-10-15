@@ -6,7 +6,6 @@ import { ArrowDown, Check, Phone } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import LiveChatWidget from "@/components/sections/live-chat-widget";
-import ContactForm from "@/components/sections/contact-form";
 
 export default function PatentsPage() {
   return (
@@ -417,13 +416,6 @@ export default function PatentsPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="py-16 bg-[#E8E9E6]">
-        <div className="container max-w-3xl">
-          <ContactForm />
         </div>
       </section>
 

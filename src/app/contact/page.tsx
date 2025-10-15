@@ -6,7 +6,6 @@ import { ArrowDown } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import LiveChatWidget from "@/components/sections/live-chat-widget";
-import ContactTestimonialForm from "@/components/sections/contact-testimonial-form";
 
 export default function ContactPage() {
   return (
@@ -35,11 +34,6 @@ export default function ContactPage() {
             <ArrowDown className="h-6 w-6" style={{ color: '#1f3130' }} />
           </div>
         </a>
-      </section>
-
-      {/* Contact + Testimonial Form */}
-      <section id="contact-content">
-        <ContactTestimonialForm />
       </section>
 
       {/* Explore Our Services Section */}
