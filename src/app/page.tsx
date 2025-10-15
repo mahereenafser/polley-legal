@@ -8,10 +8,10 @@ import ClientCentric from "@/components/sections/client-centric";
 import ExploreCards from "@/components/sections/explore-cards";
 import TestimonialsSlider from "@/components/sections/testimonials-slider";
 import ValuesAccordion from "@/components/sections/values-accordion";
+import ContactSection from "@/components/sections/contact-section";
 import CtaContact from "@/components/sections/cta-contact";
 import Footer from "@/components/sections/footer";
 import LiveChatWidget from "@/components/sections/live-chat-widget";
-import ContactForm from "@/components/sections/contact-form";
 
 export default function Home() {
   return (
@@ -34,12 +34,8 @@ export default function Home() {
       <TestimonialsSlider />
       <ValuesAccordion />
 
-      {/* Contact Form Section */}
-      <section className="py-16 bg-[#E8E9E6]">
-        <div className="container max-w-3xl">
-          <ContactForm />
-        </div>
-      </section>
+      {/* Contact Section with Testimonials */}
+      <ContactSection />
 
       <CtaContact />
       <Footer />
