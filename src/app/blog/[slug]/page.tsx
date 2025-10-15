@@ -122,21 +122,38 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
 
           {/* Main Content */}
-          <div
-            className="prose prose-lg max-w-none
-              prose-headings:font-display prose-headings:text-[#1f3130]
-              prose-h1:text-5xl prose-h1:mb-6 prose-h1:mt-12
-              prose-h2:text-4xl prose-h2:mb-5 prose-h2:mt-10
-              prose-h3:text-2xl prose-h3:mb-4 prose-h3:mt-8
-              prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6
-              prose-a:text-[#1f3130] prose-a:font-semibold prose-a:no-underline hover:prose-a:opacity-80
-              prose-strong:text-[#1f3130] prose-strong:font-bold
-              prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
-              prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
-              prose-li:text-gray-700 prose-li:mb-2
-              prose-blockquote:border-l-4 prose-blockquote:border-[#f8d0b3] prose-blockquote:pl-6 prose-blockquote:italic"
-            dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br />') }}
-          />
+          <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-[#1f3130] prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-[#1f3130] prose-strong:font-bold">
+            {post.content.split('\n\n').map((paragraph, index) => {
+              if (paragraph.startsWith('# ')) {
+                return (
+                  <h1 key={index} className="text-5xl font-display mb-6 mt-12" style={{ color: '#1f3130' }}>
+                    {paragraph.replace('# ', '')}
+                  </h1>
+                );
+              } else if (paragraph.startsWith('## ')) {
+                return (
+                  <h2 key={index} className="text-4xl font-display mb-5 mt-10" style={{ color: '#1f3130' }}>
+                    {paragraph.replace('## ', '')}
+                  </h2>
+                );
+              } else if (paragraph.startsWith('### ')) {
+                return (
+                  <h3 key={index} className="text-2xl font-display mb-4 mt-8" style={{ color: '#1f3130' }}>
+                    {paragraph.replace('### ', '')}
+                  </h3>
+                );
+              } else if (paragraph.trim()) {
+                return (
+                  <p key={index} className="text-gray-700 leading-relaxed mb-6">
+                    {paragraph.split('**').map((part, i) =>
+                      i % 2 === 0 ? part : <strong key={i} className="font-bold" style={{ color: '#1f3130' }}>{part}</strong>
+                    )}
+                  </p>
+                );
+              }
+              return null;
+            })}
+          </div>
 
           {/* Tags */}
           <div className="mt-12 pt-8 border-t" style={{ borderColor: '#E8E9E6' }}>

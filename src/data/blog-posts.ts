@@ -12,6 +12,11 @@ export interface BlogPost {
   tags: string[];
 }
 
+// Helper function to safely format content
+function formatContent(content: string): string {
+  return content.trim();
+}
+
 export const blogPosts: BlogPost[] = [
   {
     id: '1',
