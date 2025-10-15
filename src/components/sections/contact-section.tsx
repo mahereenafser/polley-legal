@@ -97,7 +97,7 @@ const ContactSection = () => {
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 rounded-3xl overflow-hidden shadow-2xl">
 
           {/* Left Column - Testimonials Carousel */}
-          <div className="relative min-h-[500px] lg:min-h-[700px]">
+          <div className="relative min-h-[400px] lg:min-h-[600px]">
             {/* Testimonial Background Image */}
             <div
               className="absolute inset-0 bg-cover bg-center transition-all duration-700"

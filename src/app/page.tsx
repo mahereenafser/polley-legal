@@ -26,16 +26,22 @@ export default function Home() {
       {/* 3. About Us */}
       <AboutIntro />
 
-      {/* Other sections */}
+      {/* 4. Our Values Carousel */}
       <ValuesMarquee />
+
+      {/* 5. Deep Knowledge, Client-Focused, Proven Success */}
       <ExpertiseSections />
+
+      {/* 6. Contact Form with Testimonials */}
+      <ContactSection />
+
+      {/* 7. Our Approach Protecting Creators */}
       <ClientCentric />
+
+      {/* Other sections */}
       <ExploreCards />
       <TestimonialsSlider />
       <ValuesAccordion />
-
-      {/* Contact Section with Testimonials */}
-      <ContactSection />
 
       <CtaContact />
       <Footer />
