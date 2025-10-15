@@ -33,7 +33,10 @@ export default function Home() {
       <ExpertiseSections />
 
       {/* 6. Contact Form with Testimonials */}
-      <ContactSection />
+      {/* Add spacing after Expertise Sections for visual separation */}
+      <div className="mt-16 md:mt-24 lg:mt-32">
+        <ContactSection />
+      </div>
 
       {/* 7. Our Approach Protecting Creators */}
       <ClientCentric />
