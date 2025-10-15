@@ -10,65 +10,57 @@ import LiveChatWidget from "@/components/sections/live-chat-widget";
 export default function PatentsPage() {
   return (
     <main className="min-h-screen bg-white">
-      <Navigation forceScrolled />
+      <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-white px-2 md:px-6 py-10 md:py-14">
-        <div className="mx-auto w-full max-w-[1440px]">
-          <div className="relative overflow-hidden rounded-3xl bg-white/50 p-1.5 md:p-3">
-            <div className="relative h-[82vh] min-h-[640px] md:min-h-[720px] w-full overflow-hidden rounded-[28px]">
-              <Image
-                src="/images/patents.jpg"
-                alt="Patent attorney Florida providing expert patent services"
-                fill
-                className="object-cover"
-                priority
-                quality={90}
-                sizes="100vw"
-              />
-              <div className="absolute inset-0 bg-black/45" />
+      <section className="relative h-[90vh] min-h-[700px] md:min-h-[760px] overflow-hidden">
+        <Image
+          src="/images/patents-hero.jpg"
+          alt="Patent attorney Florida providing expert patent services"
+          fill
+          className="absolute inset-0 h-full w-full object-cover"
+          priority
+          quality={90}
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/50" />
 
-              <div className="relative z-10 flex h-full w-full items-center">
-                <div className="w-full px-6 py-16 md:px-16 md:py-24 lg:px-24">
-                  <div className="max-w-3xl">
-                    <h1 className="font-display text-white text-[44px] sm:text-[52px] md:text-[68px] lg:text-[82px] leading-[1.04] -tracking-[0.01em] mb-5">
-                      Patent Attorney Florida
-                    </h1>
-                    <p className="text-white/90 text-base sm:text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
-                      Expert patent protection for utility patents, design patents, and provisional patent applications. Same-day emergency patent filing available.
-                    </p>
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                      <Link
-                        href="/contact"
-                        className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
-                      >
-                        <span>Schedule Free Consultation</span>
-                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                      </Link>
-                      <a
-                        href="tel:+1234567890"
-                        className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
-                      >
-                        <span>Emergency Filing Available</span>
-                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <a
-                href="#content"
-                aria-label="Scroll down"
-                className="absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 md:block"
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1280px] flex-col justify-center px-6 sm:px-8 md:px-12 lg:px-20">
+          <div className="max-w-3xl">
+            <h1 className="font-display text-white text-[44px] sm:text-[56px] md:text-[72px] lg:text-[86px] leading-[1.02] -tracking-[0.01em] mb-6">
+              Patent Attorney Florida
+            </h1>
+            <p className="text-white/90 text-base sm:text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+              Expert patent protection for utility patents, design patents, and provisional patent applications. Same-day emergency patent filing available.
+            </p>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 transition-all duration-300 hover:scale-105">
-                  <ArrowDown className="h-5 w-5 text-white" />
-                </div>
+                <span>Schedule Free Consultation</span>
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+              <a
+                href="tel:+1234567890"
+                className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
+              >
+                <span>Emergency Filing Available</span>
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>
           </div>
         </div>
+
+        <a
+          href="#content"
+          aria-label="Scroll down"
+          className="absolute bottom-10 left-1/2 z-20 hidden -translate-x-1/2 md:block"
+        >
+          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/30 transition-all duration-300 hover:scale-105">
+            <ArrowDown className="h-5 w-5 text-white" />
+          </div>
+        </a>
       </section>
 
       {/* Introduction */}
