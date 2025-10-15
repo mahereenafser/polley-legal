@@ -14,8 +14,12 @@ import { usePathname } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 
-export default function Navigation() {
-  const [scrolled, setScrolled] = useState(false);
+type NavigationProps = {
+  forceScrolled?: boolean;
+};
+
+export default function Navigation({ forceScrolled = false }: NavigationProps) {
+  const [scrolled, setScrolled] = useState(forceScrolled);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -35,14 +39,22 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
+      if (forceScrolled) {
+        setScrolled(true);
+        return;
+      }
       setScrolled(window.scrollY > 10);
     };
+
+    if (forceScrolled) {
+      setScrolled(true);
+    }
 
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [forceScrolled]);
 
   useEffect(() => {
     return () => {
