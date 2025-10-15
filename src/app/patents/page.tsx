@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, Check, Phone } from "lucide-react";
+import { ArrowDown, ArrowRight, Check, Phone } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import LiveChatWidget from "@/components/sections/live-chat-widget";
@@ -13,56 +13,62 @@ export default function PatentsPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[600px] overflow-hidden" style={{ backgroundColor: '#1f3130' }}>
-        <div className="absolute inset-0 opacity-30">
-          <Image
-            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/fvb9alQqu0RnQpJt7fyXnVHf4-5.jpg"
-            alt="Patent attorney Florida providing expert patent services"
-            fill
-            className="object-cover"
-            priority
-            quality={85}
-            sizes="100vw"
-          />
-        </div>
+      <section className="bg-white px-4 py-12 md:py-16">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="relative overflow-hidden rounded-3xl bg-white/40 p-2 md:p-3">
+            <div className="relative h-[70vh] min-h-[520px] w-full overflow-hidden rounded-[26px]">
+              <Image
+                src="/images/patents.jpg"
+                alt="Patent attorney Florida providing expert patent services"
+                fill
+                className="object-cover"
+                priority
+                quality={90}
+                sizes="100vw"
+              />
+              <div className="absolute inset-0 bg-black/45" />
 
-        <div className="relative z-10 mx-auto max-w-[1200px] h-full flex flex-col justify-center px-6 md:px-12 py-24">
-          <div className="max-w-3xl">
-            <h1 className="font-display text-white text-[60px] md:text-[90px] lg:text-[110px] leading-[0.9] -tracking-[0.02em] mb-6">
-              Patent Attorney Florida
-            </h1>
-            <p className="text-white/90 text-xl md:text-2xl leading-relaxed mb-8">
-              Expert patent protection for utility patents, design patents, and provisional patent applications. Same-day emergency patent filing available.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded transition-all"
-                style={{ backgroundColor: '#f8d0b3', color: '#1f3130' }}
-              >
-                Schedule Free Consultation
-              </Link>
+              <div className="relative z-10 flex h-full w-full items-center">
+                <div className="w-full px-6 py-16 md:px-16 md:py-24 lg:px-20">
+                  <div className="max-w-3xl">
+                    <h1 className="font-display text-white text-[42px] md:text-[64px] lg:text-[80px] leading-[1.05] -tracking-[0.01em] mb-5">
+                      Patent Attorney Florida
+                    </h1>
+                    <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-8">
+                      Expert patent protection for utility patents, design patents, and provisional patent applications. Same-day emergency patent filing available.
+                    </p>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                      <Link
+                        href="/contact"
+                        className="group inline-flex items-center gap-2 text-sm md:text-base font-semibold uppercase tracking-[0.18em] text-white transition-all hover:underline"
+                      >
+                        <span>Schedule Free Consultation</span>
+                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      </Link>
+                      <a
+                        href="tel:+1234567890"
+                        className="group inline-flex items-center gap-2 text-sm md:text-base font-semibold uppercase tracking-[0.18em] text-white transition-all hover:underline"
+                      >
+                        <span>Emergency Filing Available</span>
+                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <a
-                href="tel:+1234567890"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-medium rounded transition-all border-2 text-white"
-                style={{ borderColor: 'rgba(255, 255, 255, 0.3)' }}
+                href="#content"
+                aria-label="Scroll down"
+                className="absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 md:block"
               >
-                <Phone className="h-5 w-5" />
-                Emergency Filing Available
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 transition-all duration-300 hover:scale-105">
+                  <ArrowDown className="h-5 w-5 text-white" />
+                </div>
               </a>
             </div>
           </div>
         </div>
-
-        <a
-          href="#content"
-          aria-label="Scroll down"
-          className="absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 md:block"
-        >
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/30 transition-all duration-300 hover:scale-105">
-            <ArrowDown className="h-5 w-5 text-white" />
-          </div>
-        </a>
       </section>
 
       {/* Introduction */}
