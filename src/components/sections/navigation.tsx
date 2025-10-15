@@ -113,6 +113,12 @@ export default function Navigation() {
               About Us
             </Link>
             <Link
+              href="/blog"
+              className="font-body text-[15px] font-normal text-white transition-opacity hover:opacity-75 uppercase"
+            >
+              Blog
+            </Link>
+            <Link
               href="/contact"
               className="font-body text-[15px] font-normal text-white transition-opacity hover:opacity-75 uppercase"
             >
@@ -266,6 +272,14 @@ export default function Navigation() {
               onClick={() => setMobileMenuOpen(false)}
             >
               About Us
+            </Link>
+
+            <Link
+              href="/blog"
+              className="font-body text-[15px] font-normal text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors uppercase"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Blog
             </Link>
 
             <Link
