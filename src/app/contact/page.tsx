@@ -6,28 +6,9 @@ import { ArrowDown } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import LiveChatWidget from "@/components/sections/live-chat-widget";
-import { useState } from "react";
+import ContactTestimonialForm from "@/components/sections/contact-testimonial-form";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   return (
     <main className="min-h-screen bg-white">
       <Navigation />
@@ -56,131 +37,9 @@ export default function ContactPage() {
         </a>
       </section>
 
-      {/* Contact Form Section - Dark Teal Background */}
-      <section id="contact-content" className="py-32 overflow-hidden" style={{ backgroundColor: '#1f3130' }}>
-        <div className="mx-auto max-w-[1200px] px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-
-            {/* Left - Form */}
-            <div>
-              <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
-                Let's Connect
-              </h2>
-              <p className="text-lg text-white/70 mb-10 leading-relaxed">
-                Fill out the form below and we'll get back to you as soon as possible.
-              </p>
-
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      placeholder="First Name *"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-5 py-4 rounded text-white placeholder:text-white/40 focus:outline-none focus:ring-2 transition-all"
-                      style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.14)',
-                        border: '1px solid rgba(255, 255, 255, 0.2)'
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      placeholder="Last Name *"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-5 py-4 rounded text-white placeholder:text-white/40 focus:outline-none focus:ring-2 transition-all"
-                      style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.14)',
-                        border: '1px solid rgba(255, 255, 255, 0.2)'
-                      }}
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Email *"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-5 py-4 rounded text-white placeholder:text-white/40 focus:outline-none focus:ring-2 transition-all"
-                    style={{
-                      backgroundColor: 'rgba(255, 255, 255, 0.14)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)'
-                    }}
-                  />
-                </div>
-
-                <div>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Message *"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="w-full px-5 py-4 rounded text-white placeholder:text-white/40 focus:outline-none focus:ring-2 resize-none transition-all"
-                    style={{
-                      backgroundColor: 'rgba(255, 255, 255, 0.14)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)'
-                    }}
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full sm:w-auto px-10 py-4 text-lg font-medium rounded transition-all hover:opacity-90"
-                  style={{
-                    backgroundColor: '#f8d0b3',
-                    color: '#1f3130'
-                  }}
-                >
-                  Send Message
-                </button>
-
-                <p className="text-sm text-white/60 italic mt-2">
-                  *Submission Of This Request Does Not Establish An Attorney Client Relationship*
-                </p>
-              </form>
-            </div>
-
-            {/* Right - Calendly CTA */}
-            <div className="p-10 lg:p-14 flex flex-col justify-center rounded" style={{ backgroundColor: '#fbe7d9' }}>
-              <h3 className="font-display text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight" style={{ color: '#1f3130' }}>
-                Schedule a Time with Us
-              </h3>
-              <p className="text-lg mb-8 leading-relaxed" style={{ color: '#1f3130', opacity: 0.8 }}>
-                Book a free 30-minute consultation to discuss protecting your intellectual property.
-              </p>
-              <a
-                href="https://calendly.com/polleyiplawpa/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-10 py-4 text-lg font-medium rounded transition-all hover:opacity-90"
-                style={{
-                  backgroundColor: '#1f3130',
-                  color: '#ffffff'
-                }}
-              >
-                Schedule Free Consultation
-              </a>
-            </div>
-
-          </div>
-        </div>
+      {/* Contact + Testimonial Form */}
+      <section id="contact-content">
+        <ContactTestimonialForm />
       </section>
 
       {/* Explore Our Services Section */}
