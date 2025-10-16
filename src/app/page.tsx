@@ -42,7 +42,9 @@ export default function Home() {
       <BlogHighlights />
 
       {/* 7. Our Approach Protecting Creators */}
-      <ClientCentric />`r`n      <ValuesAccordion />
+      <ClientCentric />
+
+      <ValuesAccordion />
 
       {/* Other sections */}
       <ExploreCards />

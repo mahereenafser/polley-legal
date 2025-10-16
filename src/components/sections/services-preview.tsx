@@ -50,7 +50,7 @@ const ServicesPreview = () => {
           {/* Left Column - aligned with previous section */}
           <div className="flex flex-col gap-8">
             {/* Text with padding for alignment */}
-            <div className="flex flex-col gap-3 pl-4 md:pl-8 pr-4 md:pr-8 lg:pr-12">
+            <div className="flex flex-col gap-3 pl-0 md:pl-8 pr-4 md:pr-8 lg:pr-12">
               <p className="text-sm text-text-secondary tracking-[0.1em] uppercase">Services</p>
               <p className="text-base text-text-primary leading-relaxed max-w-md">
                 Comprehensive intellectual property protection services to secure your innovations and creative works.
@@ -60,7 +60,7 @@ const ServicesPreview = () => {
             {/* Image and Card Container - No padding */}
             <div className="relative">
               {/* Background Image - Full width, no padding */}
-              <div className="relative h-[400px] md:h-[500px] lg:h-[600px] w-full">
+              <div className="relative h-[400px] md:h-[500px] lg:h-[600px] w-full overflow-hidden rounded-3xl">
                 <Image
                   src="/images/services.jpg"
                   alt="Services"
