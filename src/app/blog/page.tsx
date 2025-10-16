@@ -173,9 +173,9 @@ export default function BlogPage() {
       {/* Blog Grid - New Card Design */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-[1400px] px-6 md:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
             {/* Patent Law Card */}
-            <Link href="/blog/respond-when-brand-threatened" className="block">
+            <Link href="/blog/respond-when-brand-threatened" className="block h-full">
               <PlaceCard
                 image="/images/image-1.jpg"
                 tags={['Brand Protection']}
@@ -185,11 +185,12 @@ export default function BlogPage() {
                 hostType="IP Protection"
                 isTopRated={true}
                 description="Secure your trademarks and creative assets with a focused response plan that balances urgency with strategy."
+                className="h-full"
               />
             </Link>
 
             {/* Emergency Services Card */}
-            <Link href="/blog/emergency-ip-protection-without-panic" className="block">
+            <Link href="/blog/emergency-ip-protection-without-panic" className="block h-full">
               <PlaceCard
                 image="/images/image-4.jpg"
                 tags={['Urgent']}
@@ -199,11 +200,12 @@ export default function BlogPage() {
                 hostType="Rapid Response"
                 isTopRated={true}
                 description="Fast-track IP protection when time is critical. We handle takedowns, filings, and outreach without losing momentum."
+                className="h-full"
               />
             </Link>
 
             {/* IP Strategy Card */}
-            <Link href="/blog/designing-ip-strategy-before-launch" className="block">
+            <Link href="/blog/designing-ip-strategy-before-launch" className="block h-full">
               <PlaceCard
                 image="/images/image-2.jpg"
                 tags={['Strategy']}
@@ -213,11 +215,12 @@ export default function BlogPage() {
                 hostType="Business Growth"
                 isTopRated={false}
                 description="Build a roadmap that aligns patents, trademarks, and copyrights with product milestones and investor expectations."
+                className="h-full"
               />
             </Link>
 
             {/* Trademark Law Card */}
-            <Link href="/blog/building-licensing-programs-that-work" className="block">
+            <Link href="/blog/building-licensing-programs-that-work" className="block h-full">
               <PlaceCard
                 image="/images/image-5.jpg"
                 tags={['Branding']}
@@ -227,6 +230,7 @@ export default function BlogPage() {
                 hostType="Brand Protection"
                 isTopRated={true}
                 description="Turn intellectual property into collaborative opportunities with agreements that safeguard reputation and quality."
+                className="h-full"
               />
             </Link>
           </div>
@@ -256,17 +260,17 @@ export default function BlogPage() {
                     <p className="text-white/90">Comprehensive IP strategy tailored to startups, e-commerce brands, and tech companies.</p>
                   </div>
                 </div>
-                <div className="flex flex-col gap-4 sm:flex-row">
+                <div className="flex flex-col gap-3 sm:flex-row">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#1E3432] transition-colors duration-300 hover:bg-[#F4D9C3] text-center"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#1E3432] transition-colors duration-300 hover:bg-[#F4D9C3] text-center sm:px-8 sm:py-2.5"
                   >
                     Schedule Consultation
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                   <a
                     href="/contact#contact-form"
-                    className="inline-flex items-center justify-center gap-3 rounded-full border border-white/30 px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-white/10 text-center"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors duration-300 hover:bg-white/10 text-center sm:px-8 sm:py-2.5"
                   >
                     Call Us Directly
                   </a>

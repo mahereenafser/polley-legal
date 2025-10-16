@@ -62,7 +62,7 @@ export const PlaceCard = ({
       }}
       // --- END NEW ---
       className={cn(
-        'w-full max-w-sm overflow-hidden rounded-2xl border bg-card text-card-foreground shadow-lg cursor-pointer',
+        'flex h-full flex-col overflow-hidden rounded-2xl border bg-card text-card-foreground shadow-lg cursor-pointer',
         className
       )}
     >
@@ -90,8 +90,8 @@ export const PlaceCard = ({
       </div>
 
       {/* Content Section */}
-      <motion.div variants={contentVariants} className="p-5 space-y-4">
-        <motion.div variants={itemVariants} className="flex justify-between items-start">
+      <motion.div variants={contentVariants} className="flex flex-1 flex-col space-y-4 p-5">
+        <motion.div variants={itemVariants} className="flex items-start justify-between">
           <h3 className="text-xl font-bold">{title}</h3>
           {isTopRated && <Badge variant="outline">Top rated</Badge>}
         </motion.div>
@@ -100,11 +100,11 @@ export const PlaceCard = ({
           <span>{dateRange}</span> &bull; <span>{hostType}</span>
         </motion.div>
 
-        <motion.p variants={itemVariants} className="text-sm text-muted-foreground leading-relaxed">
+        <motion.p variants={itemVariants} className="text-sm leading-relaxed text-muted-foreground">
           {description}
         </motion.p>
 
-        <motion.div variants={itemVariants} className="pt-2">
+        <motion.div variants={itemVariants} className="mt-auto pt-2">
           <Button className="group w-full">
             Read More
             <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
