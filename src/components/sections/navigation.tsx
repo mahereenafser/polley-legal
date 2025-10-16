@@ -286,7 +286,7 @@ export default function Navigation({ forceScrolled = false }: NavigationProps) {
               className="flex items-center gap-2 text-white hover:opacity-75 transition-opacity"
             >
               <Phone className="h-4 w-4" />
-              <span className="font-body text-sm">Call our Tampa office</span>
+              <span className="font-body text-sm">Call our office</span>
             </a>
             <button
               onClick={() => window.open("https://calendly.com/polleylaw", "_blank", "noopener,noreferrer")}
