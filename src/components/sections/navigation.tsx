@@ -14,6 +14,8 @@ import { usePathname } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 
+const MOBILE_MENU_MUTED_TEXT_CLASS = "text-[#B8C2C0]";
+
 type NavigationProps = {
   forceScrolled?: boolean;
 };
@@ -328,7 +330,7 @@ export default function Navigation({ forceScrolled = false }: NavigationProps) {
         <div className="flex h-full flex-col overflow-y-auto bg-gradient-to-br from-[#071412] via-[#12302C] to-[#071412] text-white shadow-2xl">
           <div className="flex items-center justify-between px-6 pt-8 pb-4">
             <div className="space-y-1">
-              <p className="text-xs uppercase tracking-[0.3em] text-white/60">Polley IP Law</p>
+              <p className={cn("text-xs uppercase tracking-[0.3em]", MOBILE_MENU_MUTED_TEXT_CLASS)}>Polley IP Law</p>
               <p className="text-sm text-white/70">Protecting trademarks, patents, and creative works across Florida.</p>
             </div>
             <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
@@ -339,7 +341,7 @@ export default function Navigation({ forceScrolled = false }: NavigationProps) {
           <div className="px-6 pb-6">
             <div className="mb-6 rounded-3xl border border-white/10 bg-white/5 p-5 text-sm text-white/80">
               <p className="font-semibold text-white">Urgent IP support?</p>
-              <p className="mt-2 leading-relaxed text-white/60">
+              <p className={cn("mt-2 leading-relaxed", MOBILE_MENU_MUTED_TEXT_CLASS)}>
                 Same-day trademark search Florida and emergency IP lawyer near me consultations are available by phone.
               </p>
             </div>
