@@ -8,6 +8,7 @@ import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import LiveChatWidget from '@/components/sections/live-chat-widget';
 import { blogPosts } from '@/data/blog-posts';
+import { PlaceCard } from '@/components/ui/card-22';
 
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -126,85 +127,85 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Blog Grid - Cards with Images and Hover Effects */}
+      {/* Blog Grid - New Card Design */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-[1400px] px-6 md:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            {filteredPosts.slice(1).map((post, index) => (
-              <Link
-                key={post.id}
-                href={`/blog/${post.slug}`}
-                className="group block"
-                style={{
-                  animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
-                }}
-              >
-                <article className="h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-                  {/* Image with Overlay */}
-                  <div className="relative h-64 overflow-hidden">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+            {/* Patent Law Card */}
+            <Link href="/blog/what-to-do-trademark-infringement-florida" className="block">
+              <PlaceCard
+                images={[
+                  '/images/image-1.jpg',
+                  '/images/image-1.jpg',
+                  '/images/image-1.jpg',
+                ]}
+                tags={['Legal']}
+                rating={4.9}
+                title="Patent Law"
+                dateRange="Comprehensive"
+                hostType="IP Protection"
+                isTopRated={true}
+                description="Secure your innovations with expert patent services. We guide you through the entire process."
+                pricePerNight={0}
+              />
+            </Link>
 
-                    {/* Category Badge */}
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm" style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', color: '#1f3130' }}>
-                        {post.category}
-                      </span>
-                    </div>
-                  </div>
+            {/* Emergency Services Card */}
+            <Link href="/blog/emergency-ip-protection-florida-guide" className="block">
+              <PlaceCard
+                images={[
+                  '/images/image-4.jpg',
+                  '/images/image-4.jpg',
+                  '/images/image-4.jpg',
+                ]}
+                tags={['Urgent']}
+                rating={5.0}
+                title="Emergency Services"
+                dateRange="24/7 Available"
+                hostType="Rapid Response"
+                isTopRated={true}
+                description="Fast-track IP protection when time is critical. Same-day filing and emergency cease & desist."
+                pricePerNight={0}
+              />
+            </Link>
 
-                  {/* Content */}
-                  <div className="flex-1 flex flex-col p-6">
-                    {/* Meta Info */}
-                    <div className="flex flex-wrap items-center gap-4 mb-4 text-sm" style={{ color: '#7A8380' }}>
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Clock className="w-4 h-4" />
-                        {post.readTime}
-                      </div>
-                    </div>
+            {/* IP Strategy Card */}
+            <Link href="/blog/spring-ip-preparation-guide-florida" className="block">
+              <PlaceCard
+                images={[
+                  '/images/image-2.jpg',
+                  '/images/image-2.jpg',
+                  '/images/image-2.jpg',
+                ]}
+                tags={['Strategy']}
+                rating={4.8}
+                title="IP Strategy"
+                dateRange="Long-term"
+                hostType="Business Growth"
+                isTopRated={false}
+                description="Build a robust IP portfolio aligned with your business goals. Expert guidance for startups."
+                pricePerNight={0}
+              />
+            </Link>
 
-                    {/* Title */}
-                    <h3 className="font-display text-xl md:text-2xl mb-3 leading-tight transition-colors duration-300 group-hover:opacity-80" style={{ color: '#1f3130' }}>
-                      {post.title}
-                    </h3>
-
-                    {/* Excerpt */}
-                    <p className="text-base mb-4 leading-relaxed flex-1" style={{ color: '#7A8380' }}>
-                      {post.excerpt}
-                    </p>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {post.tags.slice(0, 3).map((tag) => (
-                        <span
-                          key={tag}
-                          className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs"
-                          style={{ backgroundColor: '#fbe7d9', color: '#1f3130' }}
-                        >
-                          <Tag className="w-3 h-3" />
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* Read More Link */}
-                    <div className="flex items-center gap-2 text-sm font-semibold transition-all duration-300 group-hover:gap-4" style={{ color: '#1f3130' }}>
-                      Read Article
-                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                    </div>
-                  </div>
-                </article>
-              </Link>
-            ))}
+            {/* Trademark Law Card */}
+            <Link href="/blog/trademark-registration-cost-florida" className="block">
+              <PlaceCard
+                images={[
+                  '/images/image-5.jpg',
+                  '/images/image-5.jpg',
+                  '/images/image-5.jpg',
+                ]}
+                tags={['Branding']}
+                rating={4.9}
+                title="Trademark Law"
+                dateRange="Complete"
+                hostType="Brand Protection"
+                isTopRated={true}
+                description="Protect your brand identity with trademark registration and enforcement services."
+                pricePerNight={0}
+              />
+            </Link>
           </div>
         </div>
       </section>
