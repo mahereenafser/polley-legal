@@ -20,7 +20,7 @@ const CtaContact = () => {
                 Ready to Protect Your IP?
               </h2>
               <p className="font-body text-base md:text-lg text-white/85 leading-relaxed max-w-xl">
-                Schedule your free 30-minute consultation today. We guide emergency trademark filing Florida, fast track patent attorney Florida requests, and long-term IP strategy for innovators, startups, and established brands.
+                Schedule your complimentary consultation today. We guide emergency trademark filing Florida, fast track patent attorney Florida requests, and long-term IP strategy for innovators, startups, and established brands.
               </p>
             </div>
 

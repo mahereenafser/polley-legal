@@ -46,7 +46,7 @@ const TrustedLeadersSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 items-center">
           <div className="flex flex-col gap-8">
             <p className="text-lg leading-relaxed text-text-primary font-body">
-              Our clients range from Fortune 500 companies to emerging startups, all benefiting from our expertise and commitment to excellence.
+              Our clients range from Fortune-ranked enterprises to emerging startups, all benefiting from our expertise and commitment to excellence.
             </p>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1 text-[#F59E0B]">

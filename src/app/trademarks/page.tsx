@@ -42,7 +42,7 @@ export default function TrademarksPage() {
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <a
-                href="tel:+1234567890"
+                href="tel:+18135557000"
                 className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
               >
                 <span>Urgent Trademark Help</span>
@@ -347,14 +347,14 @@ export default function TrademarksPage() {
             <div>
               <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>How much does a trademark attorney in Florida cost?</h3>
               <p className="text-lg text-gray-700">
-                <strong>Trademark registration lawyer Florida</strong> fees typically range from $1,500-$2,500 per class for federal registration, including attorney fees and USPTO filing fees. <strong>Trademark clearance search Florida</strong> costs $500-$1,000. State trademark registration is generally $800-$1,200.
+                <strong>Trademark registration lawyer Florida</strong> fees depend on the number of classes, filing strategy, and whether additional monitoring is required. <strong>Trademark clearance search Florida</strong> projects and state filings are quoted individually so you always know the investment before we begin.
               </p>
             </div>
 
             <div>
               <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>How long does trademark registration take?</h3>
               <p className="text-lg text-gray-700">
-                <strong>Federal trademark filing Florida</strong> typically takes 8-12 months from application to registration. <strong>State trademark registration Florida</strong> is faster, usually 2-4 months. Rush processing available for urgent cases.
+                <strong>Federal trademark filing Florida</strong> often requires an extended examination period before registration. <strong>State trademark registration Florida</strong> typically resolves more quickly. Rush processing is available for urgent cases.
               </p>
             </div>
 
@@ -420,7 +420,7 @@ export default function TrademarksPage() {
               </p>
               <div className="flex flex-col gap-4">
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+18135557000"
                   className="inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-medium rounded transition-all"
                   style={{ backgroundColor: '#f8d0b3', color: '#1f3130' }}
                 >

@@ -9,7 +9,7 @@ type BlogCard = {
   title: string;
   image: string;
   tags: string[];
-  reads: number;
+  insightLabel: string;
   dateRange: string;
   hostType: string;
   isTopRated: boolean;
@@ -22,34 +22,34 @@ const blogCards: BlogCard[] = [
     title: 'Trademark Law',
     image: '/images/image-5.jpg',
     tags: ['Branding'],
-    reads: 2678,
+    insightLabel: 'Popular brand protection insight',
     dateRange: 'Complete',
     hostType: 'Brand Protection',
     isTopRated: true,
     description: 'Protect your brand identity with trademark registration and enforcement services.',
-    href: '/blog/trademark-registration-cost-florida',
+    href: '/blog/building-licensing-programs-that-work',
   },
   {
     title: 'Emergency Services',
     image: '/images/image-4.jpg',
     tags: ['Urgent'],
-    reads: 3120,
-    dateRange: '24/7 Available',
+    insightLabel: 'Emergency spotlight',
+    dateRange: 'Always Available',
     hostType: 'Rapid Response',
     isTopRated: true,
     description: 'Fast-track IP protection when time is critical. Same-day filing and emergency cease & desist.',
-    href: '/blog/emergency-ip-protection-florida-guide',
+    href: '/blog/emergency-ip-protection-without-panic',
   },
   {
     title: 'IP Strategy',
     image: '/images/image-2.jpg',
     tags: ['Strategy'],
-    reads: 1890,
+    insightLabel: 'Strategy spotlight',
     dateRange: 'Long-term',
     hostType: 'Business Growth',
     isTopRated: false,
     description: 'Build a robust IP portfolio aligned with your business goals. Expert guidance for startups.',
-    href: '/blog/spring-ip-preparation-guide',
+    href: '/blog/designing-ip-strategy-before-launch',
   },
 ];
 
@@ -113,7 +113,7 @@ const BlogHighlights = () => {
               <PlaceCard
                 image={card.image}
                 tags={card.tags}
-                reads={card.reads}
+                insightLabel={card.insightLabel}
                 title={card.title}
                 dateRange={card.dateRange}
                 hostType={card.hostType}
@@ -182,7 +182,7 @@ const BlogHighlights = () => {
                 <PlaceCard
                   image={card.image}
                   tags={card.tags}
-                  reads={card.reads}
+                  insightLabel={card.insightLabel}
                   title={card.title}
                   dateRange={card.dateRange}
                   hostType={card.hostType}

@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 
 type ValueItemProps = {
-  number: string;
   title: string;
   subtitle: string;
   description: string;
@@ -11,7 +10,6 @@ type ValueItemProps = {
 };
 
 const ValueItem = ({
-  number,
   title,
   subtitle,
   description,
@@ -22,10 +20,10 @@ const ValueItem = ({
     <div className="flex flex-col justify-center">
       <header className="flex justify-between items-center mb-8">
         <span className="font-body text-base font-medium text-text-primary">
-          {number}
+          {subtitle}
         </span>
         <span className="font-body text-sm font-semibold uppercase tracking-[0.05em] text-text-accent">
-          {subtitle}
+          Guiding Principle
         </span>
       </header>
       <div className="max-w-xl">
@@ -72,7 +70,6 @@ const ValueItem = ({
 
 const valuesData: ValueItemProps[] = [
   {
-    number: "01",
     title: "Expertise",
     subtitle: "Deep Knowledge",
     description:
@@ -80,7 +77,6 @@ const valuesData: ValueItemProps[] = [
     imagePosition: "none",
   },
   {
-    number: "02",
     title: "Accessibility",
     subtitle: "Client-Focused",
     description:
@@ -90,11 +86,10 @@ const valuesData: ValueItemProps[] = [
     imagePosition: "right",
   },
   {
-    number: "03",
     title: "Results",
     subtitle: "Proven Success",
     description:
-      "With over 500 successful IP filings and a 98% client satisfaction rate, we deliver results that protect your creative assets and build lasting value for your business.",
+      "Our longstanding record of successful IP filings and consistently high client satisfaction reflects the care we put into protecting your creative assets and building lasting value for your business.",
     imageUrl:
       "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/qczjTcTGhNr04QiZO8QMBftMhg-6.jpg",
     imagePosition: "left",
@@ -107,7 +102,7 @@ const ValuesDetail = () => {
       <div className="container mx-auto px-6 md:px-12 py-24 md:py-40">
         <div className="flex flex-col gap-y-16">
           {valuesData.map((value) => (
-            <ValueItem key={value.number} {...value} />
+            <ValueItem key={value.title} {...value} />
           ))}
         </div>
       </div>

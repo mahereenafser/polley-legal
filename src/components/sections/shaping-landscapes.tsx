@@ -33,12 +33,12 @@ export default function ShapingLandscapes() {
             <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center gap-6 bg-text-primary/80 p-6 text-white backdrop-blur-[10px]">
               <div className="flex flex-col items-center gap-2 text-center">
                 <p className="text-base font-medium">Revenue Recovered</p>
-                <h3 className="text-[40px] leading-none">$2B+</h3>
+                <h3 className="text-[40px] leading-none">Significant recoveries</h3>
               </div>
               <div className="h-12 w-px bg-white/20"></div>
               <div className="flex flex-col items-center gap-2 text-center">
                 <p className="text-base font-medium">Client Retention</p>
-                <h3 className="text-[40px] leading-none">98%</h3>
+                <h3 className="text-[40px] leading-none">Exceptional retention</h3>
               </div>
             </div>
           </div>

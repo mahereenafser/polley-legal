@@ -16,12 +16,10 @@ const MarqueeContent: React.FC = () => (
       height={64}
       className="h-16 w-16"
     />
-    <div className="flex items-baseline gap-2 whitespace-nowrap font-display text-text-primary">
-      <h1 className="text-[80px] font-normal leading-none tracking-[-0.02em]">95</h1>
-      <h1 className="text-[80px] font-normal leading-none tracking-[-0.02em]">%</h1>
-      <p className="font-body text-[18px] font-normal leading-[1.6] text-text-primary">
-        Client retention rate
-      </p>
+    <div className="flex items-center gap-3 whitespace-nowrap font-display text-text-primary">
+      <h1 className="text-[42px] font-normal leading-tight tracking-[-0.02em]">
+        Consistently retained clients
+      </h1>
     </div>
     <img
       src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/svgs/jYuzs1OlEiRLJM1mIh68thUkupc-4.svg"

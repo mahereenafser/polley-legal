@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 interface PlaceCardProps {
   image: string;
   tags: string[];
-  reads: number;
+  insightLabel: string;
   title: string;
   dateRange: string;
   hostType: string;
@@ -21,7 +21,7 @@ interface PlaceCardProps {
 export const PlaceCard = ({
   image,
   tags,
-  reads,
+  insightLabel,
   title,
   dateRange,
   hostType,
@@ -84,7 +84,7 @@ export const PlaceCard = ({
         </div>
         <div className="absolute top-3 right-3">
           <Badge variant="secondary" className="flex items-center gap-1 bg-background/70 backdrop-blur-sm">
-            <Eye className="h-4 w-4" /> {reads.toLocaleString()} reads
+            <Eye className="h-4 w-4" /> {insightLabel}
           </Badge>
         </div>
       </div>

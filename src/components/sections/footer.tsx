@@ -106,7 +106,7 @@ export default function Footer() {
 
         <div className="mt-16 flex flex-col gap-6 border-t border-white/10 pt-8 text-xs text-white/60 lg:flex-row lg:items-center lg:justify-between">
           <p className="max-w-[540px] leading-relaxed">
-            © {new Date().getFullYear()} Polley IP Law, P.A. The information on this site is provided for general informational purposes and does not constitute legal advice.
+            © Polley IP Law, P.A. The information on this site is provided for general informational purposes and does not constitute legal advice.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/privacy" className="transition-colors duration-300 hover:text-white">

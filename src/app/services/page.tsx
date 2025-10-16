@@ -58,38 +58,38 @@ const blogPreviews = [
   {
     image: "/images/image-4.jpg",
     tags: ["Urgent"],
-    reads: 3120,
+    insightLabel: "Widely read feature",
     title: "Emergency Services",
-    dateRange: "24/7 Support",
+    dateRange: "Always Available Support",
     hostType: "Rapid Response",
     isTopRated: true,
     description:
       "Emergency IP protection Florida checklist for founders facing infringement, leaks, or investor diligence.",
-    href: "/blog/emergency-ip-protection-florida-guide",
+    href: "/blog/emergency-ip-protection-without-panic",
   },
   {
     image: "/images/image-2.jpg",
     tags: ["Strategy"],
-    reads: 1890,
+    insightLabel: "Strategic spotlight",
     title: "IP Strategy",
     dateRange: "Long-term",
     hostType: "Business Growth",
     isTopRated: false,
     description:
       "Startup IP attorney Florida roadmap to align patents, trademarks, and copyrights with funding rounds.",
-    href: "/blog/spring-ip-preparation-guide",
+    href: "/blog/designing-ip-strategy-before-launch",
   },
   {
     image: "/images/image-5.jpg",
     tags: ["Branding"],
-    reads: 2678,
+    insightLabel: "Brand protection favorite",
     title: "Trademark Law",
     dateRange: "Complete",
     hostType: "Brand Protection",
     isTopRated: true,
     description:
       "Avoid trademark opposition lawyer Florida battles with smarter clearance, monitoring, and enforcement.",
-    href: "/blog/trademark-registration-cost-florida",
+    href: "/blog/building-licensing-programs-that-work",
   },
 ];
 

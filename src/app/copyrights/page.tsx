@@ -42,7 +42,7 @@ export default function CopyrightsPage() {
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <a
-                href="tel:+1234567890"
+                href="tel:+18135557000"
                 className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
               >
                 <span>Urgent Copyright Help</span>
@@ -431,7 +431,7 @@ export default function CopyrightsPage() {
               </p>
               <div className="flex flex-col gap-4">
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+18135557000"
                   className="inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-medium rounded transition-all"
                   style={{ backgroundColor: '#f8d0b3', color: '#1f3130' }}
                 >

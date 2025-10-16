@@ -147,7 +147,7 @@ export default function AboutPage() {
             <div className="flex flex-col justify-center">
               <div className="bg-white border border-[#E8E9E6] shadow-xl rounded-3xl p-8 md:p-10 lg:p-12 max-w-xl">
                 <header className="flex justify-between items-center mb-6">
-                  <span className="font-body text-base font-medium text-text-primary">01</span>
+                  <span className="font-body text-base font-medium text-text-primary">Leadership</span>
                   <span className="font-body text-xs sm:text-sm font-semibold uppercase tracking-[0.12em] text-text-secondary">
                     Managing Shareholder
                   </span>
@@ -172,7 +172,7 @@ export default function AboutPage() {
             <div className="flex flex-col justify-center">
               <div className="bg-white border border-[#E8E9E6] shadow-xl rounded-3xl p-8 md:p-10 lg:p-12 max-w-xl">
                 <header className="flex justify-between items-center mb-6">
-                  <span className="font-body text-base font-medium text-text-primary">02</span>
+                  <span className="font-body text-base font-medium text-text-primary">Collaboration</span>
                   <span className="font-body text-xs sm:text-sm font-semibold uppercase tracking-[0.12em] text-text-secondary">
                     Associate
                   </span>

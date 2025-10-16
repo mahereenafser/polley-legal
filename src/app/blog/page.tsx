@@ -111,7 +111,7 @@ export default function BlogPage() {
                 </span>
                 <div className="flex items-center gap-2 text-sm" style={{ color: '#7A8380' }}>
                   <Calendar className="w-4 h-4" />
-                  {new Date(featuredPost.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                  {featuredPost.date}
                 </div>
                 <div className="flex items-center gap-2 text-sm" style={{ color: '#7A8380' }}>
                   <Clock className="w-4 h-4" />
@@ -175,58 +175,58 @@ export default function BlogPage() {
         <div className="mx-auto max-w-[1400px] px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
             {/* Patent Law Card */}
-            <Link href="/blog/what-to-do-trademark-infringement-florida" className="block">
+            <Link href="/blog/respond-when-brand-threatened" className="block">
               <PlaceCard
                 image="/images/image-1.jpg"
-                tags={['Legal']}
-                reads={2345}
-                title="Patent Law"
+                tags={['Brand Protection']}
+                insightLabel="Community favorite"
+                title="Respond When Your Brand Is Threatened"
                 dateRange="Comprehensive"
                 hostType="IP Protection"
                 isTopRated={true}
-                description="Secure your innovations with expert patent services. We guide you through the entire process."
+                description="Secure your trademarks and creative assets with a focused response plan that balances urgency with strategy."
               />
             </Link>
 
             {/* Emergency Services Card */}
-            <Link href="/blog/emergency-ip-protection-florida-guide" className="block">
+            <Link href="/blog/emergency-ip-protection-without-panic" className="block">
               <PlaceCard
                 image="/images/image-4.jpg"
                 tags={['Urgent']}
-                reads={3120}
-                title="Emergency Services"
-                dateRange="24/7 Available"
+                insightLabel="Emergency spotlight"
+                title="Emergency IP Support Without Panic"
+                dateRange="Always Available"
                 hostType="Rapid Response"
                 isTopRated={true}
-                description="Fast-track IP protection when time is critical. Same-day filing and emergency cease & desist."
+                description="Fast-track IP protection when time is critical. We handle takedowns, filings, and outreach without losing momentum."
               />
             </Link>
 
             {/* IP Strategy Card */}
-            <Link href="/blog/spring-ip-preparation-guide" className="block">
+            <Link href="/blog/designing-ip-strategy-before-launch" className="block">
               <PlaceCard
                 image="/images/image-2.jpg"
                 tags={['Strategy']}
-                reads={1890}
-                title="IP Strategy"
+                insightLabel="Strategic highlight"
+                title="Designing An IP Strategy Before Launch"
                 dateRange="Long-term"
                 hostType="Business Growth"
                 isTopRated={false}
-                description="Build a robust IP portfolio aligned with your business goals. Expert guidance for startups."
+                description="Build a roadmap that aligns patents, trademarks, and copyrights with product milestones and investor expectations."
               />
             </Link>
 
             {/* Trademark Law Card */}
-            <Link href="/blog/trademark-registration-cost-florida" className="block">
+            <Link href="/blog/building-licensing-programs-that-work" className="block">
               <PlaceCard
                 image="/images/image-5.jpg"
                 tags={['Branding']}
-                reads={2678}
-                title="Trademark Law"
+                insightLabel="Brand protection favorite"
+                title="Building Licensing Programs That Work"
                 dateRange="Complete"
                 hostType="Brand Protection"
                 isTopRated={true}
-                description="Protect your brand identity with trademark registration and enforcement services."
+                description="Turn intellectual property into collaborative opportunities with agreements that safeguard reputation and quality."
               />
             </Link>
           </div>
@@ -265,7 +265,7 @@ export default function BlogPage() {
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+18135557000"
                     className="inline-flex items-center justify-center gap-3 rounded-full border border-white/30 px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-white/10"
                   >
                     Call Us Directly

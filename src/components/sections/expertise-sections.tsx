@@ -58,7 +58,7 @@ const ExpertiseSections = () => {
                 {/* Top-left label */}
                 <div className="flex-shrink-0">
                   <p className="font-body text-white text-base uppercase tracking-wider mb-2">
-                    01 Deep Knowledge
+                    Deep Knowledge Focus
                   </p>
                   {/* Thin decorative line */}
                   <div className="w-full h-px bg-white/20" />
@@ -124,7 +124,7 @@ const ExpertiseSections = () => {
                 {/* Top-left label */}
                 <div className="flex-shrink-0">
                   <p className="font-body text-white text-base uppercase tracking-wider mb-2">
-                    02 Client-Focused Accessibility
+                    Client-Focused Accessibility
                   </p>
                   {/* Thin decorative line */}
                   <div className="w-full h-px bg-white/20" />
@@ -190,7 +190,7 @@ const ExpertiseSections = () => {
                 {/* Top-left label */}
                 <div className="flex-shrink-0">
                   <p className="font-body text-white text-base uppercase tracking-wider mb-2">
-                    03 Proven Success Results
+                    Proven Success Stories
                   </p>
                   {/* Thin decorative line */}
                   <div className="w-full h-px bg-white/20" />

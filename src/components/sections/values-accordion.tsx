@@ -6,7 +6,6 @@ import Image from "next/image";
 
 const valuesData = [
   {
-    number: "01",
     title: "Integrity",
     subtitle: "Trust",
     description:
@@ -15,7 +14,6 @@ const valuesData = [
     image: "/images/image-6.jpg",
   },
   {
-    number: "02",
     title: "Innovation",
     subtitle: "Forward-thinking",
     description:
@@ -24,7 +22,6 @@ const valuesData = [
     image: "/images/image-7.jpg",
   },
   {
-    number: "03",
     title: "Excellence",
     subtitle: "Best-in-class",
     description:
@@ -62,7 +59,7 @@ const ValuesAccordion = () => {
 
             return (
               <motion.button
-                key={item.number}
+                key={item.title}
                 type="button"
                 onMouseEnter={() => setActiveIndex(index)}
                 onFocus={() => setActiveIndex(index)}
@@ -94,10 +91,7 @@ const ValuesAccordion = () => {
                     </div>
 
                     <div className="space-y-5">
-                      <div className="flex items-center gap-4">
-                        <span className="font-display text-4xl text-[#f8d0b3]">{item.number}</span>
-                        <h3 className="font-display text-3xl sm:text-4xl leading-tight text-[#f8d0b3]">{item.title}</h3>
-                      </div>
+                      <h3 className="font-display text-3xl sm:text-4xl leading-tight text-[#f8d0b3]">{item.title}</h3>
                       <p className="text-sm sm:text-base text-white/85 leading-relaxed">
                         {item.description}
                       </p>

@@ -42,7 +42,7 @@ export default function PatentsPage() {
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <a
-                href="tel:+1234567890"
+                href="tel:+18135557000"
                 className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
               >
                 <span>Emergency Filing Available</span>
@@ -85,7 +85,7 @@ export default function PatentsPage() {
             <div className="bg-white p-8 rounded">
               <h3 className="font-display text-3xl mb-4" style={{ color: '#1f3130' }}>Provisional Patent Applications</h3>
               <p className="text-lg text-gray-700 mb-4">
-                Secure your invention date quickly with our <strong>provisional patent lawyer Florida</strong> services. File within 24 hours for urgent protection.
+                Secure your invention date quickly with our <strong>provisional patent lawyer Florida</strong> services. File within within a day for urgent protection.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -98,7 +98,7 @@ export default function PatentsPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="h-6 w-6 flex-shrink-0 mt-1" style={{ color: '#f8d0b3' }} />
-                  <span className="text-gray-700">12-month window to file utility patent</span>
+                  <span className="text-gray-700">year-long window to file utility patent</span>
                 </li>
               </ul>
             </div>
@@ -225,7 +225,7 @@ export default function PatentsPage() {
           <div className="space-y-8">
             <div className="flex gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white" style={{ backgroundColor: '#1f3130' }}>
-                1
+                Step
               </div>
               <div>
                 <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>Free Initial Consultation</h3>
@@ -237,7 +237,7 @@ export default function PatentsPage() {
 
             <div className="flex gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white" style={{ backgroundColor: '#1f3130' }}>
-                2
+                Step
               </div>
               <div>
                 <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>Patent Search & Analysis</h3>
@@ -249,7 +249,7 @@ export default function PatentsPage() {
 
             <div className="flex gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white" style={{ backgroundColor: '#1f3130' }}>
-                3
+                Step
               </div>
               <div>
                 <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>Application Preparation & Filing</h3>
@@ -261,7 +261,7 @@ export default function PatentsPage() {
 
             <div className="flex gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white" style={{ backgroundColor: '#1f3130' }}>
-                4
+                Step
               </div>
               <div>
                 <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>Patent Prosecution</h3>
@@ -273,7 +273,7 @@ export default function PatentsPage() {
 
             <div className="flex gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white" style={{ backgroundColor: '#1f3130' }}>
-                5
+                Step
               </div>
               <div>
                 <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>Patent Grant & Maintenance</h3>
@@ -331,21 +331,21 @@ export default function PatentsPage() {
             <div>
               <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>How much does a patent attorney in Florida cost?</h3>
               <p className="text-lg text-gray-700">
-                <strong>Provisional patent lawyer Florida</strong> fees typically range from $2,000-$5,000. <strong>Utility patent attorney Florida</strong> fees range from $8,000-$15,000 depending on complexity. Design patents are generally $2,000-$4,000. We provide detailed quotes after your free consultation.
+                <strong>Provisional patent lawyer Florida</strong> fees adjust according to invention complexity and desired pace. <strong>Utility patent attorney Florida</strong> engagements require deeper drafting and prosecution, while design patents typically involve a more streamlined scope. We provide detailed quotes after your complimentary consultation so you understand every investment before moving forward.
               </p>
             </div>
 
             <div>
               <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>How long does the patent process take?</h3>
               <p className="text-lg text-gray-700">
-                Provisional patents file within days. Utility patents typically take 1-3 years from filing to grant. Design patents are faster, usually 12-18 months. Our <strong>patent prosecution lawyer Florida</strong> team expedites where possible and keeps you informed throughout.
+                Provisional patents file within days. Utility patents typically take multiple years from filing to grant. Design patents are faster, usually roughly a year. Our <strong>patent prosecution lawyer Florida</strong> team expedites where possible and keeps you informed throughout.
               </p>
             </div>
 
             <div>
               <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>Do you offer same-day patent filing?</h3>
               <p className="text-lg text-gray-700">
-                Yes! As a <strong>same day patent attorney Florida</strong> firm, we can file provisional patent applications within 24 hours for urgent situations. This is critical when facing public disclosure deadlines, competitive threats, or investor meetings.
+                Yes! As a <strong>same day patent attorney Florida</strong> firm, we can file provisional patent applications within within a day for urgent situations. This is critical when facing public disclosure deadlines, competitive threats, or investor meetings.
               </p>
             </div>
 
@@ -397,7 +397,7 @@ export default function PatentsPage() {
               </p>
               <div className="flex flex-col gap-4">
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+18135557000"
                   className="inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-medium rounded transition-all"
                   style={{ backgroundColor: '#f8d0b3', color: '#1f3130' }}
                 >

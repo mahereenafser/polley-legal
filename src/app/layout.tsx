@@ -22,7 +22,7 @@ const newsreader = Newsreader({
 
 export const metadata: Metadata = {
   title: "Best IP Attorney Florida | Intellectual Property Lawyer | Polley IP Law",
-  description: "Florida's top intellectual property attorney. Expert IP lawyer for patents, trademarks, and copyrights. Trusted by 500+ clients. Same-day emergency filing available. Free 30-minute consultation.",
+  description: "Florida's top intellectual property attorney. Expert IP lawyer for patents, trademarks, and copyrights. Trusted by a wide community of clients. Same-day emergency filing available with a complimentary consultation.",
   keywords: "IP attorney Florida, intellectual property attorney Florida, best IP attorney Florida, IP lawyer Florida, intellectual property lawyer Florida, patent trademark copyright attorney Florida",
   metadataBase: new URL('https://www.polleylegal.com'),
   alternates: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Best IP Attorney Florida | Intellectual Property Lawyer | Polley IP Law",
-    description: "Florida's top intellectual property attorney for patents, trademarks, and copyrights. Trusted by 500+ clients.",
+    description: "Florida's top intellectual property attorney for patents, trademarks, and copyrights. Trusted by a wide community of clients.",
     url: 'https://www.polleylegal.com',
     siteName: 'Polley IP Law',
     locale: 'en_US',
@@ -67,7 +67,6 @@ export default function RootLayout({
       "addressCountry": "US"
     },
     "url": "https://www.polleylegal.com",
-    "telephone": "+1-XXX-XXX-XXXX",
     "priceRange": "$$",
     "areaServed": [
       {
@@ -170,7 +169,7 @@ export default function RootLayout({
           data-include-search-params="true"
           data-only-in-iframe="true"
           data-debug="true"
-          data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
+          data-custom-data='{"appName": "YourApp", "version": "current", "greeting": "hi"}'
         />
         {children}
       </body>
