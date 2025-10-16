@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type CSSProperties } from 'react';
 import Link from 'next/link';
 import { PlaceCard } from '@/components/ui/card-22';
 
@@ -110,7 +110,7 @@ const BlogHighlights = () => {
             let scale = 0.86;
             let opacity = 0;
             let zIndex = 10;
-            let pointer = 'none';
+            let pointer: CSSProperties['pointerEvents'] = 'none';
 
             if (isActive) {
               translateX = 0;
