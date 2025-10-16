@@ -311,19 +311,6 @@ export default function Navigation({ forceScrolled = false }: NavigationProps) {
           </div>
         </div>
       </header>
-
-
-      {/* Mobile Menu Overlay */}
-      <div
-        className={cn(
-          "fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 lg:hidden",
-          mobileMenuOpen ? "opacity-100 z-50" : "opacity-0 pointer-events-none"
-        )}
-        onClick={() => setMobileMenuOpen(false)}
-      />
-
-      {/* Mobile Menu Drawer - Glassmorphic */}
-      {/* Mobile Overlay */}
       <div
         className={cn(
           "fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden",
