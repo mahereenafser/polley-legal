@@ -1,39 +1,35 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Star, ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const testimonials = [
   {
     id: 1,
     name: 'sample',
     role: 'sample',
-    rating: 5,
-    review: 'sample',
+    review: 'Sample testimonial from a client.',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&q=80',
   },
   {
     id: 2,
     name: 'sample',
     role: 'sample',
-    rating: 5,
-    review: 'sample',
+    review: 'Sample testimonial from a client.',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=1000&fit=crop&q=80',
   },
   {
     id: 3,
     name: 'sample',
     role: 'sample',
-    rating: 5,
-    review: 'sample',
+    review: 'Sample testimonial from a client.',
     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&h=1000&fit=crop&q=80',
   },
   {
     id: 4,
     name: 'sample',
     role: 'sample',
-    rating: 5,
-    review: 'sample',
+    review: 'Sample testimonial from a client.',
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&h=1000&fit=crop&q=80',
   },
 ];
@@ -112,10 +108,10 @@ const ContactSection = () => {
             {/* Testimonial Content - Bottom */}
             <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7 lg:p-9">
               {/* Rating Stars */}
-              <div className="flex gap-1 mb-4">
-                {[...Array(currentTestimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-[#F4D9C3] text-[#F4D9C3]" />
-                ))}
+              <div className="mb-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/80">
+                  sample
+                </p>
               </div>
 
               {/* Review Text */}
