@@ -395,52 +395,53 @@ export default function PatentsPage() {
         </div>
       </section>
 
-      {/* Service Areas & Emergency CTA */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#F8FAF9] via-[#EFF4F3] to-[#F8FAF9] py-24">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(248,208,179,0.25),_transparent_60%)]" />
-          <div className="absolute -top-36 right-10 h-64 w-64 rounded-full bg-[#1f3130]/10 blur-3xl" />
-          <div className="absolute -bottom-24 left-10 h-56 w-56 rounded-full bg-[#1f3130]/10 blur-3xl" />
-        </div>
-        <div className="relative mx-auto flex max-w-[1100px] flex-col gap-10 px-6 text-center md:px-10">
-          <span className="mx-auto inline-flex items-center gap-2 rounded-full border border-[#1f3130]/15 bg-white px-5 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#1f3130]">
-            Florida Patent Support
-          </span>
-          <h2 className="font-display text-3xl leading-tight text-[#1f3130] sm:text-4xl md:text-[44px]">
-            Wherever you&apos;re building, we keep innovation protected.
-          </h2>
-          <p className="mx-auto max-w-3xl text-base leading-relaxed text-[#4B5553]">
-            From Tampa to Miami and beyond, we provide same-day filings, ongoing strategy, and direct access to a <strong>patent attorney Florida</strong> when decisions can&apos;t wait.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {floridaCities.map((city) => (
-              <span
-                key={city}
-                className="rounded-full border border-[#E5EBE9] bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#1f3130]"
-              >
-                {city}
-              </span>
-            ))}
+      {/* Patent Support CTA */}
+      <section className="py-20 bg-white">
+        <div className="mx-auto max-w-[1040px] px-6 md:px-10">
+          <div className="relative overflow-hidden rounded-[32px] border border-[#E5EBE9] shadow-2xl">
+            <Image
+              src="/images/paper-contract.jpg"
+              alt="Attorney reviewing patent documents"
+              fill
+              priority={false}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#071412]/85 via-[#12342f]/75 to-[#07110f]/90" />
+
+            <div className="relative z-10 flex flex-col gap-6 p-8 text-white md:flex-row md:items-center md:justify-between md:p-10">
+              <div className="space-y-4 md:max-w-xl">
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
+                  Emergency Patent Support
+                </span>
+                <h2 className="font-display text-3xl leading-tight sm:text-4xl">
+                  Need rapid patent counsel?
+                </h2>
+                <p className="text-sm leading-relaxed text-white/80 sm:text-base">
+                  Same-day provisional filings, examiner responses, and strategic direction from a dedicated <strong>patent attorney Florida</strong>. We act fast so your invention stays protected.
+                </p>
+              </div>
+
+              <div className="flex w-full flex-col gap-3 md:w-[260px]">
+                <a
+                  href="/contact#contact-form"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F4D9C3] px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-[#102220] transition-transform duration-300 hover:scale-[1.02]"
+                >
+                  <Phone className="h-4 w-4" />
+                  Call For Emergency Filing
+                </a>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-white transition-colors duration-300 hover:bg-white/10"
+                >
+                  Schedule A Consultation
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <p className="text-[11px] text-center uppercase tracking-[0.3em] text-white/70">
+                  Available evenings & weekends
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="mx-auto grid w-full max-w-3xl gap-4 md:grid-cols-2">
-            <a
-              href="/contact#contact-form"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1f3130] bg-[#1f3130] px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-white transition-transform duration-300 hover:scale-[1.02]"
-            >
-              <Phone className="h-4 w-4" />
-              Call For Emergency Filing
-            </a>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1f3130]/30 bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-[#1f3130] transition-colors duration-300 hover:bg-[#F4D9C3]/40"
-            >
-              Schedule A Consultation
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-          <p className="text-xs uppercase tracking-[0.3em] text-[#4B5553]">
-            Evenings and weekends available for urgent matters.
-          </p>
         </div>
       </section>
 
@@ -495,28 +496,3 @@ const faqItems: FAQItem[] = [
   },
 ];
 
-const floridaCities = [
-  "Tampa",
-  "Miami",
-  "Orlando",
-  "Jacksonville",
-  "Fort Lauderdale",
-  "West Palm Beach",
-  "Tallahassee",
-  "Sarasota",
-];
-
-const emergencyHighlights: Array<{ icon: LucideIcon; title: string; description: string }> = [
-  {
-    icon: Zap,
-    title: "Rapid Provisional Filing",
-    description:
-      "Lock in your priority date with same-day provisional applications and expedited utility filings.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Enforcement-Ready Strategy",
-    description:
-      "Monitor competitors, prepare licensing pathways, and respond decisively to infringement.",
-  },
-];
