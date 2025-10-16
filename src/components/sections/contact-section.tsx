@@ -108,7 +108,12 @@ const ContactSection = () => {
             {/* Testimonial Content - Bottom */}
             <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7 lg:p-9">
               {/* Rating Stars */}
-              <div className="mb-4">
+              <div className="flex flex-col gap-2 mb-4">
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-[#F4D9C3] text-[#F4D9C3]" />
+                  ))}
+                </div>
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/80">
                   sample
                 </p>
