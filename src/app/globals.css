@@ -297,3 +297,7 @@ nextjs-portal {
 .animate-marquee-vertical {
   animation: marquee-vertical var(--duration, 40s) linear infinite;
 }
+
+.animate-marquee-vertical-reverse {
+  animation: marquee-vertical var(--duration, 40s) linear infinite reverse;
+}

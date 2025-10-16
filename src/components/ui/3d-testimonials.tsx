@@ -90,9 +90,9 @@ export function Marquee({
                   !vertical ? 'flex-row [gap:var(--gap)]' : 'flex-col [gap:var(--gap)]',
                   'flex shrink-0 justify-around',
                   !vertical && 'animate-marquee flex-row',
-                  vertical && 'animate-marquee-vertical flex-col',
+                  vertical && !reverse && 'animate-marquee-vertical flex-col',
+                  vertical && reverse && 'animate-marquee-vertical-reverse flex-col',
                   pauseOnHover && 'group-hover:[animation-play-state:paused]',
-                  reverse && '[animation-direction:reverse]',
                 )}
               >
                 {children}
