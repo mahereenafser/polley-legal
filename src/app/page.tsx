@@ -42,12 +42,12 @@ export default function Home() {
       <BlogHighlights />
 
       {/* 7. Our Approach Protecting Creators */}
-      <ClientCentric />
+      <ClientCentric />`r`n      <ValuesAccordion />
 
       {/* Other sections */}
       <ExploreCards />
       <Testimonials3D />
-      <ValuesAccordion />
+
 
       <CtaContact />
       <Footer />
