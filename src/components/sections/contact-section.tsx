@@ -79,7 +79,7 @@ const ContactSection = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="relative min-h-[680px] md:min-h-[calc(100vh-160px)] py-16 md:py-20 overflow-hidden">
+    <section className="relative min-h-[600px] md:min-h-[calc(100vh-220px)] py-12 md:py-16 overflow-hidden">
       {/* Full Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -97,7 +97,7 @@ const ContactSection = () => {
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 rounded-3xl overflow-hidden shadow-2xl">
 
           {/* Left Column - Testimonials Carousel */}
-          <div className="relative min-h-[400px] lg:min-h-[600px]">
+          <div className="relative min-h-[360px] lg:min-h-[520px]">
             {/* Testimonial Background Image */}
             <div
               className="absolute inset-0 bg-cover bg-center transition-all duration-700"
@@ -110,7 +110,7 @@ const ContactSection = () => {
             </div>
 
             {/* Testimonial Content - Bottom */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-10">
+            <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7 lg:p-9">
               {/* Rating Stars */}
               <div className="flex gap-1 mb-4">
                 {[...Array(currentTestimonial.rating)].map((_, i) => (
@@ -134,17 +134,17 @@ const ContactSection = () => {
               </div>
 
               {/* Carousel Controls */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3 md:gap-4">
                 <button
                   onClick={handlePrev}
-                  className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-all"
+                  className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-all"
                   aria-label="Previous testimonial"
                 >
                   <ArrowLeft className="w-5 h-5 text-white" />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-all"
+                  className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-all"
                   aria-label="Next testimonial"
                 >
                   <ArrowRight className="w-5 h-5 text-white" />
@@ -167,19 +167,19 @@ const ContactSection = () => {
           </div>
 
           {/* Right Column - White Contact Form */}
-          <div className="bg-white p-6 md:p-8 lg:p-12 flex flex-col justify-center">
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl mb-3" style={{ color: '#1E3432' }}>
+          <div className="bg-white p-5 md:p-7 lg:p-10 flex flex-col justify-center">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl mb-2" style={{ color: '#1E3432' }}>
               Get Started Today
             </h2>
-            <p className="text-base md:text-lg mb-8" style={{ color: '#7A8380' }}>
+            <p className="text-base md:text-lg mb-6" style={{ color: '#7A8380' }}>
               Schedule your free consultation to protect your intellectual property
             </p>
 
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               {/* Name Fields */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium mb-2" style={{ color: '#1E3432' }}>
+                  <label htmlFor="firstName" className="block text-sm font-medium mb-1.5" style={{ color: '#1E3432' }}>
                     First Name *
                   </label>
                   <input
@@ -189,12 +189,12 @@ const ContactSection = () => {
                     value={formData.firstName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1E3432] transition-all"
+                    className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1E3432] transition-all"
                     style={{ color: '#1E3432' }}
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium mb-2" style={{ color: '#1E3432' }}>
+                  <label htmlFor="lastName" className="block text-sm font-medium mb-1.5" style={{ color: '#1E3432' }}>
                     Last Name *
                   </label>
                   <input
@@ -204,7 +204,7 @@ const ContactSection = () => {
                     value={formData.lastName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1E3432] transition-all"
+                    className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1E3432] transition-all"
                     style={{ color: '#1E3432' }}
                   />
                 </div>
@@ -212,7 +212,7 @@ const ContactSection = () => {
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2" style={{ color: '#1E3432' }}>
+                <label htmlFor="email" className="block text-sm font-medium mb-1.5" style={{ color: '#1E3432' }}>
                   Email *
                 </label>
                 <input
@@ -222,14 +222,14 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1E3432] transition-all"
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1E3432] transition-all"
                   style={{ color: '#1E3432' }}
                 />
               </div>
 
               {/* Phone */}
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-2" style={{ color: '#1E3432' }}>
+                <label htmlFor="phone" className="block text-sm font-medium mb-1.5" style={{ color: '#1E3432' }}>
                   Phone *
                 </label>
                 <input
@@ -239,14 +239,14 @@ const ContactSection = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1E3432] transition-all"
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1E3432] transition-all"
                   style={{ color: '#1E3432' }}
                 />
               </div>
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2" style={{ color: '#1E3432' }}>
+                <label htmlFor="message" className="block text-sm font-medium mb-1.5" style={{ color: '#1E3432' }}>
                   How can we help you? *
                 </label>
                 <textarea
@@ -255,8 +255,8 @@ const ContactSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1E3432] resize-none transition-all"
+                  rows={4}
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1E3432] resize-none transition-all"
                   style={{ color: '#1E3432' }}
                 />
               </div>
@@ -264,7 +264,7 @@ const ContactSection = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-4 rounded-lg font-semibold text-lg transition-all hover:opacity-90"
+                className="w-full py-3.5 rounded-lg font-semibold text-lg transition-all hover:opacity-90"
                 style={{
                   backgroundColor: '#1E3432',
                   color: '#FFFFFF',
@@ -273,7 +273,7 @@ const ContactSection = () => {
                 Schedule a Consultation
               </button>
 
-              <p className="text-xs text-center mt-2" style={{ color: '#7A8380' }}>
+              <p className="text-xs text-center mt-1.5" style={{ color: '#7A8380' }}>
                 *Submission of this request does not establish an attorney-client relationship*
               </p>
             </form>
