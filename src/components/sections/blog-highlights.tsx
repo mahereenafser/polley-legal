@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { PlaceCard } from '@/components/ui/card-22';
 
@@ -52,28 +52,19 @@ const blogCards: BlogCard[] = [
   },
 ];
 
-const useRotatingIndices = (length: number, intervalMs = 6000) => {
+const BlogHighlights = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % length);
-    }, intervalMs);
+      setActiveIndex((prev) => (prev + 1) % blogCards.length);
+    }, 6000);
 
     return () => clearInterval(interval);
-  }, [length, intervalMs]);
+  }, []);
 
-  const indices = useMemo(() => {
-    const previous = (activeIndex + length - 1) % length;
-    const next = (activeIndex + 1) % length;
-    return [previous, activeIndex, next];
-  }, [activeIndex, length]);
-
-  return { activeIndex, indices, setActiveIndex };
-};
-
-const BlogHighlights = () => {
-  const { activeIndex, indices, setActiveIndex } = useRotatingIndices(blogCards.length);
+  const leftIndex = (activeIndex + blogCards.length - 1) % blogCards.length;
+  const rightIndex = (activeIndex + 1) % blogCards.length;
 
   return (
     <section className="bg-white py-20">
@@ -109,38 +100,62 @@ const BlogHighlights = () => {
         </div>
 
         {/* Desktop Carousel */}
-        <div className="hidden md:flex items-center justify-center gap-6">
-          {indices.map((cardIndex, position) => {
-            const card = blogCards[cardIndex];
-            const isActive = position === 1;
+        <div className="hidden md:block relative h-[430px]">
+          {blogCards.map((card, index) => {
+            const isActive = index === activeIndex;
+            const isLeft = index === leftIndex;
+            const isRight = index === rightIndex;
+
+            let translateX = 0;
+            let scale = 0.86;
+            let opacity = 0;
+            let zIndex = 10;
+            let pointer = 'none';
+
+            if (isActive) {
+              translateX = 0;
+              scale = 1;
+              opacity = 1;
+              zIndex = 30;
+              pointer = 'auto';
+            } else if (isLeft) {
+              translateX = -360;
+              opacity = 0.85;
+              zIndex = 20;
+              pointer = 'auto';
+            } else if (isRight) {
+              translateX = 360;
+              opacity = 0.85;
+              zIndex = 20;
+              pointer = 'auto';
+            }
+
             return (
-              <div
-                key={`${card.title}-${position}`}
-                onMouseEnter={() => setActiveIndex(cardIndex)}
-                className={`group relative transition-all duration-500 ease-out ${
-                  isActive ? 'scale-100 z-30 opacity-100' : 'scale-95 z-20 opacity-75'
-                }`}
+              <Link
+                key={card.title}
+                href={card.href}
+                onFocus={() => setActiveIndex(index)}
+                onMouseEnter={() => setActiveIndex(index)}
+                className="absolute left-1/2 top-1/2 block w-[280px] lg:w-[320px] xl:w-[360px]"
                 style={{
-                  transformOrigin: 'center',
+                  transform: `translate(-50%, -50%) translateX(${translateX}px) scale(${scale})`,
+                  transition: 'transform 0.7s ease, opacity 0.7s ease',
+                  opacity,
+                  zIndex,
+                  pointerEvents: pointer,
                 }}
               >
-                <Link
-                  href={card.href}
-                  className="block w-[280px] lg:w-[320px] xl:w-[360px]"
-                  onFocus={() => setActiveIndex(cardIndex)}
-                >
-                  <PlaceCard
-                    image={card.image}
-                    tags={card.tags}
-                    reads={card.reads}
-                    title={card.title}
-                    dateRange={card.dateRange}
-                    hostType={card.hostType}
-                    isTopRated={card.isTopRated}
-                    description={card.description}
-                  />
-                </Link>
-              </div>
+                <PlaceCard
+                  image={card.image}
+                  tags={card.tags}
+                  reads={card.reads}
+                  title={card.title}
+                  dateRange={card.dateRange}
+                  hostType={card.hostType}
+                  isTopRated={card.isTopRated}
+                  description={card.description}
+                />
+              </Link>
             );
           })}
         </div>

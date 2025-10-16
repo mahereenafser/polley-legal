@@ -15,7 +15,7 @@ export default function CopyrightsPage() {
       {/* Hero Section */}
       <section className="relative h-[90vh] min-h-[700px] md:min-h-[760px] overflow-hidden">
         <Image
-          src="/images/about-hero.jpg"
+          src="/images/image-3.jpg"
           alt="Copyright attorney Florida providing creative works protection"
           fill
           className="absolute inset-0 h-full w-full object-cover"
