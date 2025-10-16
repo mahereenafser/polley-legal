@@ -225,7 +225,7 @@ export default function PatentsPage() {
           <div className="space-y-8">
             <div className="flex gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white" style={{ backgroundColor: '#1f3130' }}>
-                Step
+                1
               </div>
               <div>
                 <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>Free Initial Consultation</h3>
@@ -237,7 +237,7 @@ export default function PatentsPage() {
 
             <div className="flex gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white" style={{ backgroundColor: '#1f3130' }}>
-                Step
+                2
               </div>
               <div>
                 <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>Patent Search & Analysis</h3>
@@ -249,7 +249,7 @@ export default function PatentsPage() {
 
             <div className="flex gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white" style={{ backgroundColor: '#1f3130' }}>
-                Step
+                3
               </div>
               <div>
                 <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>Application Preparation & Filing</h3>
@@ -261,7 +261,7 @@ export default function PatentsPage() {
 
             <div className="flex gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white" style={{ backgroundColor: '#1f3130' }}>
-                Step
+                4
               </div>
               <div>
                 <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>Patent Prosecution</h3>
@@ -273,7 +273,7 @@ export default function PatentsPage() {
 
             <div className="flex gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white" style={{ backgroundColor: '#1f3130' }}>
-                Step
+                5
               </div>
               <div>
                 <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>Patent Grant & Maintenance</h3>
