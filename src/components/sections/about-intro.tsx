@@ -103,7 +103,7 @@ const AboutIntro = () => {
               </div>
               <div className="space-y-5 px-7 py-8 md:px-9">
                 <blockquote className="font-body text-base leading-relaxed text-[#3B4D4A] sm:text-lg">
-                  “{member.quote}”
+                  "{member.quote}"
                 </blockquote>
                 <div className="space-y-1">
                   <p className="font-display text-2xl text-[#0F201F]">{member.name}</p>

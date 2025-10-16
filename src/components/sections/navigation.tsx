@@ -339,7 +339,7 @@ export default function Navigation({ forceScrolled = false }: NavigationProps) {
           <div className="px-6 pb-6">
             <div className="mb-6 rounded-3xl border border-white/10 bg-white/5 p-5 text-sm text-white/80">
               <p className="font-semibold text-white">Urgent IP support?</p>
-              <p className="mt-2 leading-relaxed">
+              <p className="mt-2 leading-relaxed text-white/60">
                 Same-day trademark search Florida and emergency IP lawyer near me consultations are available by phone.
               </p>
             </div>
