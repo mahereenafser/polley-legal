@@ -33,21 +33,21 @@ export default function PatentsPage() {
             <p className="mx-auto max-w-3xl text-base leading-relaxed text-white/90 sm:text-lg md:text-xl">
               Expert patent protection for utility patents, design patents, and provisional patent applications. Same-day emergency patent filing available.
             </p>
-            <div className="flex flex-col items-center gap-4 sm:flex-row">
+            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
+                className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#1E3432] transition-colors duration-300 hover:bg-[#F4D9C3]"
               >
-                <span>Schedule Free Consultation</span>
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                Schedule Free Consultation
+                <ArrowRight className="h-4 w-4" />
               </Link>
-              <a
+              <Link
                 href="/contact#contact-form"
-                className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
+                className="inline-flex items-center justify-center gap-3 rounded-full border border-white/40 px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-white/10"
               >
-                <span>Emergency Filing Available</span>
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </a>
+                Emergency Filing Available
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </div>

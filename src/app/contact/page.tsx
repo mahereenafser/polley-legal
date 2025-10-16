@@ -81,17 +81,17 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href="/contact#contact-form"
-              className="inline-flex items-center justify-center gap-3 rounded-full bg-[#f8d0b3] px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#1E3432] transition-all duration-300 hover:bg-[#EDC2A4]"
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#1E3432] transition-colors duration-300 hover:bg-[#F4D9C3]"
             >
               Call Our Team
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="#contact-form"
-              className="inline-flex items-center justify-center gap-3 rounded-full border border-white/40 px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-white/10"
+              className="inline-flex items-center justify-center gap-3 rounded-full border border-white/40 px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-white/10"
             >
               Send a Message
               <ArrowRight className="h-4 w-4" />
