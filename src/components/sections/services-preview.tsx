@@ -72,13 +72,13 @@ const ServicesPreview = () => {
               {/* Floating Card - Positioned to overlap image (tape effect) */}
               <Link
                 href="/patents"
-                className="group absolute left-0 top-[calc(60%+60px)] md:top-[calc(65%+70px)] w-[75%] sm:w-[85%] md:w-[80%] lg:w-[85%] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#081615] via-[#12302C] to-[#081615] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.8)] transition-all duration-500 hover:shadow-[0_45px_90px_-35px_rgba(12,24,22,0.9)] hover:scale-[1.02]"
+                className="group absolute left-0 top-[calc(60%+60px)] md:top-[calc(65%+70px)] w-[70%] sm:w-[85%] md:w-[80%] lg:w-[85%] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#081615] via-[#12302C] to-[#081615] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.8)] transition-all duration-500 hover:shadow-[0_45px_90px_-35px_rgba(12,24,22,0.9)] hover:scale-[1.02]"
               >
                 <div className="absolute inset-0 opacity-40 mix-blend-overlay" style={{
                   backgroundImage: 'radial-gradient(circle at 30% 30%, rgba(248,208,179,0.4), transparent 55%)'
                 }} />
 
-                <div className="relative z-10 space-y-4 p-6 sm:p-8">
+                <div className="relative z-10 space-y-4 p-5 sm:p-8">
                   <div className="flex items-start justify-between gap-3 sm:gap-4">
                     <div className="flex-1 space-y-2">
                       <span className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#f8d0b3]">Highlighted</span>
