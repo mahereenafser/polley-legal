@@ -397,48 +397,83 @@ export default function PatentsPage() {
 
       {/* Patent Support CTA */}
       <section className="py-20 bg-white">
-        <div className="mx-auto max-w-[1040px] px-6 md:px-10">
-          <div className="relative overflow-hidden rounded-[32px] border border-[#E5EBE9] shadow-2xl">
-            <Image
-              src="/images/paper-contract.jpg"
-              alt="Attorney reviewing patent documents"
-              fill
-              priority={false}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-[#071412]/85 via-[#12342f]/75 to-[#07110f]/90" />
+        <div className="mx-auto max-w-[1200px] px-6 md:px-12">
+          <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]">
+            <div className="space-y-6">
+              <span className="inline-flex items-center gap-2 rounded-full bg-[#F8FAF9] px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#1f3130]">
+                Patent Law Guidance
+              </span>
+              <h2 className="font-display text-3xl leading-tight text-[#1f3130] sm:text-4xl">
+                Strategic protection for every stage of your invention.
+              </h2>
+              <p className="text-base leading-relaxed text-[#4B5553]">
+                From prior art diligence to enforcement-ready strategies, our <strong>patent attorney Florida</strong> team provides clarity when competitive pressure is high and timelines are tight.
+              </p>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl border border-[#E5EBE9] bg-[#F8FAF9] p-5 shadow-sm">
+                  <div className="flex items-center gap-2 text-[#1f3130]">
+                    <ShieldCheck className="h-5 w-5" />
+                    <span className="text-xs font-semibold uppercase tracking-[0.2em]">
+                      Prosecution Ready
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-[#4B5553]">
+                    Office action responses, examiner interviews, and portfolio strategy with measurable milestones.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-[#E5EBE9] bg-[#F8FAF9] p-5 shadow-sm">
+                  <div className="flex items-center gap-2 text-[#1f3130]">
+                    <Zap className="h-5 w-5" />
+                    <span className="text-xs font-semibold uppercase tracking-[0.2em]">
+                      Rapid Response
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-[#4B5553]">
+                    Same-day provisional filings and immediate infringement assessments when speed is essential.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-            <div className="relative z-10 flex flex-col gap-6 p-8 text-white md:flex-row md:items-center md:justify-between md:p-10">
-              <div className="space-y-4 md:max-w-xl">
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
+            <div className="relative overflow-hidden rounded-[32px] border border-[#0c1b18] shadow-2xl lg:ml-auto">
+              <Image
+                src="/images/paper-contract.jpg"
+                alt="Patent attorney reviewing documents"
+                fill
+                priority={false}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/75" />
+
+              <div className="relative z-10 flex flex-col gap-4 p-8 text-white sm:p-10">
+                <span className="self-start rounded-full bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/70">
                   Emergency Patent Support
                 </span>
-                <h2 className="font-display text-3xl leading-tight sm:text-4xl">
+                <h3 className="font-display text-3xl leading-tight sm:text-[34px]">
                   Need rapid patent counsel?
-                </h2>
+                </h3>
                 <p className="text-sm leading-relaxed text-white/80 sm:text-base">
-                  Same-day provisional filings, examiner responses, and strategic direction from a dedicated <strong>patent attorney Florida</strong>. We act fast so your invention stays protected.
+                  Direct access to a seasoned patent attorney with plans tailored for urgent filings and high-stakes enforcement.
                 </p>
-              </div>
-
-              <div className="flex w-full flex-col gap-3 md:w-[260px]">
-                <a
-                  href="/contact#contact-form"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F4D9C3] px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-[#102220] transition-transform duration-300 hover:scale-[1.02]"
-                >
-                  <Phone className="h-4 w-4" />
-                  Call For Emergency Filing
-                </a>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-white transition-colors duration-300 hover:bg-white/10"
-                >
-                  Schedule A Consultation
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-                <p className="text-[11px] text-center uppercase tracking-[0.3em] text-white/70">
-                  Available evenings & weekends
-                </p>
+                <div className="flex flex-col gap-3">
+                  <a
+                    href="/contact#contact-form"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F4D9C3] px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-[#102220] transition-transform duration-300 hover:scale-[1.02]"
+                  >
+                    <Phone className="h-4 w-4" />
+                    Call For Emergency Filing
+                  </a>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-white transition-colors duration-300 hover:bg-white/10"
+                  >
+                    Schedule A Consultation
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <p className="text-[11px] text-center uppercase tracking-[0.3em] text-white/70">
+                    Available evenings & weekends
+                  </p>
+                </div>
               </div>
             </div>
           </div>
