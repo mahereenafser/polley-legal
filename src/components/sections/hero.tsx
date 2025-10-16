@@ -1,18 +1,18 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
     <section className="relative h-[90vh] min-h-[720px] overflow-hidden">
-      <Image
-        src="/images/services-hero.jpg"
-        alt="Polley IP Law home hero"
-        fill
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
         className="absolute inset-0 h-full w-full object-cover"
-        priority
-        quality={90}
-      />
+      >
+        <source src="/videos/hero-video.mp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/80" />
 
       <div className="relative z-10 mx-auto flex h-full w-full max-w-[1280px] flex-col justify-center gap-16 px-6 sm:px-8 md:px-12 lg:px-20">
