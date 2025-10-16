@@ -70,30 +70,30 @@ const ServicesPreview = () => {
               </div>
 
               {/* Floating Card - Positioned to overlap image (tape effect) */}
-              <Link
+                            <Link
                 href="/patents"
-                className="group absolute left-0 top-[calc(60%+60px)] md:top-[calc(65%+70px)] w-[85%] sm:w-[75%] md:w-[80%] lg:w-[85%] bg-gradient-to-br from-[#1E3432] to-[#2D4745] text-white p-4 sm:p-6 md:p-8 rounded-r-xl transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] animate-float overflow-hidden"
+                className="group absolute left-0 top-[calc(60%+60px)] md:top-[calc(65%+70px)] w-[85%] sm:w-[75%] md:w-[80%] lg:w-[85%] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#081615] via-[#12302C] to-[#081615] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.8)] transition-all duration-500 hover:shadow-[0_45px_90px_-35px_rgba(12,24,22,0.9)] hover:scale-[1.02]"
               >
-                {/* Subtle texture overlay */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.1),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 opacity-40 mix-blend-overlay" style={{
+                  backgroundImage: 'radial-gradient(circle at 30% 30%, rgba(248,208,179,0.4), transparent 55%)'
+                }} />
 
-                <div className="relative z-10">
-                  <div className="flex justify-between items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div className="flex-1">
-                      <h4 className="font-display text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-1 sm:mb-2 text-white">Patent Protection Services</h4>
-                      <p className="text-xs sm:text-sm text-white/80 mb-2 sm:mb-4">Expert guidance from provisional applications to PCT filing</p>
+                <div className="relative z-10 space-y-4 p-6 sm:p-8">
+                  <div className="flex items-start justify-between gap-3 sm:gap-4">
+                    <div className="flex-1 space-y-2">
+                      <span className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#f8d0b3]">Highlighted</span>
+                      <h4 className="font-display text-xl sm:text-2xl md:text-3xl text-white">Patent Protection Services</h4>
+                      <p className="text-xs sm:text-sm text-white/75">
+                        Expert guidance from provisional patent lawyer Florida filings to patent infringement attorney Florida enforcement strategies.
+                      </p>
                     </div>
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white/80 transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110 flex-shrink-0 mt-1" />
+                    <ArrowRight className="mt-1 h-6 w-6 flex-shrink-0 text-[#f8d0b3] transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110" />
                   </div>
 
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-2 sm:mb-4">
-                    <span className="text-[10px] sm:text-xs px-2 sm:px-3 py-1 sm:py-1.5 bg-white/15 backdrop-blur-sm rounded-full text-white border border-white/20">Software Patents</span>
-                    <span className="text-[10px] sm:text-xs px-2 sm:px-3 py-1 sm:py-1.5 bg-white/15 backdrop-blur-sm rounded-full text-white border border-white/20">Biotech & Medical</span>
-                    <span className="text-[10px] sm:text-xs px-2 sm:px-3 py-1 sm:py-1.5 bg-white/15 backdrop-blur-sm rounded-full text-white border border-white/20">AI & Blockchain</span>
-                  </div>
-
-                  <div className="text-[10px] sm:text-xs text-white/60 font-medium uppercase tracking-wider">
-                    Click to explore all patent services →
+                  <div className="grid grid-cols-1 gap-2 text-[11px] uppercase tracking-[0.2em] text-white/70 sm:grid-cols-3">
+                    <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-center">Software Patents</span>
+                    <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-center">Biotech & Medical</span>
+                    <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-center">AI & Blockchain</span>
                   </div>
                 </div>
               </Link>
@@ -126,3 +126,4 @@ const ServicesPreview = () => {
 };
 
 export default ServicesPreview;
+

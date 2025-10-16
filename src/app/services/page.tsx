@@ -255,7 +255,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="lg:w-1/2 space-y-6 rounded-[32px] bg-[#102220] p-8 text-white">
-            <h3 className="font-display text-2xl">Rapid Response, Real Results</h3>
+            <h3 className="font-display text-2xl text-[#f8d0b3]">Rapid Response, Real Results</h3>
             <p className="text-sm text-white/80 leading-relaxed">
               Need emergency IP lawyer near me support? We maintain protocols for emergency trademark filing Florida, urgent trademark search Florida, and fast track patent attorney Florida submissions so you never miss a deadline, demo, or investor opportunity.
             </p>

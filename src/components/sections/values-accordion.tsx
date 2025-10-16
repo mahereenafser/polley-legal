@@ -96,7 +96,7 @@ const ValuesAccordion = () => {
                     <div className="space-y-5">
                       <div className="flex items-center gap-4">
                         <span className="font-display text-4xl text-[#f8d0b3]">{item.number}</span>
-                        <h3 className="font-display text-3xl sm:text-4xl leading-tight">{item.title}</h3>
+                        <h3 className="font-display text-3xl sm:text-4xl leading-tight text-[#f8d0b3]">{item.title}</h3>
                       </div>
                       <p className="text-sm sm:text-base text-white/85 leading-relaxed">
                         {item.description}
