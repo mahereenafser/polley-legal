@@ -100,7 +100,7 @@ const ServicesPreview = () => {
             </div>
           </div>
           {/* Right Column - pushed to extreme right */}
-          <div className="flex flex-col pl-4 md:pl-0 pr-4 md:pr-8 mt-6 md:mt-0 space-y-6 md:space-y-16">
+          <div className="flex flex-col pl-4 md:pl-0 pr-4 md:pr-8 mt-10 md:mt-0 space-y-6 md:space-y-16">
             {serviceItems.map((item, index) => (
               <Link
                 key={index}
