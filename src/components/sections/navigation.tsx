@@ -453,6 +453,7 @@ export default function Navigation({ forceScrolled = false }: NavigationProps) {
               </div>
             </nav>
           </div>
+        </div>
       </div>
     </>
   );
