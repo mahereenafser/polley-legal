@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, ArrowRight, Check, Phone } from "lucide-react";
+import { ArrowDown, ArrowRight, Check, Phone, Wallet, Clock3, Zap, Globe2, Cpu, ShieldCheck } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import LiveChatWidget from "@/components/sections/live-chat-widget";
@@ -322,95 +323,157 @@ export default function PatentsPage() {
       </section>
 
       {/* FAQs */}
-      <section className="py-20" style={{ backgroundColor: '#e5ebea' }}>
-        <div className="mx-auto max-w-[1000px] px-6 md:px-12">
-          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl mb-12" style={{ color: '#1f3130' }}>
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>How much does a patent attorney in Florida cost?</h3>
-              <p className="text-lg text-gray-700">
-                <strong>Provisional patent lawyer Florida</strong> fees adjust according to invention complexity and desired pace. <strong>Utility patent attorney Florida</strong> engagements require deeper drafting and prosecution, while design patents typically involve a more streamlined scope. We provide detailed quotes after your complimentary consultation so you understand every investment before moving forward.
+      <section className="relative overflow-hidden py-24">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#081513] via-[#102220] to-[#07110f]" />
+        <div className="absolute -top-32 right-10 h-72 w-72 rounded-full bg-[#F4D9C3]/20 blur-3xl" />
+        <div className="absolute -bottom-24 left-10 h-72 w-72 rounded-full bg-[#F4D9C3]/10 blur-3xl" />
+
+        <div className="relative mx-auto max-w-[1200px] px-6 md:px-12">
+          <div className="grid gap-12 lg:grid-cols-[0.55fr_1.45fr]">
+            <div className="space-y-6 text-white">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white/80">
+                FAQ & Support
+              </span>
+              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-base md:text-lg text-white/80 leading-relaxed">
+                We tailor every engagement to the urgency, complexity, and goals of your invention. Explore the most common questions founders and product teams ask when partnering with our <strong>patent attorney Florida</strong> team.
               </p>
+              <div className="space-y-3">
+                {[
+                  "Transparent pricing aligned with the stage of your innovation",
+                  "Expedited filings and prosecution updates so you never lose momentum",
+                  "Strategic enforcement that safeguards the value of your IP assets",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3 text-sm text-white/75">
+                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-white/15">
+                      <Check className="h-4 w-4 text-[#F4D9C3]" />
+                    </div>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-white transition-colors duration-300 hover:bg-white/20"
+              >
+                Talk with our team
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
 
-            <div>
-              <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>How long does the patent process take?</h3>
-              <p className="text-lg text-gray-700">
-                Provisional patents file within days. Utility patents typically take multiple years from filing to grant. Design patents are faster, usually roughly a year. Our <strong>patent prosecution lawyer Florida</strong> team expedites where possible and keeps you informed throughout.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>Do you offer same-day patent filing?</h3>
-              <p className="text-lg text-gray-700">
-                Yes! As a <strong>same day patent attorney Florida</strong> firm, we can file provisional patent applications within within a day for urgent situations. This is critical when facing public disclosure deadlines, competitive threats, or investor meetings.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>What types of inventions can you patent?</h3>
-              <p className="text-lg text-gray-700">
-                Our <strong>software patent attorney Florida</strong> protects algorithms and applications. Our <strong>biotech patent lawyer Florida</strong> handles pharmaceutical and medical device patents. Our <strong>mechanical patent attorney Florida</strong> covers machines, tools, and devices. We also handle business methods, chemical processes, and more.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>Can you help with international patents?</h3>
-              <p className="text-lg text-gray-700">
-                Absolutely. Our <strong>PCT patent filing Florida</strong> services provide international patent protection through the Patent Cooperation Treaty. We coordinate filings in specific countries based on your market strategy and budget.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-display text-2xl mb-3" style={{ color: '#1f3130' }}>What if someone is infringing my patent?</h3>
-              <p className="text-lg text-gray-700">
-                Our <strong>patent infringement attorney Florida</strong> team evaluates infringement claims, sends cease and desist letters, negotiates licensing agreements, and litigates when necessary. We protect your patent rights aggressively and strategically.
-              </p>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {faqItems.map((faq) => {
+                const Icon = faq.icon;
+                return (
+                  <div
+                    key={faq.question}
+                    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
+                  >
+                    <div className="flex items-center gap-3 text-[#F4D9C3]">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F4D9C3]/10">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <span className="text-xs font-semibold uppercase tracking-[0.28em] text-white/70">
+                        FAQ
+                      </span>
+                    </div>
+                    <h3 className="mt-5 font-display text-xl text-white leading-snug">
+                      {faq.question}
+                    </h3>
+                    <p
+                      className="mt-3 text-sm leading-relaxed text-white/80"
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    />
+                    <div className="absolute inset-x-6 bottom-0 h-px bg-gradient-to-r from-transparent via-[#F4D9C3]/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </section>
 
       {/* Service Areas & Emergency CTA */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-[1200px] px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-display text-4xl md:text-5xl mb-6" style={{ color: '#1f3130' }}>
-                Serving All of Florida
+      <section className="relative overflow-hidden bg-[#F8FAF9] py-24">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-[#EAF1F0]" />
+          <div className="absolute -top-32 right-20 h-64 w-64 rounded-full bg-[#f8d0b3]/30 blur-3xl" />
+          <div className="absolute -bottom-28 left-16 h-56 w-56 rounded-full bg-[#1f3130]/10 blur-3xl" />
+        </div>
+        <div className="relative mx-auto max-w-[1200px] px-6 md:px-12">
+          <div className="grid items-stretch gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="rounded-[32px] border border-[#E5EBE9] bg-white p-8 shadow-xl md:p-10 lg:p-12">
+              <span className="inline-flex items-center gap-2 rounded-full bg-[#F4D9C3]/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#1f3130]">
+                Florida Coverage
+              </span>
+              <h2 className="mt-6 font-display text-3xl md:text-4xl lg:text-5xl leading-tight text-[#1f3130]">
+                Serving innovators across Florida
               </h2>
-              <p className="text-lg text-gray-700 mb-6">
+              <p className="mt-4 text-base md:text-lg leading-relaxed text-[#4B5553]">
                 While based in Tampa, our <strong>patent attorney Florida</strong> services are available statewide including Miami, Orlando, Jacksonville, Fort Lauderdale, West Palm Beach, Tallahassee, and beyond. We serve clients nationwide and internationally for patent matters.
               </p>
-              <p className="text-lg text-gray-700">
-                Virtual consultations available for clients anywhere in Florida or across the United States. In-person meetings by appointment at our Tampa office.
+              <div className="mt-6 flex flex-wrap gap-2">
+                {floridaCities.map((city) => (
+                  <span
+                    key={city}
+                    className="rounded-full border border-[#E5EBE9] bg-[#F8FAF9] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#1f3130]"
+                  >
+                    {city}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-6 text-base md:text-lg leading-relaxed text-[#4B5553]">
+                Virtual consultations are available anywhere in Florida or across the United States. In-person meetings are hosted by appointment at our Tampa office.
               </p>
             </div>
-            <div className="p-10 rounded" style={{ backgroundColor: '#1f3130' }}>
-              <h3 className="font-display text-3xl md:text-4xl text-white mb-4">
-                Need Urgent Patent Protection?
-              </h3>
-              <p className="text-white/80 text-lg mb-6">
-                <strong>Same-day patent filing available.</strong> If you're facing a deadline, public disclosure, or competitive threat, contact us immediately for <strong>emergency patent filing Florida</strong> services.
-              </p>
-              <div className="flex flex-col gap-4">
-                <a
-                  href="/contact#contact-form"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-medium rounded transition-all"
-                  style={{ backgroundColor: '#f8d0b3', color: '#1f3130' }}
-                >
-                  <Phone className="h-5 w-5" />
-                  Call for Emergency Filing
-                </a>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded transition-all border-2 text-white"
-                  style={{ borderColor: 'rgba(255, 255, 255, 0.3)' }}
-                >
-                  Schedule Free Consultation
-                </Link>
+
+            <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#0f1f1c] via-[#12342f] to-[#07110f] p-8 text-white shadow-2xl md:p-10 lg:p-12">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(244,217,195,0.25),_transparent_55%)] opacity-70" />
+              <div className="pointer-events-none absolute -bottom-24 right-0 h-60 w-60 rounded-full bg-[#F4D9C3]/30 blur-3xl" />
+              <div className="relative z-10 flex h-full flex-col gap-6">
+                <span className="inline-flex items-center gap-2 self-start rounded-full bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white/80">
+                  Emergency IP Response
+                </span>
+                <h3 className="font-display text-3xl md:text-[40px] leading-tight">
+                  Need urgent patent protection?
+                </h3>
+                <p className="text-sm md:text-base leading-relaxed text-white/80">
+                  <strong>Same-day patent filing available.</strong> If you&apos;re facing a deadline, public disclosure, or competitive threat, contact us immediately for <strong>emergency patent filing Florida</strong> services.
+                </p>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {emergencyHighlights.map(({ icon: Icon, title, description }) => (
+                    <div key={title} className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+                      <div className="flex items-center gap-2 text-[#F4D9C3]">
+                        <Icon className="h-5 w-5" />
+                        <span className="text-xs font-semibold uppercase tracking-[0.22em]">
+                          {title}
+                        </span>
+                      </div>
+                      <p className="mt-3 text-sm leading-relaxed text-white/75">{description}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-auto flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href="/contact#contact-form"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F4D9C3] px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-[#102220] transition-transform duration-300 hover:scale-[1.02]"
+                  >
+                    <Phone className="h-4 w-4" />
+                    Call for Emergency Filing
+                  </a>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-white transition-colors duration-300 hover:bg-white/10"
+                  >
+                    Schedule Free Consultation
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+                <p className="text-xs uppercase tracking-[0.3em] text-white/60">
+                  Evening and weekend availability for urgent matters.
+                </p>
               </div>
             </div>
           </div>
@@ -423,3 +486,73 @@ export default function PatentsPage() {
   );
 }
 
+type FAQItem = {
+  icon: LucideIcon;
+  question: string;
+  answer: string;
+};
+
+const faqItems: FAQItem[] = [
+  {
+    icon: Wallet,
+    question: "How much does a patent attorney in Florida cost?",
+    answer:
+      "<strong>Provisional patent lawyer Florida</strong> fees adjust according to invention complexity and desired pace. <strong>Utility patent attorney Florida</strong> engagements require deeper drafting and prosecution, while design patents typically involve a more streamlined scope. We provide detailed quotes after your complimentary consultation so you understand every investment before moving forward.",
+  },
+  {
+    icon: Clock3,
+    question: "How long does the patent process take?",
+    answer:
+      "Provisional patents file within days. Utility patents typically take multiple years from filing to grant. Design patents are faster, usually roughly a year. Our <strong>patent prosecution lawyer Florida</strong> team expedites where possible and keeps you informed throughout.",
+  },
+  {
+    icon: Zap,
+    question: "Do you offer same-day patent filing?",
+    answer:
+      "Yes! As a <strong>same day patent attorney Florida</strong> firm, we can file provisional patent applications within a day for urgent situations. This is critical when facing public disclosure deadlines, competitive threats, or investor meetings.",
+  },
+  {
+    icon: Cpu,
+    question: "What types of inventions can you patent?",
+    answer:
+      "Our <strong>software patent attorney Florida</strong> protects algorithms and applications. Our <strong>biotech patent lawyer Florida</strong> handles pharmaceutical and medical device patents. Our <strong>mechanical patent attorney Florida</strong> covers machines, tools, and devices. We also handle business methods, chemical processes, and more.",
+  },
+  {
+    icon: Globe2,
+    question: "Can you help with international patents?",
+    answer:
+      "Absolutely. Our <strong>PCT patent filing Florida</strong> services provide international patent protection through the Patent Cooperation Treaty. We coordinate filings in specific countries based on your market strategy and budget.",
+  },
+  {
+    icon: ShieldCheck,
+    question: "What if someone is infringing my patent?",
+    answer:
+      "Our <strong>patent infringement attorney Florida</strong> team evaluates infringement claims, sends cease and desist letters, negotiates licensing agreements, and litigates when necessary. We protect your patent rights aggressively and strategically.",
+  },
+];
+
+const floridaCities = [
+  "Tampa",
+  "Miami",
+  "Orlando",
+  "Jacksonville",
+  "Fort Lauderdale",
+  "West Palm Beach",
+  "Tallahassee",
+  "Sarasota",
+];
+
+const emergencyHighlights: Array<{ icon: LucideIcon; title: string; description: string }> = [
+  {
+    icon: Zap,
+    title: "Rapid Provisional Filing",
+    description:
+      "Lock in your priority date with same-day provisional applications and expedited utility filings.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Enforcement-Ready Strategy",
+    description:
+      "Monitor competitors, prepare licensing pathways, and respond decisively to infringement.",
+  },
+];
