@@ -36,14 +36,14 @@ export default function TrademarksPage() {
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#1E3432] transition-colors duration-300 hover:bg-[#F4D9C3]"
+                className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#1E3432] transition-colors duration-300 hover:bg-[#F4D9C3] sm:w-auto"
               >
                 Free Trademark Consultation
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/contact#contact-form"
-                className="inline-flex items-center justify-center gap-3 rounded-full border border-white/40 px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-white/10"
+                className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/40 px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-white/10 sm:w-auto"
               >
                 Urgent Trademark Help
                 <ArrowRight className="h-4 w-4" />
