@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="relative z-10 mx-auto flex h-full w-full max-w-[1280px] flex-col justify-center gap-16 px-6 sm:px-8 md:px-12 lg:px-20">
         <div className="max-w-3xl space-y-6 text-white">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/70">Florida Intellectual Property Attorneys</p>
-          <h1 className="font-display text-[42px] sm:text-[58px] md:text-[74px] lg:text-[88px] leading-[1.03]">
+          <h1 className="font-display text-[42px] sm:text-[58px] md:text-[74px] lg:text-[88px] leading-[1.03] text-white">
             Protect the ideas that define your business.
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl">

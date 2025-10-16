@@ -99,7 +99,7 @@ export default function ServicesPage() {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative h-[90vh] min-h-[720px] overflow-hidden">
+      <section className="relative h-[92vh] min-h-[820px] overflow-hidden">
         <video
           autoPlay
           loop
@@ -111,10 +111,10 @@ export default function ServicesPage() {
         </video>
         <div className="absolute inset-0 bg-black/55" />
 
-        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1280px] flex-col justify-center px-6 sm:px-8 md:px-12 lg:px-20">
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1280px] flex-col justify-center gap-8 px-6 sm:px-8 md:px-12 lg:px-20">
           <div className="max-w-3xl space-y-6 text-white">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/70">Comprehensive IP Counsel</p>
-            <h1 className="font-display text-[44px] sm:text-[60px] md:text-[78px] lg:text-[90px] leading-[1.04]">Integrated Services for Patents, Trademarks & Copyrights</h1>
+            <h1 className="font-display text-[44px] sm:text-[60px] md:text-[78px] lg:text-[90px] leading-[1.04] text-white">Integrated Services for Patents, Trademarks & Copyrights</h1>
             <p className="text-base sm:text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl">
               Boutique attention with national reach—delivering patent attorney Florida precision, trademark attorney Florida brand protection, and copyright registration lawyer Florida experience when you need it.
             </p>
@@ -140,7 +140,7 @@ export default function ServicesPage() {
         <a
           href="#services-overview"
           aria-label="Scroll down"
-          className="absolute bottom-12 left-1/2 hidden -translate-x-1/2 md:flex"
+          className="absolute bottom-16 left-1/2 hidden -translate-x-1/2 md:flex"
         >
           <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/30 transition-all duration-300 hover:scale-105 hover:bg-white/10">
             <ArrowDown className="h-5 w-5 text-white" />

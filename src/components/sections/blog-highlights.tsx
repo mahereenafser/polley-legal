@@ -194,7 +194,7 @@ const BlogHighlights = () => {
           })}
         </div>
 
-        <div className="mt-10 hidden justify-center md:flex">
+        <div className="mt-14 hidden justify-center md:flex">
           <Link
             href="/blog"
             className="inline-flex items-center gap-3 rounded-full bg-[#1E3432] px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-[#2C4A47]"
@@ -204,7 +204,7 @@ const BlogHighlights = () => {
           </Link>
         </div>
 
-        <div className="mt-8 flex md:hidden">
+        <div className="mt-10 flex md:hidden">
           <Link
             href="/blog"
             className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#1E3432] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition-colors duration-300 hover:bg-[#2C4A47]"
