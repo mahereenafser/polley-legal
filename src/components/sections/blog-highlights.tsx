@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, type CSSProperties } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import Link from 'next/link';
 import { PlaceCard } from '@/components/ui/card-22';
 
@@ -54,17 +54,41 @@ const blogCards: BlogCard[] = [
 
 const BlogHighlights = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    if (isPaused) {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+      return;
+    }
+
+    intervalRef.current = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % blogCards.length);
     }, 6000);
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
+  }, [isPaused]);
 
   const leftIndex = (activeIndex + blogCards.length - 1) % blogCards.length;
   const rightIndex = (activeIndex + 1) % blogCards.length;
+
+  const handleActivate = (index: number) => {
+    setActiveIndex(index);
+    setIsPaused(true);
+  };
+
+  const handleResume = () => {
+    setIsPaused(false);
+  };
 
   return (
     <section className="bg-white py-20">
@@ -100,7 +124,10 @@ const BlogHighlights = () => {
         </div>
 
         {/* Desktop Carousel */}
-        <div className="hidden md:block relative h-[430px]">
+        <div
+          className="hidden md:block relative h-[430px]"
+          onMouseLeave={handleResume}
+        >
           {blogCards.map((card, index) => {
             const isActive = index === activeIndex;
             const isLeft = index === leftIndex;
@@ -134,8 +161,14 @@ const BlogHighlights = () => {
               <Link
                 key={card.title}
                 href={card.href}
-                onFocus={() => setActiveIndex(index)}
-                onMouseEnter={() => setActiveIndex(index)}
+                onFocus={() => handleActivate(index)}
+                onBlur={(event) => {
+                  const next = event.relatedTarget as Node | null;
+                  if (!event.currentTarget.parentElement?.contains(next)) {
+                    handleResume();
+                  }
+                }}
+                onMouseEnter={() => handleActivate(index)}
                 className="absolute left-1/2 top-1/2 block w-[280px] lg:w-[320px] xl:w-[360px]"
                 style={{
                   transform: `translate(-50%, -50%) translateX(${translateX}px) scale(${scale})`,

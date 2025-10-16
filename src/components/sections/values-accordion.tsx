@@ -1,106 +1,113 @@
 "use client";
 
-import * as React from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Plus, Minus } from "lucide-react";
 
 const valuesData = [
   {
-    value: "item-1",
     number: "01",
     title: "Integrity",
     subtitle: "Trust",
-    description: "We uphold the highest ethical standards, fostering trust and long-lasting relationships with our clients and colleagues.",
-    image: null,
+    description:
+      "We maintain absolute transparency and ethical clarity so every client trusts our advice, fees, and long-term intellectual property roadmap.",
+    keywords: "integrity • trust • ethical IP counsel",
+    image: "/images/image-6.jpg",
   },
   {
-    value: "item-2",
     number: "02",
     title: "Innovation",
     subtitle: "Forward-thinking",
-    description: "We embrace cutting-edge legal strategies and technologies to stay ahead of evolving challenges in the legal landscape.",
-    image: "https://framerusercontent.com/images/fvb9alQqu0RnQpJt7fyXnVHf4.jpg",
+    description:
+      "From emergency trademark filing Florida to rush patent filing Florida, we combine creative legal strategy with technology to respond the second opportunity or risk appears.",
+    keywords: "innovation • emergency IP protection • rush filings",
+    image: "/images/image-7.jpg",
   },
   {
-    value: "item-3",
     number: "03",
     title: "Excellence",
     subtitle: "Best-in-class",
-    description: "We strive for excellence in every aspect of our work, delivering superior results and exceeding client expectations.",
-    image: "https://framerusercontent.com/images/qczjTcTGhNr04QiZO8QMBftMhg.jpg",
+    description:
+      "Our team delivers best-in-class patent attorney Florida, trademark attorney Florida, and copyright attorney Florida representation—meticulous filings, decisive enforcement, and proactive monitoring.",
+    keywords: "excellence • patent attorney Florida • trademark attorney Florida",
+    image: "/images/image-8.jpg",
   },
 ];
 
 const ValuesAccordion = () => {
-  return (
-    <section className="bg-gradient-to-br from-[#1E3432] via-[#2C4A47] to-[#1E3432] text-white relative overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-5" style={{
-        backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-        backgroundSize: '40px 40px'
-      }}></div>
+  const [activeIndex, setActiveIndex] = useState(0);
 
-      <div className="container py-20 md:py-32 relative z-10">
-        {/* Section Header */}
-        <div className="max-w-4xl mb-16 md:mb-24">
-          <p className="text-[#f8d0b3] font-semibold uppercase tracking-widest text-sm mb-4">Our Values</p>
-          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
-            What Drives Us
-          </h2>
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#081615] via-[#102220] to-[#081615] py-20 md:py-32 text-white">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.6) 1px, transparent 0)',
+          backgroundSize: '48px 48px',
+        }}
+      />
+
+      <div className="container relative z-10">
+        <div className="max-w-3xl space-y-4 mb-16">
+          <p className="text-[#f8d0b3] text-sm font-semibold uppercase tracking-[0.3em]">Our Values</p>
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight">What Drives Us</h2>
+          <p className="text-base md:text-lg text-white/80 max-w-2xl">
+            We combine uncompromising ethics, innovative thinking, and elite execution so every emergency IP protection Florida request or long-term portfolio strategy receives white-glove guidance.
+          </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-6">
-          {valuesData.map((item) => (
-            <AccordionItem
-              key={item.value}
-              value={item.value}
-              className="border-none bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden transition-all duration-300 hover:bg-white/8 group"
-            >
-              <AccordionTrigger className="px-6 md:px-10 py-8 md:py-10 text-left hover:no-underline [&[data-state=open]]:bg-white/10">
-                <div className="flex w-full items-center justify-between gap-4">
-                  <div className="flex items-center gap-6 md:gap-10 flex-1">
-                    <span className="font-display text-4xl md:text-5xl text-[#f8d0b3] font-bold shrink-0">{item.number}</span>
-                    <div className="flex flex-col gap-2">
-                      <h3 className="font-display text-3xl md:text-5xl lg:text-6xl text-white leading-tight">{item.title}</h3>
-                      <span className="font-semibold uppercase tracking-[0.2em] text-[#f8d0b3] text-xs md:text-sm">
-                        {item.subtitle}
-                      </span>
+        <div className="grid gap-6 md:grid-cols-3">
+          {valuesData.map((item, index) => {
+            const isActive = activeIndex === index;
+
+            return (
+              <motion.button
+                key={item.number}
+                type="button"
+                onMouseEnter={() => setActiveIndex(index)}
+                onFocus={() => setActiveIndex(index)}
+                className="group relative overflow-hidden rounded-[32px] border border-white/10 text-left focus:outline-none"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                aria-pressed={isActive}
+              >
+                <motion.div
+                  animate={{ scale: isActive ? 1 : 0.95, opacity: isActive ? 1 : 0.75 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 22 }}
+                  className="relative h-full min-h-[420px]"
+                >
+                  <Image
+                    src={item.image}
+                    alt={`${item.title} at Polley IP Law`}
+                    fill
+                    className="object-cover"
+                    priority={index === 0}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/85" />
+
+                  <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8">
+                    <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.3em] text-white/60">
+                      <span>{item.subtitle}</span>
+                      <span className="hidden sm:block text-right">{item.keywords}</span>
+                    </div>
+
+                    <div className="space-y-5">
+                      <div className="flex items-center gap-4">
+                        <span className="font-display text-4xl text-[#f8d0b3]">{item.number}</span>
+                        <h3 className="font-display text-3xl sm:text-4xl leading-tight">{item.title}</h3>
+                      </div>
+                      <p className="text-sm sm:text-base text-white/85 leading-relaxed">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
-                  <div className="relative h-8 w-8 md:h-10 md:w-10 shrink-0 rounded-full bg-[#f8d0b3] flex items-center justify-center transition-transform duration-300 group-data-[state=open]:rotate-180">
-                    <Plus className="h-5 w-5 md:h-6 md:w-6 text-[#1E3432] opacity-100 transition-opacity duration-300 group-data-[state=open]:opacity-0 absolute" />
-                    <Minus className="h-5 w-5 md:h-6 md:w-6 text-[#1E3432] opacity-0 transition-opacity duration-300 group-data-[state=open]:opacity-100 absolute" />
-                  </div>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="px-6 md:px-10 pt-6 pb-10 animate-accordion-down">
-                <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2 lg:gap-12">
-                  <div className="max-w-xl">
-                    <p className="leading-relaxed text-white/90 text-lg md:text-xl font-light">
-                      {item.description}
-                    </p>
-                  </div>
-                  {item.image && (
-                    <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
-                      <Image
-                        src={item.image}
-                        alt={`${item.title} - ${item.subtitle}`}
-                        fill
-                        className="object-cover transition-transform duration-500 hover:scale-105"
-                      />
-                    </div>
-                  )}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+                </motion.div>
+              </motion.button>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

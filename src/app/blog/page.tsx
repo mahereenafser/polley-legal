@@ -233,41 +233,50 @@ export default function BlogPage() {
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-[1200px] px-6 md:px-12">
           <div className="overflow-hidden rounded-3xl border border-[#E8E9E6] bg-[#102220] text-white">
-            <div className="flex flex-col gap-12 p-8 md:p-12 lg:p-16 lg:flex-row lg:items-center lg:justify-between">
-              <div className="max-w-xl space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/60">Support</p>
-                <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-tight">
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_360px]">
+              <div className="space-y-6 p-8 md:p-12 lg:p-16">
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/50">Support</p>
+                <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-tight text-white">
                   Need Expert IP Guidance?
                 </h2>
-                <p className="text-base md:text-lg text-white/80 leading-relaxed">
-                  Whether you&apos;re racing against launch deadlines or building a long-term portfolio, our attorneys respond with rapid action and strategic clarity.
+                <p className="text-base md:text-lg text-white/85 leading-relaxed max-w-xl">
+                  Whether you&apos;re racing against launch deadlines or strengthening a long-term portfolio, our attorneys respond with emergency action plans and strategic intellectual property counsel tailored to your business.
                 </p>
-                <div className="grid gap-3 text-sm text-white/70 md:grid-cols-2">
-                  <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                <div className="grid gap-4 text-sm text-white/75 md:grid-cols-2">
+                  <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
                     <p className="font-semibold text-white">Emergency Filings</p>
-                    <p>Same-day trademark and patent support when time is critical.</p>
+                    <p>Same-day trademark monitoring, rush patent filing Florida, and urgent copyright protection services.</p>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                  <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
                     <p className="font-semibold text-white">Strategic Counsel</p>
-                    <p>Comprehensive IP strategy tailored to your business goals.</p>
+                    <p>Comprehensive IP strategy tailored to startups, e-commerce brands, and tech companies.</p>
                   </div>
+                </div>
+                <div className="flex flex-col gap-4 sm:flex-row">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#1E3432] transition-colors duration-300 hover:bg-[#F4D9C3]"
+                  >
+                    Schedule Consultation
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <a
+                    href="tel:+1234567890"
+                    className="inline-flex items-center justify-center gap-3 rounded-full border border-white/30 px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-white/10"
+                  >
+                    Call Us Directly
+                  </a>
                 </div>
               </div>
 
-              <div className="flex flex-col gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#1E3432] transition-colors duration-300 hover:bg-[#F4D9C3]"
-                >
-                  Schedule Consultation
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-                <a
-                  href="tel:+1234567890"
-                  className="inline-flex items-center justify-center gap-3 rounded-full border border-white/30 px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-white/10"
-                >
-                  Call Us Directly
-                </a>
+              <div className="relative hidden h-full min-h-[240px] overflow-hidden bg-black/20 lg:block">
+                <Image
+                  src="/images/image-8.jpg"
+                  alt="Attorneys reviewing documents"
+                  fill
+                  className="object-cover opacity-70"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#102220] via-transparent to-transparent" />
               </div>
             </div>
           </div>
