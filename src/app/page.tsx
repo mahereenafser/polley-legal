@@ -12,6 +12,7 @@ import ContactSection from "@/components/sections/contact-section";
 import CtaContact from "@/components/sections/cta-contact";
 import Footer from "@/components/sections/footer";
 import LiveChatWidget from "@/components/sections/live-chat-widget";
+import BlogHighlights from "@/components/sections/blog-highlights";
 
 export default function Home() {
   return (
@@ -37,6 +38,8 @@ export default function Home() {
       <div className="mt-16 md:mt-24 lg:mt-32">
         <ContactSection />
       </div>
+
+      <BlogHighlights />
 
       {/* 7. Our Approach Protecting Creators */}
       <ClientCentric />
