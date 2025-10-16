@@ -98,29 +98,29 @@ export default function Testimonials3D() {
                 'translateX(-50px) translateY(0px) translateZ(-50px) rotateX(15deg) rotateY(-12deg) rotateZ(8deg)',
             }}
           >
-            {/* Vertical Marquee (downwards) - Column 1 */}
-            <Marquee vertical pauseOnHover repeat={3} className="[--duration:40s]">
+            {/* Column 1 - Upward scroll (reverse) */}
+            <Marquee vertical pauseOnHover reverse repeat={4} className="[--duration:30s]">
               {testimonials.map((review, idx) => (
                 <TestimonialCard key={`col1-${review.username}-${idx}`} {...review} />
               ))}
             </Marquee>
 
-            {/* Vertical Marquee (upwards) - Column 2 */}
-            <Marquee vertical pauseOnHover reverse repeat={3} className="[--duration:40s]">
+            {/* Column 2 - Downward scroll */}
+            <Marquee vertical pauseOnHover repeat={4} className="[--duration:30s]">
               {testimonials.map((review, idx) => (
                 <TestimonialCard key={`col2-${review.username}-${idx}`} {...review} />
               ))}
             </Marquee>
 
-            {/* Vertical Marquee (downwards) - Column 3 */}
-            <Marquee vertical pauseOnHover repeat={3} className="[--duration:40s]">
+            {/* Column 3 - Upward scroll (reverse) */}
+            <Marquee vertical pauseOnHover reverse repeat={4} className="[--duration:30s]">
               {testimonials.map((review, idx) => (
                 <TestimonialCard key={`col3-${review.username}-${idx}`} {...review} />
               ))}
             </Marquee>
 
-            {/* Vertical Marquee (upwards) - Column 4 */}
-            <Marquee vertical pauseOnHover reverse repeat={3} className="[--duration:40s]">
+            {/* Column 4 - Downward scroll */}
+            <Marquee vertical pauseOnHover repeat={4} className="[--duration:30s]">
               {testimonials.map((review, idx) => (
                 <TestimonialCard key={`col4-${review.username}-${idx}`} {...review} />
               ))}
