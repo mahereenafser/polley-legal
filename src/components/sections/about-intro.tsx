@@ -13,12 +13,12 @@ const AboutIntro = () => {
 
   return (
     <section className="bg-white overflow-hidden">
-      <div className="mx-auto max-w-[1440px] relative pt-16 md:pt-[120px]">
+      <div className="mx-auto max-w-[1440px] relative pt-6 md:pt-[120px]">
         <div className="relative min-h-[550px] lg:min-h-[750px] flex flex-col">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 flex-1">
             {/* Left Column - Text with space for content */}
             <div className="flex flex-col pl-4 md:pl-8 pr-4 md:pr-8 lg:pr-12">
-              <div className="flex flex-col gap-4 mb-12">
+              <div className="flex flex-col gap-4 mb-6 md:mb-12">
                 <p className="text-label text-text-primary">About us</p>
                 <p className="text-base text-text-secondary max-w-md">
                   As Florida's leading intellectual property attorney, Polley IP Law specializes in comprehensive IP protection, guiding inventors and creators through patents, trademarks, and copyrights with expert legal representation.
@@ -80,7 +80,7 @@ const AboutIntro = () => {
         </div>
 
         {/* Team Members Section */}
-        <div className="px-4 md:px-8 py-16">
+        <div className="px-4 md:px-8 py-6 md:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 w-full">
             {/* Left Column - Daniel Polley */}
             <div className="flex flex-col sm:flex-row items-start gap-6">
