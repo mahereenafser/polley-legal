@@ -449,7 +449,7 @@ export default function PatentsPage() {
                 <span className="self-start rounded-full bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/70">
                   Emergency Patent Support
                 </span>
-                <h3 className="font-display text-3xl leading-tight sm:text-[34px]">
+                <h3 className="font-display text-3xl leading-tight text-white sm:text-[34px]">
                   Need rapid patent counsel?
                 </h3>
                 <p className="text-sm leading-relaxed text-white/80 sm:text-base">
