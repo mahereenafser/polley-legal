@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, Check, Phone, Shield } from "lucide-react";
+import { ArrowDown, ArrowRight, Check, Phone, Shield } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import LiveChatWidget from "@/components/sections/live-chat-widget";
@@ -13,42 +13,40 @@ export default function TrademarksPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[600px] overflow-hidden" style={{ backgroundColor: '#1f3130' }}>
-        <div className="absolute inset-0 opacity-30">
-          <Image
-            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/qczjTcTGhNr04QiZO8QMBftMhg-6.jpg"
-            alt="Trademark attorney Florida providing brand protection services"
-            fill
-            className="object-cover"
-            priority
-            quality={85}
-            sizes="100vw"
-          />
-        </div>
+      <section className="relative h-[90vh] min-h-[700px] md:min-h-[760px] overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/images/explore-video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/55" />
 
-        <div className="relative z-10 mx-auto max-w-[1200px] h-full flex flex-col justify-center px-6 md:px-12 py-24">
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1280px] flex-col justify-center px-6 sm:px-8 md:px-12 lg:px-20">
           <div className="max-w-3xl">
-            <h1 className="font-display text-white text-[60px] md:text-[90px] lg:text-[110px] leading-[0.9] -tracking-[0.02em] mb-6">
+            <h1 className="font-display text-white text-[44px] sm:text-[56px] md:text-[72px] lg:text-[86px] leading-[1.04] -tracking-[0.01em] mb-6">
               Trademark Attorney Florida
             </h1>
-            <p className="text-white/90 text-xl md:text-2xl leading-relaxed mb-8">
+            <p className="text-white/90 text-base sm:text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
               Protect your brand with expert trademark registration, federal trademark filing, and trademark monitoring services. Rush trademark search and same-day filing available.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded transition-all"
-                style={{ backgroundColor: '#f8d0b3', color: '#1f3130' }}
+                className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
               >
-                Free Trademark Consultation
+                <span>Free Trademark Consultation</span>
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <a
                 href="tel:+1234567890"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-medium rounded transition-all border-2 text-white"
-                style={{ borderColor: 'rgba(255, 255, 255, 0.3)' }}
+                className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
               >
-                <Phone className="h-5 w-5" />
-                Urgent Trademark Help
+                <span>Urgent Trademark Help</span>
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>
           </div>
@@ -57,7 +55,7 @@ export default function TrademarksPage() {
         <a
           href="#content"
           aria-label="Scroll down"
-          className="absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 md:block"
+          className="absolute bottom-10 left-1/2 z-20 hidden -translate-x-1/2 md:block"
         >
           <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/30 transition-all duration-300 hover:scale-105">
             <ArrowDown className="h-5 w-5 text-white" />
