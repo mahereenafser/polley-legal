@@ -60,7 +60,7 @@ const ServicesPreview = () => {
             {/* Image and Card Container - No padding */}
             <div className="relative">
               {/* Background Image - Full width, no padding */}
-              <div className="relative h-[400px] md:h-[500px] lg:h-[600px] w-full overflow-hidden rounded-3xl">
+              <div className="relative h-[400px] md:h-[500px] lg:h-[600px] w-full overflow-hidden rounded-3xl pr-4 sm:pr-0">
                 <Image
                   src="/images/services.jpg"
                   alt="Services"
@@ -72,7 +72,7 @@ const ServicesPreview = () => {
               {/* Floating Card - Positioned to overlap image (tape effect) */}
               <Link
                 href="/patents"
-                className="group absolute left-0 top-[calc(60%+60px)] md:top-[calc(65%+70px)] w-[85%] sm:w-[100%] md:w-[80%] lg:w-[85%] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#081615] via-[#12302C] to-[#081615] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.8)] transition-all duration-500 hover:shadow-[0_45px_90px_-35px_rgba(12,24,22,0.9)] hover:scale-[1.02]"
+                className="group absolute left-0 top-[calc(60%+60px)] md:top-[calc(65%+70px)] w-[75%] sm:w-[85%] md:w-[80%] lg:w-[85%] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#081615] via-[#12302C] to-[#081615] text-white shadow-[0_40px_80px_-40px_rgba(0,0,0,0.8)] transition-all duration-500 hover:shadow-[0_45px_90px_-35px_rgba(12,24,22,0.9)] hover:scale-[1.02]"
               >
                 <div className="absolute inset-0 opacity-40 mix-blend-overlay" style={{
                   backgroundImage: 'radial-gradient(circle at 30% 30%, rgba(248,208,179,0.4), transparent 55%)'
