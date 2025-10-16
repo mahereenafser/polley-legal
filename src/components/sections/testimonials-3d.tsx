@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent } from '@/components/ui/card';
 import { Marquee } from '@/components/ui/3d-testimonials';
 
@@ -13,6 +13,7 @@ const testimonials = [
     body: 'Polley IP Law provided exceptional service, guiding us through every step of protecting our intellectual property. Their expertise is unmatched!',
     initials: 'SJ',
     role: 'CEO, Tech Innovations Inc.',
+    img: 'https://randomuser.me/api/portraits/women/44.jpg',
   },
   {
     name: 'Michael Chen',
@@ -20,6 +21,7 @@ const testimonials = [
     body: 'Working with Polley IP Law was a game-changer for our business. They helped us secure critical patents that positioned us ahead of our competitors.',
     initials: 'MC',
     role: 'Founder, BioTech Solutions',
+    img: 'https://randomuser.me/api/portraits/men/32.jpg',
   },
   {
     name: 'Jennifer Martinez',
@@ -27,6 +29,7 @@ const testimonials = [
     body: 'The team at Polley IP Law combines deep legal expertise with a genuine understanding of our business needs. Highly recommended!',
     initials: 'JM',
     role: 'VP of Legal, Creative Studios',
+    img: 'https://randomuser.me/api/portraits/women/65.jpg',
   },
   {
     name: 'David Thompson',
@@ -34,15 +37,17 @@ const testimonials = [
     body: 'From trademark registration to patent prosecution, Polley IP Law has been our trusted partner. Their attention to detail is remarkable.',
     initials: 'DT',
     role: 'CTO, Innovation Labs',
+    img: 'https://randomuser.me/api/portraits/men/46.jpg',
   },
 ];
 
-function TestimonialCard({ initials, name, username, body, role }: typeof testimonials[number]) {
+function TestimonialCard({ initials, name, username, body, role, img }: typeof testimonials[number]) {
   return (
     <Card className="w-80 hover:shadow-xl transition-shadow duration-300">
       <CardContent className="p-6">
         <div className="flex items-center gap-3 mb-4">
-          <Avatar className="h-12 w-12 bg-[#1E3432]">
+          <Avatar className="h-12 w-12">
+            <AvatarImage src={img} alt={name} />
             <AvatarFallback className="bg-[#1E3432] text-white font-display text-base">
               {initials}
             </AvatarFallback>
@@ -78,12 +83,19 @@ export default function Testimonials3D() {
         </div>
 
         {/* 3D Marquee Container */}
-        <div className="relative flex h-[600px] w-full max-w-[1200px] mx-auto flex-row items-center justify-center overflow-hidden rounded-2xl border border-border bg-background/50">
+        <div
+          className="relative flex h-[600px] w-full max-w-[1200px] mx-auto flex-row items-center justify-center overflow-hidden rounded-2xl border border-border bg-background/50"
+          style={{
+            perspective: '1000px',
+            perspectiveOrigin: 'center center',
+          }}
+        >
           <div
             className="flex flex-row items-center gap-4"
             style={{
+              transformStyle: 'preserve-3d',
               transform:
-                'translateX(-100px) translateY(0px) translateZ(-100px) rotateX(20deg) rotateY(-10deg) rotateZ(20deg)',
+                'translateX(-50px) translateY(0px) translateZ(-50px) rotateX(15deg) rotateY(-12deg) rotateZ(8deg)',
             }}
           >
             {/* Vertical Marquee (downwards) - Column 1 */}
