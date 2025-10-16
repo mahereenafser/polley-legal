@@ -334,7 +334,7 @@ export default function PatentsPage() {
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white/80">
                 FAQ & Support
               </span>
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight">
+              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight" style={{ color: '#F4D9C3' }}>
                 Frequently Asked Questions
               </h2>
               <p className="text-base md:text-lg text-white/80 leading-relaxed">
@@ -396,87 +396,51 @@ export default function PatentsPage() {
       </section>
 
       {/* Service Areas & Emergency CTA */}
-      <section className="relative overflow-hidden bg-[#F8FAF9] py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#F8FAF9] via-[#EFF4F3] to-[#F8FAF9] py-24">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-[#EAF1F0]" />
-          <div className="absolute -top-32 right-20 h-64 w-64 rounded-full bg-[#f8d0b3]/30 blur-3xl" />
-          <div className="absolute -bottom-28 left-16 h-56 w-56 rounded-full bg-[#1f3130]/10 blur-3xl" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(248,208,179,0.25),_transparent_60%)]" />
+          <div className="absolute -top-36 right-10 h-64 w-64 rounded-full bg-[#1f3130]/10 blur-3xl" />
+          <div className="absolute -bottom-24 left-10 h-56 w-56 rounded-full bg-[#1f3130]/10 blur-3xl" />
         </div>
-        <div className="relative mx-auto max-w-[1200px] px-6 md:px-12">
-          <div className="grid items-stretch gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-            <div className="rounded-[32px] border border-[#E5EBE9] bg-white p-8 shadow-xl md:p-10 lg:p-12">
-              <span className="inline-flex items-center gap-2 rounded-full bg-[#F4D9C3]/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#1f3130]">
-                Florida Coverage
+        <div className="relative mx-auto flex max-w-[1100px] flex-col gap-10 px-6 text-center md:px-10">
+          <span className="mx-auto inline-flex items-center gap-2 rounded-full border border-[#1f3130]/15 bg-white px-5 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#1f3130]">
+            Florida Patent Support
+          </span>
+          <h2 className="font-display text-3xl leading-tight text-[#1f3130] sm:text-4xl md:text-[44px]">
+            Wherever you&apos;re building, we keep innovation protected.
+          </h2>
+          <p className="mx-auto max-w-3xl text-base leading-relaxed text-[#4B5553]">
+            From Tampa to Miami and beyond, we provide same-day filings, ongoing strategy, and direct access to a <strong>patent attorney Florida</strong> when decisions can&apos;t wait.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            {floridaCities.map((city) => (
+              <span
+                key={city}
+                className="rounded-full border border-[#E5EBE9] bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#1f3130]"
+              >
+                {city}
               </span>
-              <h2 className="mt-6 font-display text-3xl md:text-4xl lg:text-5xl leading-tight text-[#1f3130]">
-                Serving innovators across Florida
-              </h2>
-              <p className="mt-4 text-base md:text-lg leading-relaxed text-[#4B5553]">
-                While based in Tampa, our <strong>patent attorney Florida</strong> services are available statewide including Miami, Orlando, Jacksonville, Fort Lauderdale, West Palm Beach, Tallahassee, and beyond. We serve clients nationwide and internationally for patent matters.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {floridaCities.map((city) => (
-                  <span
-                    key={city}
-                    className="rounded-full border border-[#E5EBE9] bg-[#F8FAF9] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#1f3130]"
-                  >
-                    {city}
-                  </span>
-                ))}
-              </div>
-              <p className="mt-6 text-base md:text-lg leading-relaxed text-[#4B5553]">
-                Virtual consultations are available anywhere in Florida or across the United States. In-person meetings are hosted by appointment at our Tampa office.
-              </p>
-            </div>
-
-            <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#0f1f1c] via-[#12342f] to-[#07110f] p-8 text-white shadow-2xl md:p-10 lg:p-12">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(244,217,195,0.25),_transparent_55%)] opacity-70" />
-              <div className="pointer-events-none absolute -bottom-24 right-0 h-60 w-60 rounded-full bg-[#F4D9C3]/30 blur-3xl" />
-              <div className="relative z-10 flex h-full flex-col gap-6">
-                <span className="inline-flex items-center gap-2 self-start rounded-full bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white/80">
-                  Emergency IP Response
-                </span>
-                <h3 className="font-display text-3xl md:text-[40px] leading-tight">
-                  Need urgent patent protection?
-                </h3>
-                <p className="text-sm md:text-base leading-relaxed text-white/80">
-                  <strong>Same-day patent filing available.</strong> If you&apos;re facing a deadline, public disclosure, or competitive threat, contact us immediately for <strong>emergency patent filing Florida</strong> services.
-                </p>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  {emergencyHighlights.map(({ icon: Icon, title, description }) => (
-                    <div key={title} className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-                      <div className="flex items-center gap-2 text-[#F4D9C3]">
-                        <Icon className="h-5 w-5" />
-                        <span className="text-xs font-semibold uppercase tracking-[0.22em]">
-                          {title}
-                        </span>
-                      </div>
-                      <p className="mt-3 text-sm leading-relaxed text-white/75">{description}</p>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-auto flex flex-col gap-3 sm:flex-row">
-                  <a
-                    href="/contact#contact-form"
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F4D9C3] px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-[#102220] transition-transform duration-300 hover:scale-[1.02]"
-                  >
-                    <Phone className="h-4 w-4" />
-                    Call for Emergency Filing
-                  </a>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-white transition-colors duration-300 hover:bg-white/10"
-                  >
-                    Schedule Free Consultation
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-                <p className="text-xs uppercase tracking-[0.3em] text-white/60">
-                  Evening and weekend availability for urgent matters.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
+          <div className="mx-auto grid w-full max-w-3xl gap-4 md:grid-cols-2">
+            <a
+              href="/contact#contact-form"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1f3130] bg-[#1f3130] px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-white transition-transform duration-300 hover:scale-[1.02]"
+            >
+              <Phone className="h-4 w-4" />
+              Call For Emergency Filing
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1f3130]/30 bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-[#1f3130] transition-colors duration-300 hover:bg-[#F4D9C3]/40"
+            >
+              Schedule A Consultation
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#4B5553]">
+            Evenings and weekends available for urgent matters.
+          </p>
         </div>
       </section>
 
