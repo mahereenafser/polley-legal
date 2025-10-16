@@ -6,7 +6,7 @@ import ExpertiseSections from "@/components/sections/expertise-sections";
 import ValuesMarquee from "@/components/sections/values-marquee";
 import ClientCentric from "@/components/sections/client-centric";
 import ExploreCards from "@/components/sections/explore-cards";
-import TestimonialsSlider from "@/components/sections/testimonials-slider";
+import Testimonials3D from "@/components/sections/testimonials-3d";
 import ValuesAccordion from "@/components/sections/values-accordion";
 import ContactSection from "@/components/sections/contact-section";
 import CtaContact from "@/components/sections/cta-contact";
@@ -46,7 +46,7 @@ export default function Home() {
 
       {/* Other sections */}
       <ExploreCards />
-      <TestimonialsSlider />
+      <Testimonials3D />
       <ValuesAccordion />
 
       <CtaContact />
