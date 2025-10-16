@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Calendar, Clock, Tag } from 'lucide-react';
+import { ArrowDown, ArrowRight, Calendar, Clock, Tag } from 'lucide-react';
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import LiveChatWidget from '@/components/sections/live-chat-widget';
@@ -26,21 +26,60 @@ export default function BlogPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-32 md:py-40 overflow-hidden" style={{ backgroundColor: '#fbe7d9' }}>
-        <div className="mx-auto max-w-[1200px] px-6 md:px-12">
-          <div className="text-center">
-            <h1 className="font-display text-[80px] md:text-[120px] lg:text-[160px] leading-[0.9] -tracking-[0.02em] mb-8" style={{ color: '#1f3130' }}>
+      <section className="relative h-[90vh] min-h-[700px] md:min-h-[760px] overflow-hidden">
+        <Image
+          src="/images/blog-hero.jpg"
+          alt="Polley IP Law blog hero"
+          fill
+          className="absolute inset-0 h-full w-full object-cover"
+          priority
+          quality={90}
+        />
+        <div className="absolute inset-0 bg-black/55" />
+
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1280px] flex-col justify-center px-6 sm:px-8 md:px-12 lg:px-20">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/70 mb-4">
+              Insights & Analysis
+            </p>
+            <h1 className="font-display text-white text-[44px] sm:text-[56px] md:text-[72px] lg:text-[86px] leading-[1.04] -tracking-[0.01em] mb-6">
               IP Insights
             </h1>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: '#1f3130', opacity: 0.8 }}>
-              Expert guidance on patents, trademarks, copyrights, and intellectual property strategy from Florida's leading IP attorneys
+            <p className="text-white/90 text-base sm:text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+              Expert commentary on patents, trademarks, emergency filings, and the strategies shaping intellectual property protection for innovators.
             </p>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+              <Link
+                href="#featured"
+                className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
+              >
+                <span>Browse Articles</span>
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+              <Link
+                href="#categories"
+                className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
+              >
+                <span>View Categories</span>
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </div>
           </div>
         </div>
+
+        <a
+          href="#featured"
+          aria-label="Scroll down"
+          className="absolute bottom-10 left-1/2 z-20 hidden -translate-x-1/2 md:block"
+        >
+          <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/30 transition-all duration-300 hover:scale-105 hover:bg-white/10">
+            <ArrowDown className="h-6 w-6 text-white" />
+          </div>
+        </a>
       </section>
 
       {/* Featured Post - Large with Floating Card Effect */}
-      <section className="py-20 bg-white">
+      <section id="featured" className="py-20 bg-white">
         <div className="mx-auto max-w-[1400px] px-6 md:px-12">
           <div className="mb-8">
             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold" style={{ backgroundColor: '#fbe7d9', color: '#1f3130' }}>
@@ -52,7 +91,7 @@ export default function BlogPage() {
             {/* Background Image */}
             <div className="relative h-[500px] md:h-[600px] w-full overflow-hidden rounded-2xl">
               <Image
-                src={featuredPost.image}
+                src="/images/copyright-claim.jpg"
                 alt={featuredPost.title}
                 fill
                 className="object-cover"
@@ -103,7 +142,7 @@ export default function BlogPage() {
       <div className="h-32 md:h-40 lg:h-48 bg-white" />
 
       {/* Category Filter */}
-      <section className="py-12 bg-white border-b" style={{ borderColor: '#E8E9E6' }}>
+      <section id="categories" className="py-12 bg-white border-b" style={{ borderColor: '#E8E9E6' }}>
         <div className="mx-auto max-w-[1400px] px-6 md:px-12">
           <div className="flex flex-wrap gap-3">
             {categories.map((category) => (
@@ -191,22 +230,47 @@ export default function BlogPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20" style={{ backgroundColor: '#1f3130' }}>
-        <div className="mx-auto max-w-[1000px] px-6 md:px-12 text-center">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6">
-            Need Expert IP Guidance?
-          </h2>
-          <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
-            Whether you need emergency trademark filing Florida, same day patent attorney Florida services, or comprehensive IP litigation attorney Florida support, our team is ready to protect your intellectual property.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
-            style={{ backgroundColor: '#f8d0b3', color: '#1f3130' }}
-          >
-            Schedule Free Consultation
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+      <section className="py-24 bg-white">
+        <div className="mx-auto max-w-[1200px] px-6 md:px-12">
+          <div className="overflow-hidden rounded-3xl border border-[#E8E9E6] bg-[#102220] text-white">
+            <div className="flex flex-col gap-12 p-8 md:p-12 lg:p-16 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-xl space-y-4">
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/60">Support</p>
+                <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-tight">
+                  Need Expert IP Guidance?
+                </h2>
+                <p className="text-base md:text-lg text-white/80 leading-relaxed">
+                  Whether you&apos;re racing against launch deadlines or building a long-term portfolio, our attorneys respond with rapid action and strategic clarity.
+                </p>
+                <div className="grid gap-3 text-sm text-white/70 md:grid-cols-2">
+                  <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                    <p className="font-semibold text-white">Emergency Filings</p>
+                    <p>Same-day trademark and patent support when time is critical.</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                    <p className="font-semibold text-white">Strategic Counsel</p>
+                    <p>Comprehensive IP strategy tailored to your business goals.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#1E3432] transition-colors duration-300 hover:bg-[#F4D9C3]"
+                >
+                  Schedule Consultation
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <a
+                  href="tel:+1234567890"
+                  className="inline-flex items-center justify-center gap-3 rounded-full border border-white/30 px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-white/10"
+                >
+                  Call Us Directly
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

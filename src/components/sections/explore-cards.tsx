@@ -2,6 +2,47 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
+const exploreCards = [
+  {
+    title: 'Services Overview',
+    description: 'Explore our full suite of intellectual property services engineered to support innovators at every stage.',
+    href: '/services',
+    tag: 'Services',
+    image: '/images/paper-contract.jpg',
+  },
+  {
+    title: 'Latest Insights',
+    description: 'Stay ahead with our analysis on trademarks, emergency filings, and long-term IP strategy.',
+    href: '/blog',
+    tag: 'Blog',
+    image: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/qOaIdbeCmsxTXr2UUj7TRajLFU-11.jpg',
+  },
+];
+
+const ExploreCard = ({ title, description, href, tag, image }: typeof exploreCards[number]) => (
+  <Link
+    href={href}
+    className="group block w-full max-w-[360px] overflow-hidden rounded-3xl border border-white/10 bg-white shadow-xl transition-transform duration-500 hover:-translate-y-2"
+  >
+    <div className="relative h-48">
+      <Image src={image} alt={title} fill className="object-cover" />
+      <span className="absolute left-4 top-4 inline-flex rounded-full bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#1E3432] backdrop-blur-sm">
+        {tag}
+      </span>
+    </div>
+    <div className="space-y-4 p-6">
+      <h4 className="font-display text-2xl text-[#1E3432]">{title}</h4>
+      <p className="text-sm text-[#5F6764] leading-relaxed">{description}</p>
+      <div className="pt-2">
+        <span className="inline-flex items-center gap-2 rounded-full bg-[#1E3432] px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 group-hover:bg-[#152623]">
+          View All
+          <ArrowRight className="h-4 w-4" />
+        </span>
+      </div>
+    </div>
+  </Link>
+);
+
 const ExploreCards = () => {
   return (
     <section id="explore-cards" className="bg-background-primary text-foreground py-20 px-6 md:px-12">
@@ -21,9 +62,9 @@ const ExploreCards = () => {
 
           {/* Video Container - responsive layouts */}
           <div className="w-full">
-            {/* Desktop Layout (md and up) - tape effect */}
+            {/* Desktop Layout (md and up) */}
             <div className="hidden md:block relative p-8 md:p-12">
-              <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl">
+              <div className="relative aspect-video overflow-hidden rounded-3xl shadow-2xl">
                 <video
                   src="/videos/explore-video.mp4"
                   autoPlay
@@ -34,64 +75,14 @@ const ExploreCards = () => {
                 />
               </div>
 
-              <Link
-                href="/services"
-                className="group absolute left-0 bottom-[10%] w-[280px] sm:w-[320px] md:w-[360px] bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3)] animate-float z-10"
-              >
-                <div className="relative h-[160px] sm:h-[180px] overflow-hidden">
-                  <Image
-                    src="/images/paper-contract.jpg"
-                    alt="Services"
-                    fill
-                    className="object-cover transform transition-transform duration-500 group-hover:scale-110"
-                  />
+              <div className="pointer-events-none absolute inset-0">
+                <div className="absolute left-0 bottom-[8%] pointer-events-auto">
+                  <ExploreCard {...exploreCards[0]} />
                 </div>
-                <div className="p-5 sm:p-6 bg-white">
-                  <div className="flex justify-between items-start gap-3">
-                    <div>
-                      <h4 className="font-display text-2xl sm:text-3xl font-normal text-foreground mb-1">
-                        Services
-                      </h4>
-                      <p className="font-body text-sm sm:text-base text-muted-foreground">
-                        Comprehensive IP solutions
-                      </p>
-                    </div>
-                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[-10deg]">
-                      <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
-                    </div>
-                  </div>
+                <div className="absolute right-0 top-[8%] pointer-events-auto">
+                  <ExploreCard {...exploreCards[1]} />
                 </div>
-              </Link>
-
-              <Link
-                href="/blog"
-                className="group absolute right-0 top-[10%] w-[280px] sm:w-[320px] md:w-[360px] bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3)] animate-float z-10"
-                style={{ animationDelay: '0.5s' }}
-              >
-                <div className="relative h-[160px] sm:h-[180px] overflow-hidden">
-                  <Image
-                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/qOaIdbeCmsxTXr2UUj7TRajLFU-11.jpg"
-                    alt="Blog"
-                    fill
-                    className="object-cover transform transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-                <div className="p-5 sm:p-6 bg-white">
-                  <div className="flex justify-between items-start gap-3">
-                    <div>
-                      <h4 className="font-display text-2xl sm:text-3xl font-normal text-foreground mb-1">
-                        Blog
-                      </h4>
-                      <p className="font-body text-sm sm:text-base text-muted-foreground">
-                        Insights and updates
-                      </p>
-                    </div>
-                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[-10deg]">
-                      <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
-                    </div>
-                  </div>
-                </div>
-              </Link>
+              </div>
             </div>
 
             {/* Mobile Layout (below md) - stacked cards */}
@@ -110,64 +101,9 @@ const ExploreCards = () => {
               </div>
 
               <div className="mt-12 flex flex-col items-center gap-8">
-                <Link
-                  href="/services"
-                  className="group w-full max-w-[520px] bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3)] animate-float"
-                >
-                  <div className="relative h-[180px] overflow-hidden">
-                    <Image
-                      src="/images/paper-contract.jpg"
-                      alt="Services"
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="p-6 bg-white">
-                    <div className="flex justify-between items-start gap-3">
-                      <div>
-                        <h4 className="font-display text-3xl font-normal text-foreground mb-1">
-                          Services
-                        </h4>
-                        <p className="font-body text-base text-muted-foreground">
-                          Comprehensive IP solutions
-                        </p>
-                      </div>
-                      <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[-10deg]">
-                        <ArrowRight className="w-6 h-6 text-primary-foreground" />
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-
-                <Link
-                  href="/blog"
-                  className="group w-full max-w-[520px] bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3)] animate-float"
-                  style={{ animationDelay: '0.4s' }}
-                >
-                  <div className="relative h-[180px] overflow-hidden">
-                    <Image
-                      src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/6391a347-8b69-465a-b4c4-00b44bb608af-lynford-framer-website/assets/images/qOaIdbeCmsxTXr2UUj7TRajLFU-11.jpg"
-                      alt="Blog"
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="p-6 bg-white">
-                    <div className="flex justify-between items-start gap-3">
-                      <div>
-                        <h4 className="font-display text-3xl font-normal text-foreground mb-1">
-                          Blog
-                        </h4>
-                        <p className="font-body text-base text-muted-foreground">
-                          Insights and updates
-                        </p>
-                      </div>
-                      <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[-10deg]">
-                        <ArrowRight className="w-6 h-6 text-primary-foreground" />
-                      </div>
-                    </div>
-                  </div>
-                </Link>
+                {exploreCards.map((card, index) => (
+                  <ExploreCard key={card.title} {...card} />
+                ))}
               </div>
             </div>
           </div>
