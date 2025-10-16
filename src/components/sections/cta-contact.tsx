@@ -38,7 +38,7 @@ const CtaContact = () => {
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 href="https://calendly.com/polleylaw"
-                className="inline-flex items-center justify-center gap-3 rounded-full bg-[#f8d0b3] px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#1E3432] transition-all duration-300 hover:bg-[#edc2a4]"
+                className="inline-flex items-center justify-center gap-3 rounded-full bg-[#f8d0b3] px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#1E3432] transition-all duration-300 hover:bg-[#edc2a4] text-center sm:text-left"
               >
                 Free Consultation
                 <ArrowRight className="h-4 w-4" />
