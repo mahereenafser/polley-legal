@@ -66,7 +66,7 @@ export default function ContactPage() {
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src="/videos/explore-video.mp4" type="video/mp4" />
+          <source src="/videos/video-2.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/75" />
 
@@ -249,7 +249,7 @@ export default function ContactPage() {
               poster="/images/contact-form.jpg"
               className="absolute inset-0 h-full w-full object-cover"
             >
-              <source src="/videos/explore-video.mp4" type="video/mp4" />
+              <source src="/videos/deep-knowledge.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-gradient-to-b from-[#081615]/20 via-[#081615]/60 to-[#081615]" />
             <div className="relative z-10 flex h-full flex-col justify-end gap-4 p-8 text-white">
