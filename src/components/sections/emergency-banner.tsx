@@ -13,13 +13,14 @@ export default function EmergencyBanner() {
           </span>
         </div>
         <a
-          href="tel:+18135557000"
+          href="/contact#contact-form"
           className="flex items-center gap-2 bg-white text-red-600 px-4 py-2 rounded-lg font-body font-semibold text-sm hover:bg-red-50 transition-colors"
         >
           <Phone className="h-4 w-4" />
-          Call Now: (813) 555-7000
+          Call Our Tampa Office Now
         </a>
       </div>
     </div>
   );
 }
+

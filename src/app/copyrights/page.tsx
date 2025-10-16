@@ -25,15 +25,15 @@ export default function CopyrightsPage() {
         />
         <div className="absolute inset-0 bg-black/55" />
 
-        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1280px] flex-col justify-center px-6 sm:px-8 md:px-12 lg:px-20">
-          <div className="max-w-3xl">
-            <h1 className="font-display text-white text-[44px] sm:text-[56px] md:text-[72px] lg:text-[86px] leading-[1.04] -tracking-[0.01em] mb-6">
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-[960px] flex-col items-center justify-center px-6 text-center sm:px-8 md:px-12">
+          <div className="space-y-6">
+            <h1 className="font-display text-white text-[44px] sm:text-[56px] md:text-[72px] lg:text-[86px] leading-[1.04] -tracking-[0.01em]">
               Copyright Attorney Florida
             </h1>
-            <p className="text-white/90 text-base sm:text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+            <p className="mx-auto max-w-3xl text-base leading-relaxed text-white/90 sm:text-lg md:text-xl">
               Expert copyright protection for music, software, books, artwork, and creative works. Copyright registration, infringement defense, and fair use guidance available.
             </p>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+            <div className="flex flex-col items-center gap-4 sm:flex-row">
               <Link
                 href="/contact"
                 className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
@@ -42,7 +42,7 @@ export default function CopyrightsPage() {
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <a
-                href="tel:+18135557000"
+                href="/contact#contact-form"
                 className="group inline-flex items-center gap-2 font-body text-xs sm:text-sm md:text-base font-light uppercase tracking-[0.08em] text-white transition-all hover:underline"
               >
                 <span>Urgent Copyright Help</span>
@@ -431,7 +431,7 @@ export default function CopyrightsPage() {
               </p>
               <div className="flex flex-col gap-4">
                 <a
-                  href="tel:+18135557000"
+                  href="/contact#contact-form"
                   className="inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-medium rounded transition-all"
                   style={{ backgroundColor: '#f8d0b3', color: '#1f3130' }}
                 >
@@ -456,3 +456,4 @@ export default function CopyrightsPage() {
     </main>
   );
 }
+

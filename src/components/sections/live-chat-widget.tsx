@@ -10,7 +10,7 @@ export default function LiveChatWidget() {
     <>
       {/* Call Button - Positioned above chat */}
       <a
-        href="tel:+18135557000"
+        href="/contact#contact-form"
         className="fixed bottom-24 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#F4D9C3]"
         style={{ backgroundColor: '#1E3432' }}
         aria-label="Call us"
@@ -80,3 +80,4 @@ export default function LiveChatWidget() {
     </>
   );
 }
+

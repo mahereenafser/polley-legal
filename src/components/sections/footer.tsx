@@ -79,9 +79,9 @@ export default function Footer() {
                 <MapPin className="h-4 w-4 mt-0.5 text-white/60" />
                 <p>Florida-based. Serving clients nationwide and internationally.</p>
               </div>
-              <a href="tel:+18135557000" className="flex items-center gap-3 transition-colors duration-300 hover:text-white">
+              <a href="/contact#contact-form" className="flex items-center gap-3 transition-colors duration-300 hover:text-white">
                 <Phone className="h-4 w-4 text-white/60" />
-                <span>(813) 555-7000</span>
+                <span>Call our Tampa office</span>
               </a>
               <a href="mailto:hello@polleylaw.com" className="flex items-center gap-3 transition-colors duration-300 hover:text-white">
                 <Mail className="h-4 w-4 text-white/60" />
@@ -121,3 +121,4 @@ export default function Footer() {
     </footer>
   );
 }
+

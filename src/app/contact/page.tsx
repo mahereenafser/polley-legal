@@ -11,10 +11,10 @@ import LiveChatWidget from "@/components/sections/live-chat-widget";
 const contactHighlights = [
   {
     title: "Call",
-    value: "(813) 555-7000",
+    value: "Call our Tampa office team",
     icon: Phone,
     description: "Fast answers for emergency trademark filing Florida, rush patent filing Florida, and urgent copyright protection Florida needs.",
-    href: "tel:+18135557000",
+    href: "/contact#contact-form",
   },
   {
     title: "Email",
@@ -25,7 +25,7 @@ const contactHighlights = [
   },
   {
     title: "Office Hours",
-    value: "Mon – Fri, 8:30am – 6:00pm ET",
+    value: "Weekdays, extended business hours (ET)",
     icon: Clock,
     description: "After-hours support available for emergency cease and desist Florida actions and investor due diligence.",
   },
@@ -70,23 +70,23 @@ export default function ContactPage() {
         </video>
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/75" />
 
-        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1200px] flex-col justify-center gap-10 px-6 sm:px-8 md:px-12 lg:px-20 text-white">
-          <div className="max-w-3xl space-y-6">
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-[980px] flex-col items-center justify-center gap-10 px-6 text-center text-white sm:px-8 md:px-12">
+          <div className="space-y-6">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/70">Connect With Polley IP Law</p>
             <h1 className="font-display text-[42px] sm:text-[60px] md:text-[76px] lg:text-[88px] leading-[1.04] text-white">
               Talk with Florida&apos;s emergency IP team.
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl">
+            <p className="mx-auto max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg md:text-xl">
               Whether you&apos;re facing urgent infringement, preparing for investment, or building a long-term IP portfolio, our attorneys respond with strategic clarity.
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 sm:flex-row">
+          <div className="flex flex-col items-center gap-4 sm:flex-row">
             <Link
-              href="tel:+18135557000"
-              className="inline-flex items-center justify-center gap-3 rounded-full bg-[#f8d0b3] px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#1E3432] transition-all duration-300 hover:bg-[#EDC2A4]"
-            >
-              Call Now
+    href="/contact#contact-form"
+    className="inline-flex items-center justify-center gap-3 rounded-full bg-[#f8d0b3] px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#1E3432] transition-all duration-300 hover:bg-[#EDC2A4]"
+  >
+    Call Our Team
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
@@ -197,7 +197,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   className="w-full rounded-xl border border-[#D6DDD9] bg-white px-4 py-3 text-sm text-[#1E3432] focus:border-[#1E3432] focus:outline-none focus:ring-2 focus:ring-[#f8d0b3]/60"
-                  placeholder="(813) 555-7000"
+                  placeholder="Example: Main office line"
                 />
               </div>
             </div>
@@ -309,3 +309,6 @@ export default function ContactPage() {
     </main>
   );
 }
+
+
+

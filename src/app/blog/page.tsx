@@ -265,7 +265,7 @@ export default function BlogPage() {
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   <a
-                    href="tel:+18135557000"
+                    href="/contact#contact-form"
                     className="inline-flex items-center justify-center gap-3 rounded-full border border-white/30 px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-white/10"
                   >
                     Call Us Directly
@@ -318,3 +318,4 @@ export default function BlogPage() {
     </main>
   );
 }
+

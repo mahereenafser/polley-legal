@@ -280,11 +280,11 @@ export default function Navigation({ forceScrolled = false }: NavigationProps) {
           {/* Right Section - Phone Number & Free Consultation */}
           <div className="hidden lg:flex items-center gap-6">
             <a
-              href="tel:+18135557000"
+              href="/contact#contact-form"
               className="flex items-center gap-2 text-white hover:opacity-75 transition-opacity"
             >
               <Phone className="h-4 w-4" />
-              <span className="font-body text-sm">(813) 555-7000</span>
+              <span className="font-body text-sm">Call our Tampa office</span>
             </a>
             <button
               onClick={() => window.open("https://calendly.com/polleylaw", "_blank", "noopener,noreferrer")}
@@ -431,11 +431,11 @@ export default function Navigation({ forceScrolled = false }: NavigationProps) {
 
               {/* Phone Number */}
               <a
-                href="tel:+18135557000"
+                href="/contact#contact-form"
                 className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm tracking-[0.1em] text-white transition-colors duration-300 hover:bg-white/10"
               >
                 <Phone className="h-4 w-4" />
-                <span>(813) 555-7000</span>
+                <span>Call our Tampa office</span>
               </a>
 
               {/* Free Consultation Button */}
@@ -458,3 +458,4 @@ export default function Navigation({ forceScrolled = false }: NavigationProps) {
     </>
   );
 }
+
