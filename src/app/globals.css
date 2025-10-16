@@ -288,3 +288,12 @@ nextjs-portal {
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
+
+/* Marquee animation utilities */
+.animate-marquee {
+  animation: marquee var(--duration, 40s) linear infinite;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration, 40s) linear infinite;
+}

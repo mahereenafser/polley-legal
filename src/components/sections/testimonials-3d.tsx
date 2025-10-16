@@ -84,14 +84,14 @@ export default function Testimonials3D() {
 
         {/* 3D Marquee Container */}
         <div
-          className="relative flex h-[600px] w-full max-w-[1200px] mx-auto flex-row items-center justify-center overflow-hidden rounded-2xl border border-border bg-background/50"
+          className="relative flex h-[700px] w-full max-w-[1400px] mx-auto flex-row items-center justify-center overflow-hidden rounded-2xl border border-border bg-white"
           style={{
             perspective: '1000px',
             perspectiveOrigin: 'center center',
           }}
         >
           <div
-            className="flex flex-row items-center gap-4"
+            className="flex flex-row items-start gap-6 h-full"
             style={{
               transformStyle: 'preserve-3d',
               transform:
@@ -99,28 +99,28 @@ export default function Testimonials3D() {
             }}
           >
             {/* Column 1 - Upward scroll (reverse) */}
-            <Marquee vertical pauseOnHover reverse repeat={4} className="[--duration:30s]">
+            <Marquee vertical pauseOnHover reverse repeat={5} className="[--duration:35s] [--gap:1.5rem]">
               {testimonials.map((review, idx) => (
                 <TestimonialCard key={`col1-${review.username}-${idx}`} {...review} />
               ))}
             </Marquee>
 
             {/* Column 2 - Downward scroll */}
-            <Marquee vertical pauseOnHover repeat={4} className="[--duration:30s]">
+            <Marquee vertical pauseOnHover repeat={5} className="[--duration:35s] [--gap:1.5rem]">
               {testimonials.map((review, idx) => (
                 <TestimonialCard key={`col2-${review.username}-${idx}`} {...review} />
               ))}
             </Marquee>
 
             {/* Column 3 - Upward scroll (reverse) */}
-            <Marquee vertical pauseOnHover reverse repeat={4} className="[--duration:30s]">
+            <Marquee vertical pauseOnHover reverse repeat={5} className="[--duration:35s] [--gap:1.5rem]">
               {testimonials.map((review, idx) => (
                 <TestimonialCard key={`col3-${review.username}-${idx}`} {...review} />
               ))}
             </Marquee>
 
             {/* Column 4 - Downward scroll */}
-            <Marquee vertical pauseOnHover repeat={4} className="[--duration:30s]">
+            <Marquee vertical pauseOnHover repeat={5} className="[--duration:35s] [--gap:1.5rem]">
               {testimonials.map((review, idx) => (
                 <TestimonialCard key={`col4-${review.username}-${idx}`} {...review} />
               ))}
