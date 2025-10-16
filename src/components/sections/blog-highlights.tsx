@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { PlaceCard } from '@/components/ui/card-22';
 
 type BlogCard = {
@@ -134,25 +135,25 @@ const BlogHighlights = () => {
             const isRight = index === rightIndex;
 
             let translateX = 0;
-            let scale = 0.86;
+            let scale = 0.82;
             let opacity = 0;
             let zIndex = 10;
             let pointer: CSSProperties['pointerEvents'] = 'none';
 
             if (isActive) {
               translateX = 0;
-              scale = 1;
+              scale = 1.05;
               opacity = 1;
               zIndex = 30;
               pointer = 'auto';
             } else if (isLeft) {
               translateX = -360;
-              opacity = 0.85;
+              opacity = 0.9;
               zIndex = 20;
               pointer = 'auto';
             } else if (isRight) {
               translateX = 360;
-              opacity = 0.85;
+              opacity = 0.9;
               zIndex = 20;
               pointer = 'auto';
             }
@@ -191,6 +192,26 @@ const BlogHighlights = () => {
               </Link>
             );
           })}
+        </div>
+
+        <div className="mt-10 hidden justify-center md:flex">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-3 rounded-full bg-[#1E3432] px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-[#2C4A47]"
+          >
+            Read Blogs
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+
+        <div className="mt-8 flex md:hidden">
+          <Link
+            href="/blog"
+            className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#1E3432] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition-colors duration-300 hover:bg-[#2C4A47]"
+          >
+            Read Blogs
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>

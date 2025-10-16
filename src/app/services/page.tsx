@@ -100,14 +100,15 @@ export default function ServicesPage() {
 
       {/* Hero */}
       <section className="relative h-[90vh] min-h-[720px] overflow-hidden">
-        <Image
-          src="/images/services-hero.jpg"
-          alt="Polley IP Law services overview"
-          fill
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="absolute inset-0 h-full w-full object-cover"
-          priority
-          quality={90}
-        />
+        >
+          <source src="/videos/hero-video.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/55" />
 
         <div className="relative z-10 mx-auto flex h-full w-full max-w-[1280px] flex-col justify-center px-6 sm:px-8 md:px-12 lg:px-20">

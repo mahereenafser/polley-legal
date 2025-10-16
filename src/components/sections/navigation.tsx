@@ -117,7 +117,9 @@ export default function Navigation({ forceScrolled = false }: NavigationProps) {
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6",
-          scrolled ? "bg-[#1E3432]/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+          scrolled
+            ? "bg-gradient-to-r from-[#081615] via-[#1E3432] to-[#0B1A18] backdrop-blur-lg shadow-lg"
+            : "bg-gradient-to-r from-[#081615]/80 via-[#1E3432]/80 to-[#0B1A18]/80"
         )}
       >
         <div className="mx-auto flex h-full max-w-[1440px] items-center justify-between">
@@ -321,43 +323,57 @@ export default function Navigation({ forceScrolled = false }: NavigationProps) {
       />
 
       {/* Mobile Menu Drawer - Glassmorphic */}
+      {/* Mobile Overlay */}
       <div
         className={cn(
-          "fixed top-0 right-0 bottom-0 w-[320px] shadow-2xl transition-all duration-300 lg:hidden z-50",
-          mobileMenuOpen ? "translate-x-0" : "translate-x-full",
-          "bg-[#1E3432]/95",
-          "backdrop-blur-xl"
+          "fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden",
+          mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        )}
+        onClick={() => setMobileMenuOpen(false)}
+      />
+
+      <div
+        className={cn(
+          "fixed top-0 right-0 bottom-0 z-50 w-[340px] max-w-full transition-transform duration-300 lg:hidden",
+          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <div className="flex flex-col h-full">
-          {/* Close Button */}
-          <div className="flex justify-end items-center p-6">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+        <div className="flex h-full flex-col overflow-y-auto bg-gradient-to-br from-[#071412] via-[#12302C] to-[#071412] text-white shadow-2xl">
+          <div className="flex items-center justify-between px-6 pt-8 pb-4">
+            <div className="space-y-1">
+              <p className="text-xs uppercase tracking-[0.3em] text-white/60">Polley IP Law</p>
+              <p className="text-sm text-white/70">Protecting trademarks, patents, and creative works across Florida.</p>
+            </div>
+            <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
               <X className="h-6 w-6 text-white" />
             </Button>
           </div>
 
-          {/* Navigation Links */}
-          <nav className="flex flex-col px-6 pb-6 gap-2">
-            <Link
-              href="/"
-              className="font-body text-[15px] font-normal text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors uppercase"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Home
-            </Link>
+          <div className="px-6 pb-6">
+            <div className="mb-6 rounded-3xl border border-white/10 bg-white/5 p-5 text-sm text-white/80">
+              <p className="font-semibold text-white">Urgent IP support?</p>
+              <p className="mt-2 leading-relaxed">
+                Same-day trademark search Florida and emergency IP lawyer near me consultations are available by phone.
+              </p>
+            </div>
 
-            {/* Services Accordion */}
-            <div className="flex flex-col">
-              <button
-                className="font-body text-[15px] font-normal text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-between uppercase"
-                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+            <nav className="flex flex-col gap-3">
+              <Link
+                href="/"
+                className="inline-flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm font-semibold uppercase tracking-[0.2em] transition-colors duration-300 hover:bg-white/10"
+                onClick={() => setMobileMenuOpen(false)}
               >
-                Services
+                <span>Home</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+
+              {/* Services Accordion */}
+              <div className="flex flex-col">
+                <button
+                  className="inline-flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm font-semibold uppercase tracking-[0.2em] transition-colors duration-300 hover:bg-white/10"
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                >
+                  Services
                 <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", mobileServicesOpen && "rotate-180")} />
               </button>
 
@@ -397,56 +413,59 @@ export default function Navigation({ forceScrolled = false }: NavigationProps) {
                   View All Services
                 </Link>
               </div>
-            </div>
+              </div>
 
-            <Link
-              href="/about"
-              className="font-body text-[15px] font-normal text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors uppercase"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About Us
-            </Link>
-
-            <Link
-              href="/blog"
-              className="font-body text-[15px] font-normal text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors uppercase"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Blog
-            </Link>
-
-            <Link
-              href="/contact"
-              className="font-body text-[15px] font-normal text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors uppercase"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
-
-            {/* Phone Number */}
-            <a
-              href="tel:+18135557000"
-              className="flex items-center gap-2 text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors"
-            >
-              <Phone className="h-4 w-4" />
-              <span className="font-body text-sm">(813) 555-7000</span>
-            </a>
-
-            {/* Free Consultation Button */}
-            <div className="mt-4">
-              <button
-                onClick={() => {
-                  window.open("https://calendly.com/polleylaw", "_blank", "noopener,noreferrer");
-                  setMobileMenuOpen(false);
-                }}
-                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-[#F4D9C3] text-[#1E3432] font-body text-sm font-medium uppercase hover:opacity-90 transition-opacity"
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm font-semibold uppercase tracking-[0.2em] transition-colors duration-300 hover:bg-white/10"
+                onClick={() => setMobileMenuOpen(false)}
               >
-                Free Consultation
+                <span>About Us</span>
                 <ArrowRight className="h-4 w-4" />
-              </button>
-            </div>
-          </nav>
-        </div>
+              </Link>
+
+              <Link
+                href="/blog"
+                className="inline-flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm font-semibold uppercase tracking-[0.2em] transition-colors duration-300 hover:bg-white/10"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>Blog</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm font-semibold uppercase tracking-[0.2em] transition-colors duration-300 hover:bg-white/10"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>Contact</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+
+              {/* Phone Number */}
+              <a
+                href="tel:+18135557000"
+                className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm tracking-[0.1em] text-white transition-colors duration-300 hover:bg-white/10"
+              >
+                <Phone className="h-4 w-4" />
+                <span>(813) 555-7000</span>
+              </a>
+
+              {/* Free Consultation Button */}
+              <div className="mt-6">
+                <button
+                  onClick={() => {
+                    window.open("https://calendly.com/polleylaw", "_blank", "noopener,noreferrer");
+                    setMobileMenuOpen(false);
+                  }}
+                className="w-full inline-flex items-center justify-center gap-3 rounded-full bg-[#F4D9C3] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#1E3432] transition-transform duration-300 hover:scale-[1.02]"
+                >
+                  Free Consultation
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+              </div>
+            </nav>
+          </div>
       </div>
     </>
   );

@@ -145,23 +145,27 @@ export default function BlogPage() {
       <section id="categories" className="py-12 bg-white border-b" style={{ borderColor: '#E8E9E6' }}>
         <div className="mx-auto max-w-[1400px] px-6 md:px-12">
           <div className="flex flex-wrap gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'shadow-lg'
-                    : 'hover:shadow-md'
-                }`}
-                style={{
-                  backgroundColor: selectedCategory === category ? '#1f3130' : '#fbe7d9',
-                  color: selectedCategory === category ? '#ffffff' : '#1f3130',
-                }}
-              >
-                {category}
-              </button>
-            ))}
+            {categories.map((category) => {
+              const isActive = selectedCategory === category;
+              return (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={
+                    "relative inline-flex items-center justify-center rounded-full px-6 py-3 text-xs font-semibold uppercase tracking-[0.28em] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1E3432]"
+                  }
+                  style={{
+                    background: isActive
+                      ? 'linear-gradient(135deg, #1E3432, #2C4A47)'
+                      : 'rgba(30,52,50,0.08)',
+                    color: isActive ? '#FFFFFF' : '#1E3432',
+                    boxShadow: isActive ? '0 12px 30px -12px rgba(30,52,50,0.6)' : 'none',
+                  }}
+                >
+                  {category}
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -239,17 +243,17 @@ export default function BlogPage() {
                 <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-tight text-white">
                   Need Expert IP Guidance?
                 </h2>
-                <p className="text-base md:text-lg text-white/85 leading-relaxed max-w-xl">
+                <p className="text-base md:text-lg text-white leading-relaxed max-w-xl">
                   Whether you&apos;re racing against launch deadlines or strengthening a long-term portfolio, our attorneys respond with emergency action plans and strategic intellectual property counsel tailored to your business.
                 </p>
-                <div className="grid gap-4 text-sm text-white/75 md:grid-cols-2">
+                <div className="grid gap-4 text-sm text-white md:grid-cols-2">
                   <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
                     <p className="font-semibold text-white">Emergency Filings</p>
-                    <p>Same-day trademark monitoring, rush patent filing Florida, and urgent copyright protection services.</p>
+                    <p className="text-white/90">Same-day trademark monitoring, rush patent filing Florida, and urgent copyright protection services.</p>
                   </div>
                   <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
                     <p className="font-semibold text-white">Strategic Counsel</p>
-                    <p>Comprehensive IP strategy tailored to startups, e-commerce brands, and tech companies.</p>
+                    <p className="text-white/90">Comprehensive IP strategy tailored to startups, e-commerce brands, and tech companies.</p>
                   </div>
                 </div>
                 <div className="flex flex-col gap-4 sm:flex-row">
@@ -269,12 +273,12 @@ export default function BlogPage() {
                 </div>
               </div>
 
-              <div className="relative hidden h-full min-h-[240px] overflow-hidden bg-black/20 lg:block">
+              <div className="relative order-first h-48 overflow-hidden bg-black/20 md:order-last md:h-full md:min-h-[240px]">
                 <Image
                   src="/images/image-8.jpg"
                   alt="Attorneys reviewing documents"
                   fill
-                  className="object-cover opacity-70"
+                  className="object-cover opacity-80"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#102220] via-transparent to-transparent" />
               </div>
