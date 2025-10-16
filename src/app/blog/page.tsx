@@ -134,76 +134,56 @@ export default function BlogPage() {
             {/* Patent Law Card */}
             <Link href="/blog/what-to-do-trademark-infringement-florida" className="block">
               <PlaceCard
-                images={[
-                  '/images/image-1.jpg',
-                  '/images/image-1.jpg',
-                  '/images/image-1.jpg',
-                ]}
+                image="/images/image-1.jpg"
                 tags={['Legal']}
-                rating={4.9}
+                reads={2345}
                 title="Patent Law"
                 dateRange="Comprehensive"
                 hostType="IP Protection"
                 isTopRated={true}
                 description="Secure your innovations with expert patent services. We guide you through the entire process."
-                pricePerNight={0}
               />
             </Link>
 
             {/* Emergency Services Card */}
             <Link href="/blog/emergency-ip-protection-florida-guide" className="block">
               <PlaceCard
-                images={[
-                  '/images/image-4.jpg',
-                  '/images/image-4.jpg',
-                  '/images/image-4.jpg',
-                ]}
+                image="/images/image-4.jpg"
                 tags={['Urgent']}
-                rating={5.0}
+                reads={3120}
                 title="Emergency Services"
                 dateRange="24/7 Available"
                 hostType="Rapid Response"
                 isTopRated={true}
                 description="Fast-track IP protection when time is critical. Same-day filing and emergency cease & desist."
-                pricePerNight={0}
               />
             </Link>
 
             {/* IP Strategy Card */}
-            <Link href="/blog/spring-ip-preparation-guide-florida" className="block">
+            <Link href="/blog/spring-ip-preparation-guide" className="block">
               <PlaceCard
-                images={[
-                  '/images/image-2.jpg',
-                  '/images/image-2.jpg',
-                  '/images/image-2.jpg',
-                ]}
+                image="/images/image-2.jpg"
                 tags={['Strategy']}
-                rating={4.8}
+                reads={1890}
                 title="IP Strategy"
                 dateRange="Long-term"
                 hostType="Business Growth"
                 isTopRated={false}
                 description="Build a robust IP portfolio aligned with your business goals. Expert guidance for startups."
-                pricePerNight={0}
               />
             </Link>
 
             {/* Trademark Law Card */}
             <Link href="/blog/trademark-registration-cost-florida" className="block">
               <PlaceCard
-                images={[
-                  '/images/image-5.jpg',
-                  '/images/image-5.jpg',
-                  '/images/image-5.jpg',
-                ]}
+                image="/images/image-5.jpg"
                 tags={['Branding']}
-                rating={4.9}
+                reads={2678}
                 title="Trademark Law"
                 dateRange="Complete"
                 hostType="Brand Protection"
                 isTopRated={true}
                 description="Protect your brand identity with trademark registration and enforcement services."
-                pricePerNight={0}
               />
             </Link>
           </div>
